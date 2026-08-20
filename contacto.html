@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto & Citas Privadas | Equine Heritage</title>
+  <meta name="description" content="Coordine una cita privada, adquiera dosis genéticas de sementales campeones o reserve una visita guiada exclusiva en la finca de Equine Heritage." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#c8a675',
+              hover: '#ddc295',
+              container: '#af8c5c',
+              light: '#f1e6d6',
+            },
+            surface: {
+              base: '#1e222a',
+              lowest: '#181b22',
+              low: '#222832',
+              card: '#2b323f',
+              high: '#343d4d',
+              highest: '#3f495a',
+            },
+            sand: {
+              100: '#f8fafc',
+              300: '#cbd5e1',
+              500: '#64748b',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Inter"', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Material Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+
+  <!-- GSAP, ScrollTrigger & Lenis Smooth Scroll -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-[#1e222a] text-[#f1f5f9] font-sans antialiased min-h-screen flex flex-col relative overflow-x-hidden selection:bg-[#c8a675] selection:text-[#1e222a]">
+
+  <!-- Header / Navigation Bar -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 glass-nav">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo / Crest -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-sm bg-gradient-to-br from-[#c8a675] to-[#1e222a] p-0.5 border border-[#c8a675]/60 flex items-center justify-center shadow-lg">
+          <div class="w-full h-full bg-[#1e222a] flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#ddc295] text-xl group-hover:scale-110 transition-transform">military_tech</span>
+          </div>
+        </div>
+        <div>
+          <span class="font-serif text-lg tracking-widest uppercase font-bold text-white block group-hover:text-[#ddc295] transition-colors">Equine Heritage</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-[#c8a675] block">Criadero de Élite</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links with Dropdown Servicios -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-slate-300">
+        <a href="index.html#catalogo" class="hover:text-[#ddc295] transition-colors">Sementales</a>
+        <a href="index.html#genealogia" class="hover:text-[#ddc295] transition-colors">Genealogía</a>
+        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors">Nuestro Legado</a>
+
+        <!-- Dropdown Servicios -->
+        <div class="relative group py-4">
+          <button class="flex items-center gap-1 hover:text-[#ddc295] transition-colors cursor-pointer">
+            <span>Servicios</span>
+            <span class="material-symbols-outlined text-base group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+          </button>
+          <div class="dropdown-menu-fade absolute top-full left-0 bg-[#1e222a] border border-[#c8a675]/30 rounded-sm shadow-2xl p-2 min-w-[230px] backdrop-blur-xl z-50">
+            <a href="turismo.html" class="flex items-center gap-2 px-4 py-2.5 rounded-sm text-xs text-slate-300 hover:text-[#ddc295] hover:bg-[#2b323f] transition-colors">
+              <span class="material-symbols-outlined text-base text-[#c8a675]">nature_people</span>
+              <span>Turismo & Cabalgatas</span>
+            </a>
+            <a href="academia.html" class="flex items-center gap-2 px-4 py-2.5 rounded-sm text-xs text-slate-300 hover:text-[#ddc295] hover:bg-[#2b323f] transition-colors">
+              <span class="material-symbols-outlined text-base text-[#c8a675]">school</span>
+              <span>Academia Ecuestre</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="contacto.html" class="text-[#ddc295] border-b-2 border-[#c8a675] pb-0.5 font-bold">Contacto</a>
+      </nav>
+
+      <!-- Return to Home CTA -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="index.html" class="border border-[#c8a675]/40 text-slate-200 hover:text-[#ddc295] hover:border-[#c8a675] bg-[#2b323f]/50 backdrop-blur-md font-semibold text-xs uppercase tracking-widest px-5 py-2.5 rounded-sm transition-all flex items-center gap-2">
+          <span class="material-symbols-outlined text-sm">arrow_back</span>
+          Volver a la Finca
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-slate-200 hover:text-[#ddc295] p-2">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-[#c8a675]/20 px-6 py-6 space-y-4">
+      <a href="index.html#catalogo" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Sementales</a>
+      <a href="index.html#genealogia" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Genealogía</a>
+      <a href="nuestro-legado.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Nuestro Legado</a>
+      
+      <div class="border-t border-slate-700/60 pt-3 space-y-2">
+        <span class="text-[10px] uppercase tracking-wider text-slate-400 block font-semibold">Nuestros Servicios:</span>
+        <a href="turismo.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">🐴 Turismo & Cabalgatas</a>
+        <a href="academia.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">🎓 Academia Ecuestre</a>
+      </div>
+
+      <a href="contacto.html" class="block text-sm uppercase tracking-widest text-[#ddc295] font-bold">Contacto</a>
+    </div>
+  </header>
+
+  <main class="flex-1 pt-32 pb-24">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Page Hero Header -->
+      <div class="max-w-3xl mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-[#2b323f] border border-[#c8a675]/40 text-[#ddc295] text-[11px] font-semibold tracking-widest uppercase">
+          <span class="material-symbols-outlined text-sm">lock</span>
+          Atención Privada & Confidencial
+        </div>
+        <h1 class="font-serif text-4xl sm:text-6xl font-bold text-white tracking-tight">
+          Conserjería Ecuestre & <br />
+          <span class="text-[#ddc295] italic">Citas Privadas</span>
+        </h1>
+        <p class="text-base text-slate-300 leading-relaxed max-w-2xl font-light">
+          Invitamos a criadores distinguidos, jinetes de alta competición y familias a coordinar visitas personalizadas a la dehesa, reservas de sementales, actividades de turismo o admisiones a la academia.
+        </p>
+      </div>
+
+      <!-- Main Content Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Column: Form -->
+        <div class="lg:col-span-7 glass-panel p-8 sm:p-10 rounded-sm border border-[#c8a675]/30 shadow-2xl relative">
+          <div class="mb-8">
+            <h2 class="font-serif text-2xl text-white font-semibold mb-1">Formulario de Solicitud</h2>
+            <p class="text-xs text-slate-400">Complete sus datos y nuestro equipo le responderá en menos de 24 horas.</p>
+          </div>
+
+          <form id="contact-page-form" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="contact-name" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Nombre Completo *</label>
+                <input type="text" id="contact-name" required placeholder="Ej. Álvaro Mendoza" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none transition-colors" />
+              </div>
+              <div>
+                <label for="contact-email" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Correo Electrónico *</label>
+                <input type="email" id="contact-email" required placeholder="correo@ejemplo.com" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none transition-colors" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="contact-phone" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Teléfono / WhatsApp *</label>
+                <input type="tel" id="contact-phone" required placeholder="+34 612 345 678" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none transition-colors" />
+              </div>
+              <div>
+                <label for="contact-country" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">País / Residencia</label>
+                <input type="text" id="contact-country" placeholder="España, México, Colombia, EE.UU..." class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none transition-colors" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="contact-service" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Área de Interés Principal</label>
+                <select id="contact-service" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none transition-colors">
+                  <option value="genetica">Adquisición de Dosis Genética / Salto</option>
+                  <option value="turismo">Turismo Ecuestre & Cabalgata Familiar</option>
+                  <option value="visita">Visita Guiada Privada a la Dehesa</option>
+                  <option value="cursos">Matrícula Academia & Cursos Ecuestres</option>
+                  <option value="compra">Compra de Ejemplar / Potro P.R.E.</option>
+                  <option value="internacional">Exportación Genética Internacional</option>
+                </select>
+              </div>
+              <div>
+                <label for="contact-horse" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Semental de Interés (Opcional)</label>
+                <select id="contact-horse" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none transition-colors">
+                  <option value="general">Cualquier Ejemplar / Asesoría General</option>
+                  <option value="imperioso-iv">Imperioso IV (Doma Clásica & Morfología)</option>
+                  <option value="valeroso-real">Valeroso Real (Salto de Obstáculos)</option>
+                  <option value="sultan-de-alba">Sultán de Alba (Paso de Alta Escuela)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="contact-date" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Fecha Estimada para la Cita / Cabalgata</label>
+              <input type="date" id="contact-date" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none transition-colors" />
+            </div>
+
+            <div>
+              <label for="contact-notes" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Notas Adicionales o Requerimientos</label>
+              <textarea id="contact-notes" rows="4" placeholder="Indique características de interés, número de personas si es cabalgata, consultas sobre fechas especiales..." class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none transition-colors"></textarea>
+            </div>
+
+            <div class="pt-2">
+              <button type="submit" class="w-full bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-semibold text-xs uppercase tracking-widest py-4 rounded-sm transition-all shadow-md flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-base">send</span>
+                Enviar Solicitud
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right Column: Estate Information & Logistics -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Direct Concierge Card -->
+          <div class="glass-panel p-6 rounded-sm border-t-2 border-t-[#c8a675] space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[#ddc295] text-2xl">support_agent</span>
+              <div>
+                <h3 class="font-serif text-lg text-white font-semibold">Atención Personalizada</h3>
+                <span class="text-xs text-slate-400">Horario de atención: 08:00 - 20:00 CET</span>
+              </div>
+            </div>
+            <div class="space-y-2 text-xs text-slate-300 pt-2 border-t border-slate-700">
+              <p class="flex items-center justify-between">
+                <span>Teléfono:</span>
+                <strong class="text-white">+34 912 840 920</strong>
+              </p>
+              <p class="flex items-center justify-between">
+                <span>WhatsApp:</span>
+                <strong class="text-[#ddc295]">+34 650 900 800</strong>
+              </p>
+              <p class="flex items-center justify-between">
+                <span>Correo Electrónico:</span>
+                <strong class="text-white">contacto@equineheritage.com</strong>
+              </p>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div class="glass-panel p-6 rounded-sm border-t-2 border-t-[#c8a675] space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[#ddc295] text-2xl">location_on</span>
+              <div>
+                <h3 class="font-serif text-lg text-white font-semibold">Ubicación & Acceso</h3>
+                <span class="text-xs text-slate-400">Dehesa de San Jerónimo</span>
+              </div>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              La Finca se encuentra en un entorno natural reservado a 20 minutos de la ciudad. Contamos con estacionamiento privado para visitantes y acceso asfaltado.
+            </p>
+            <div class="p-3 bg-[#181b22] border border-slate-700 rounded-sm text-xs text-slate-400">
+              <strong class="text-slate-300 block mb-1">Dirección:</strong>
+              Camino Real de la Dehesa, Km 14 • Sevilla / Madrid
+            </div>
+          </div>
+
+          <!-- Notice -->
+          <div class="glass-panel p-6 rounded-sm border border-[#c8a675]/20 bg-[#222832]/60 space-y-2">
+            <div class="flex items-center gap-2 text-[#ddc295]">
+              <span class="material-symbols-outlined text-sm">verified_user</span>
+              <span class="text-xs uppercase tracking-widest font-semibold">Visitas con Reserva Previa</span>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Para garantizar la tranquilidad de los ejemplares y la mejor atención a nuestros visitantes, todas las visitas y cabalgatas se realizan bajo reserva confirmada.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#181b22] border-t border-slate-800 py-12 mt-auto">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-[#ddc295] text-2xl">military_tech</span>
+        <span class="font-serif text-lg font-bold text-white">EQUINE HERITAGE</span>
+      </div>
+      <p class="text-xs text-slate-400 text-center md:text-left">
+        &copy; 2026 Equine Heritage Ranch & Stud. Todos los derechos reservados.
+      </p>
+      <div class="flex items-center gap-6 text-xs text-slate-400">
+        <a href="index.html" class="hover:text-[#ddc295] transition-colors">Inicio</a>
+        <a href="index.html#catalogo" class="hover:text-[#ddc295] transition-colors">Sementales</a>
+        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors">Legado</a>
+        <a href="turismo.html" class="hover:text-[#ddc295] transition-colors">Turismo</a>
+        <a href="contacto.html" class="text-[#ddc295]">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Confirmation Modal -->
+  <div id="contact-confirmation-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-6">
+    <div class="relative w-full max-w-lg bg-[#222832] border border-[#c8a675] rounded-sm p-8 text-center shadow-2xl">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[#c8a675]/20 border border-[#c8a675] flex items-center justify-center text-[#ddc295]">
+        <span class="material-symbols-outlined text-3xl">verified</span>
+      </div>
+      <h3 class="font-serif text-2xl text-white font-bold mb-2">Solicitud Enviada</h3>
+      <p class="text-xs text-slate-300 mb-6">Hemos recibido su solicitud correctamente. Nos pondremos en contacto con usted a la brevedad.</p>
+      
+      <div id="contact-summary-details" class="bg-[#181b22] p-5 rounded-sm border border-slate-700 text-left mb-6 space-y-2 text-xs text-slate-300">
+        <!-- Injected by JS -->
+      </div>
+
+      <div class="flex gap-4">
+        <a href="index.html" class="flex-1 border border-slate-600 text-slate-200 hover:text-white py-3 text-xs font-semibold uppercase tracking-widest rounded-sm text-center">
+          Volver al Inicio
+        </a>
+        <button id="close-contact-modal" class="flex-1 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-semibold text-xs uppercase tracking-widest py-3 rounded-sm transition-all">
+          Aceptar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Page JS Script -->
+  <script type="module" src="js/contact-page.js"></script>
+</body>
+</html>

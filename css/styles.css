@@ -1,0 +1,134 @@
+/* ==========================================================================
+   Equine Heritage - Core Design System Styles (Luminous Camel & Soft Charcoal)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+:root {
+  --color-bg-base: #1e222a;
+  --color-surface-card: #2b323f;
+  --color-primary-camel: #c8a675;
+  --color-primary-hover: #ddc295;
+  --color-sand-text: #f1f5f9;
+  --color-border: rgba(200, 166, 117, 0.24);
+}
+
+/* Base Body Styles */
+body {
+  background-color: #1e222a;
+  color: #f1f5f9;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  selection-background-color: #c8a675;
+  selection-color: #1e222a;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+::selection {
+  background: #c8a675;
+  color: #1e222a;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #181b22;
+}
+::-webkit-scrollbar-thumb {
+  background: #343d4d;
+  border-radius: 4px;
+  border: 1px solid rgba(200, 166, 117, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c8a675;
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(43, 50, 63, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(200, 166, 117, 0.22);
+}
+
+.glass-panel-subtle {
+  background: rgba(30, 34, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Header Navigation: Reduced initial opacity, solid on scroll */
+.glass-nav {
+  background: rgba(30, 34, 42, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(200, 166, 117, 0.12);
+  transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              backdrop-filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-nav.is-scrolled {
+  background: rgba(30, 34, 42, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(200, 166, 117, 0.28);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+}
+
+/* Smooth Fade Dropdown */
+.dropdown-menu-fade {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+  pointer-events: none;
+}
+
+.group:hover .dropdown-menu-fade {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Page Fade-In Initial Class */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in-element.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Camel Accent Helper */
+.text-camel-accent {
+  color: #c8a675;
+}
+
+.bg-camel-accent {
+  background-color: #c8a675;
+}
+
+/* Typography Helpers */
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-interface {
+  font-family: 'Inter', sans-serif;
+}
+

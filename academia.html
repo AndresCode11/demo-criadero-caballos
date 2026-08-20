@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academia Ecuestre & Cursos de Alta Escuela | Equine Heritage</title>
+  <meta name="description" content="Formación de alto rendimiento en Doma Clásica Gran Premio, Alta Escuela Española y Biotecnología Equina con maestros olímpicos en Equine Heritage." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#ba9666',
+              hover: '#cdad7d',
+              container: '#9f7d4e',
+              light: '#e8dcce',
+            },
+            surface: {
+              base: '#1e222a',
+              lowest: '#181b22',
+              low: '#222832',
+              card: '#2b323f',
+              high: '#343d4d',
+              highest: '#3f495a',
+            },
+            sand: {
+              100: '#f8fafc',
+              300: '#cbd5e1',
+              500: '#64748b',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Inter"', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Material Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+
+  <!-- GSAP, ScrollTrigger & Lenis Smooth Scroll -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-[#1e222a] text-[#f1f5f9] font-sans antialiased selection:bg-[#ba9666] selection:text-[#1e222a] min-h-screen flex flex-col">
+
+  <!-- Header / Navigation Bar -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 glass-nav">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo / Crest -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-sm bg-gradient-to-br from-[#c8a675] to-[#1e222a] p-0.5 border border-[#c8a675]/60 flex items-center justify-center shadow-lg">
+          <div class="w-full h-full bg-[#1e222a] flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#ddc295] text-xl group-hover:scale-110 transition-transform">school</span>
+          </div>
+        </div>
+        <div>
+          <span class="font-serif text-lg tracking-widest uppercase font-bold text-white block group-hover:text-[#ddc295] transition-colors">Equine Heritage</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-[#c8a675] block">Academia Ecuestre</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links with Dropdown "Servicios" -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-slate-300">
+        <a href="index.html" class="hover:text-[#ddc295] transition-colors">Criadero</a>
+        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors">Nuestro Legado</a>
+        <a href="#cursos" class="hover:text-[#ddc295] transition-colors">Cursos & Masterclasses</a>
+        <a href="#profesorado" class="hover:text-[#ddc295] transition-colors">Maestros</a>
+        <a href="#calculadora" class="hover:text-[#ddc295] transition-colors">Cotizador</a>
+        
+        <!-- Dropdown Servicios -->
+        <div class="relative group py-4">
+          <button class="flex items-center gap-1 text-[#ddc295] hover:text-white transition-colors font-bold cursor-pointer">
+            <span>Servicios</span>
+            <span class="material-symbols-outlined text-base group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+          </button>
+          <div class="dropdown-menu-fade absolute top-full left-0 bg-[#1e222a] border border-[#c8a675]/30 rounded-sm shadow-2xl p-2 min-w-[230px] backdrop-blur-xl z-50">
+            <a href="turismo.html" class="flex items-center gap-2 px-4 py-2.5 rounded-sm text-xs text-slate-300 hover:text-[#ddc295] hover:bg-[#2b323f] transition-colors">
+              <span class="material-symbols-outlined text-base text-[#c8a675]">nature_people</span>
+              <span>Turismo & Cabalgatas</span>
+            </a>
+            <a href="academia.html" class="flex items-center gap-2 px-4 py-2.5 rounded-sm text-xs text-[#ddc295] bg-[#2b323f]/80 font-bold">
+              <span class="material-symbols-outlined text-base text-[#c8a675]">school</span>
+              <span>Academia Ecuestre</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="contacto.html?service=cursos" class="hover:text-[#ddc295] transition-colors">Inscripciones</a>
+      </nav>
+
+      <!-- CTA -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#calculadora" class="bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-semibold text-xs uppercase tracking-widest px-5 py-2.5 rounded-sm transition-all shadow-md">
+          Planear Matrícula
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-slate-200 hover:text-[#ddc295] p-2">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-[#c8a675]/20 px-6 py-6 space-y-4">
+      <a href="index.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Criadero & Sementales</a>
+      <a href="nuestro-legado.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Nuestro Legado</a>
+      <a href="#cursos" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Cursos & Masterclasses</a>
+      <a href="#profesorado" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Maestros</a>
+      <a href="#calculadora" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Cotizador de Matrícula</a>
+      
+      <div class="border-t border-slate-700/60 pt-3 space-y-2">
+        <span class="text-[10px] uppercase tracking-wider text-slate-400 block font-semibold">Nuestros Servicios:</span>
+        <a href="turismo.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">🐴 Turismo & Cabalgatas</a>
+        <a href="academia.html" class="block text-sm uppercase tracking-widest text-[#ddc295] font-bold pl-2">🎓 Academia Ecuestre</a>
+      </div>
+
+      <a href="contacto.html?service=cursos" class="block text-center bg-[#c8a675] text-[#1e222a] font-semibold text-xs uppercase tracking-widest py-3 rounded-sm">Inscripción / Contacto</a>
+    </div>
+  </header>
+
+  <main class="flex-1">
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center justify-center pt-28 pb-20 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="assets/images/dressage_champion.jpg" alt="Academia Ecuestre Internacional" class="w-full h-full object-cover object-center transform scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#1e222a]/85 via-[#1e222a]/55 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1e222a] via-transparent to-transparent opacity-70"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-8 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-[#1e222a]/90 backdrop-blur-md border border-[#ba9666]/40">
+            <span class="material-symbols-outlined text-[#cdad7d] text-sm">school</span>
+            <span class="text-xs uppercase tracking-[0.2em] font-semibold text-[#cdad7d]">Centro Homologado FEI & ANCCE</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-6xl font-bold leading-tight text-white drop-shadow-md">
+            Academia Ecuestre & <br />
+            <span class="text-[#cdad7d] italic">Alta Escuela Internacional</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed font-light drop-shadow">
+            Programas residenciales intensivos de perfeccionamiento en Doma Clásica Gran Premio, Alta Escuela Tradicional y Biotecnología Reproductiva con sementales de élite e instructores olímpicos.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#cursos" class="bg-[#ba9666] hover:bg-[#cdad7d] text-[#1e222a] font-semibold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all shadow-lg">
+              Explorar Cursos
+            </a>
+            <a href="#calculadora" class="border border-[#ba9666]/40 text-slate-200 hover:text-[#cdad7d] hover:border-[#ba9666] bg-[#2b323f]/60 backdrop-blur-md font-semibold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all">
+              Calcular Matrícula
+            </a>
+          </div>
+        </div>
+
+        <!-- Academic Features Cards -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="glass-panel p-6 rounded-sm border-l-4 border-l-[#ba9666] space-y-2">
+            <div class="flex items-center gap-2 text-[#cdad7d]">
+              <span class="material-symbols-outlined">workspace_premium</span>
+              <span class="text-xs uppercase tracking-widest font-bold">Maestros Olímpicos</span>
+            </div>
+            <p class="text-xs text-slate-300">Clases impartidas por jinetes con experiencia en campeonatos del mundo y Juegos Olímpicos.</p>
+          </div>
+
+          <div class="glass-panel p-6 rounded-sm border-l-4 border-l-[#ba9666] space-y-2">
+            <div class="flex items-center gap-2 text-[#cdad7d]">
+              <span class="material-symbols-outlined">analytics</span>
+              <span class="text-xs uppercase tracking-widest font-bold">Tecnología Biomecánica</span>
+            </div>
+            <p class="text-xs text-slate-300">Análisis digital de asiento, sensores de presión y cámaras de alta velocidad en cada sesión.</p>
+          </div>
+
+          <div class="glass-panel p-6 rounded-sm border-l-4 border-l-[#ba9666] space-y-2">
+            <div class="flex items-center gap-2 text-[#cdad7d]">
+              <span class="material-symbols-outlined">hotel</span>
+              <span class="text-xs uppercase tracking-widest font-bold">Residencia VIP en la Finca</span>
+            </div>
+            <p class="text-xs text-slate-300">Posibilidad de alojamiento en suites de la finca con pupilaje para el caballo propio.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Courses Grid Section -->
+    <section id="cursos" class="py-24 bg-[#181b22] border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-widest text-[#ba9666] font-semibold block mb-2">Programas Académicos</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Cursos & Masterclasses</h2>
+          <p class="text-sm text-slate-300 mt-3">Diseñados para jinetes profesionales, criadores y apasionados que buscan el más alto nivel de excelencia.</p>
+        </div>
+
+        <div id="academy-courses-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Instructors / Faculty Section -->
+    <section id="profesorado" class="py-24 bg-[#1e222a] border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-widest text-[#ba9666] font-semibold block mb-2">Claustro Docente</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Nuestros Maestros</h2>
+          <p class="text-sm text-slate-300 mt-3">Profesionales reconocidos a nivel internacional por su pedagogía, técnica y respeto al caballo.</p>
+        </div>
+
+        <div id="instructors-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Course Estimator / Calculator -->
+    <section id="calculadora" class="py-24 bg-[#181b22] border-t border-slate-800">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <span class="text-xs uppercase tracking-widest text-[#ba9666] font-semibold block mb-2">Planificador de Formación</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Cotizador de Matrícula</h2>
+          <p class="text-xs text-slate-300 mt-2">Seleccione su programa académico y servicios complementarios de alojamiento o pupilaje.</p>
+        </div>
+
+        <div class="glass-panel p-8 sm:p-10 rounded-sm border border-[#ba9666]/30 shadow-2xl">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+            <div>
+              <label for="calc-course" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Programa Académico</label>
+              <select id="calc-course" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#ba9666] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none">
+                <!-- Injected via JS -->
+              </select>
+            </div>
+            <div>
+              <label for="calc-start-date" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Fecha Estimada de Inicio</label>
+              <input type="date" id="calc-start-date" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#ba9666] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none" />
+            </div>
+          </div>
+
+          <!-- Addons Checkboxes -->
+          <div class="space-y-4 mb-8 p-4 bg-[#181b22] border border-slate-700 rounded-sm">
+            <span class="text-xs uppercase tracking-wider text-slate-400 font-semibold block mb-2">Servicios Opcionales Residenciales</span>
+            
+            <label class="flex items-center justify-between gap-3 text-xs text-slate-200 cursor-pointer hover:text-white">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" id="addon-accommodation" class="w-4 h-4 rounded-sm text-[#ba9666] focus:ring-0 bg-[#2b323f] border-slate-600" />
+                <span>Alojamiento en Suite de la Finca con Pensión Completa (+€1,200/semana)</span>
+              </div>
+              <span class="font-bold text-[#cdad7d]">+€1,200</span>
+            </label>
+
+            <label class="flex items-center justify-between gap-3 text-xs text-slate-200 cursor-pointer hover:text-white">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" id="addon-horse-livery" class="w-4 h-4 rounded-sm text-[#ba9666] focus:ring-0 bg-[#2b323f] border-slate-600" />
+                <span>Pupilaje en Box Real 4x4m para Caballo Propio (+€600/semana)</span>
+              </div>
+              <span class="font-bold text-[#cdad7d]">+€600</span>
+            </label>
+          </div>
+
+          <!-- Total Calculation Banner -->
+          <div class="p-6 bg-[#181b22] border border-[#ba9666]/30 rounded-sm flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
+            <div>
+              <span class="text-[11px] uppercase tracking-wider text-slate-400 block">Inversión Académica Estimada</span>
+              <div class="flex items-baseline gap-2">
+                <span id="calc-course-total" class="font-serif text-3xl sm:text-4xl font-bold text-[#cdad7d]">€6,500</span>
+                <span class="text-xs text-slate-300">(Certificado oficial, material didáctico y seguro incluidos)</span>
+              </div>
+            </div>
+            <a id="btn-book-course" href="contacto.html?service=cursos" class="w-full sm:w-auto text-center bg-[#ba9666] hover:bg-[#cdad7d] text-[#1e222a] font-semibold text-xs uppercase tracking-widest px-8 py-3.5 rounded-sm transition-all shadow-md">
+              Solicitar Admisión
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities -->
+    <section class="py-24 bg-[#1e222a] border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-widest text-[#ba9666] font-semibold block mb-2">Instalaciones Homologadas</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Campus Ecuestre</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="glass-panel p-6 rounded-sm text-center space-y-3 border-t-2 border-t-[#ba9666]">
+            <span class="material-symbols-outlined text-[#cdad7d] text-4xl">stadium</span>
+            <h4 class="font-serif text-base text-white font-semibold">2 Pistas Olímpicas Cubiertas</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">Suelo geotextil Otto Sport con climatización para entrenar todo el año.</p>
+          </div>
+          <div class="glass-panel p-6 rounded-sm text-center space-y-3 border-t-2 border-t-[#ba9666]">
+            <span class="material-symbols-outlined text-[#cdad7d] text-4xl">biotech</span>
+            <h4 class="font-serif text-base text-white font-semibold">Aula de Biomecánica</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">Pantallas interactivas y software de trazado articular computarizado.</p>
+          </div>
+          <div class="glass-panel p-6 rounded-sm text-center space-y-3 border-t-2 border-t-[#ba9666]">
+            <span class="material-symbols-outlined text-[#cdad7d] text-4xl">domain</span>
+            <h4 class="font-serif text-base text-white font-semibold">Picadero Clásico Cartujano</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">Espacio circular histórico con pilares para doma en riendas largas.</p>
+          </div>
+          <div class="glass-panel p-6 rounded-sm text-center space-y-3 border-t-2 border-t-[#ba9666]">
+            <span class="material-symbols-outlined text-[#cdad7d] text-4xl">hotel</span>
+            <h4 class="font-serif text-base text-white font-semibold">Casa de Huéspedes</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">Alojamiento privado con piscina, chef y salones de descanso.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#181b22] border-t border-slate-800 py-12 mt-auto">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-[#cdad7d] text-2xl">school</span>
+        <span class="font-serif text-lg font-bold text-white">EQUINE HERITAGE • ACADEMIA</span>
+      </div>
+      <p class="text-xs text-slate-400 text-center md:text-left">
+        &copy; 2026 Equine Heritage Academia Ecuestre Internacional. Todos los derechos reservados.
+      </p>
+      <div class="flex items-center gap-6 text-xs text-slate-400">
+        <a href="index.html" class="hover:text-[#cdad7d] transition-colors">Criadero</a>
+        <a href="nuestro-legado.html" class="hover:text-[#cdad7d] transition-colors">Legado</a>
+        <a href="turismo.html" class="hover:text-[#cdad7d] transition-colors">Turismo</a>
+        <a href="academia.html" class="text-[#cdad7d]">Academia</a>
+        <a href="contacto.html" class="hover:text-[#cdad7d] transition-colors">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Academy Page JS Script -->
+  <script type="module" src="js/academy-page.js"></script>
+</body>
+</html>
