@@ -1,0 +1,13 @@
+{
+  "name": "criadero-caballos-diseno",
+  "version": "1.0.0",
+  "description": "LA CHUCUA J.C - Criadero de Caballos & Genética de Calidad",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve . -l 3000",
+    "start": "npx serve . -l 3000"
+  },
+  "keywords": ["criadero", "caballos", "turismo", "chalaneria", "estimulacion", "genetica"],
+  "author": "LA CHUCUA J.C",
+  "license": "ISC"
+}

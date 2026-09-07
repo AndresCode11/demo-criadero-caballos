@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupContactNavigation();
   parseUrlParameters();
   setupContactForm();
+  setupWhatsAppSync();
   initAnimations();
 });
 
@@ -16,6 +17,12 @@ function setupContactNavigation() {
     menuBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
   }
 }
 
@@ -25,31 +32,61 @@ function parseUrlParameters() {
   const horse = params.get('horse');
   const course = params.get('course');
   const exp = params.get('exp');
-  const adults = params.get('adults');
-  const children = params.get('children');
   const addons = params.get('addons');
+  const pax = params.get('pax');
+  const plan = params.get('plan');
+  const mod = params.get('mod');
 
   const serviceSelect = document.getElementById('contact-service');
-  const horseSelect = document.getElementById('contact-horse');
   const notesTextarea = document.getElementById('contact-notes');
 
   if (service && serviceSelect) {
     serviceSelect.value = service;
   }
 
-  if (horse && horseSelect) {
-    horseSelect.value = horse;
-  }
-
-  if (course && notesTextarea) {
-    let note = `Interés en matrícula del curso: ${decodeURIComponent(course)}`;
-    if (addons) note += `\nServicios adicionales solicitados: ${decodeURIComponent(addons)}`;
+  // Cabalgata pre-fill
+  if ((exp || service === 'turismo') && notesTextarea && (pax || exp)) {
+    let note = `Interés en: ${decodeURIComponent(exp || 'Cabalgata Ecológica en Tabio (3 horas)')}.\nParticipantes: ${pax || 2} personas.`;
+    if (horse) note += `\nPreferencia de caballo: ${horse === 'especial' ? 'Caballo Especial de Alta Escuela/Genética' : 'Caballo Básico Manso'}`;
+    if (addons) note += `\nServicios gastronómicos/adicionales: ${decodeURIComponent(addons)}`;
     notesTextarea.value = note;
   }
 
-  if (exp && notesTextarea) {
-    notesTextarea.value = `Reserva de Cabalgata / Experiencia: ${decodeURIComponent(exp)}\nParticipantes: ${adults || 2} Adultos, ${children || 0} Niños.`;
+  // Estimulación temprana pre-fill
+  if (service === 'estimulacion' && notesTextarea) {
+    let note = `Interés en: Estimulación Temprana con Caballos (7m - 4 años).`;
+    if (plan) note += `\nFrecuencia: ${plan === '2semana' ? '2 sesiones/semana (8 clases/mes)' : '1 sesión/semana (4 clases/mes - $325.000)'}`;
+    if (mod) note += `\nModalidad: ${mod === 'grupal' ? 'Grupo Reducido (2-3 niños)' : 'Atención Individual (1 a 1)'}`;
+    notesTextarea.value = note;
   }
+
+  // Chalanería pre-fill
+  if (service === 'chalaneria' && notesTextarea && !notesTextarea.value) {
+    notesTextarea.value = 'Interés en: Escuela de Chalanería & Formación Ecuestre. Solicito información sobre horarios, niveles y proceso de inscripción.';
+  }
+
+  // Generic course or other
+  if (course && notesTextarea && !notesTextarea.value) {
+    notesTextarea.value = `Interés en formación: ${decodeURIComponent(course)}`;
+  }
+}
+
+function setupWhatsAppSync() {
+  const serviceSelect = document.getElementById('contact-service');
+  const nameInput = document.getElementById('contact-name');
+  const waLink = document.getElementById('contact-whatsapp-link');
+
+  if (!waLink) return;
+
+  function updateLink() {
+    const name = nameInput?.value.trim() || '';
+    const serviceLabel = serviceSelect?.options[serviceSelect.selectedIndex]?.text || 'Servicios ecuestres';
+    const text = `Hola Club Ecuestre La Chucua J.C, ${name ? `mi nombre es ${name} y ` : ''}deseo solicitar información sobre: ${serviceLabel}.`;
+    waLink.href = `https://wa.me/573108529410?text=${encodeURIComponent(text)}`;
+  }
+
+  serviceSelect?.addEventListener('change', updateLink);
+  nameInput?.addEventListener('input', updateLink);
 }
 
 function setupContactForm() {
@@ -69,36 +106,33 @@ function setupContactForm() {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const name = document.getElementById('contact-name').value.trim();
-      const email = document.getElementById('contact-email').value.trim();
-      const phone = document.getElementById('contact-phone').value.trim();
-      const country = document.getElementById('contact-country').value.trim();
-      const service = document.getElementById('contact-service').value;
-      const horse = document.getElementById('contact-horse').value;
-      const date = document.getElementById('contact-date').value;
-      const notes = document.getElementById('contact-notes').value.trim();
+      const name = document.getElementById('contact-name')?.value.trim();
+      const email = document.getElementById('contact-email')?.value.trim();
+      const phone = document.getElementById('contact-phone')?.value.trim();
+      const serviceSelect = document.getElementById('contact-service');
+      const serviceText = serviceSelect?.options[serviceSelect.selectedIndex]?.text || '';
+      const notes = document.getElementById('contact-notes')?.value.trim();
 
       if (!name || !email || !phone) {
-        showToast('Por favor complete los campos obligatorios (*)', 'error');
+        showToast('Por favor complete los campos requeridos: Nombre, Teléfono y Correo', 'error');
         return;
       }
 
       if (detailsContainer) {
         detailsContainer.innerHTML = `
-          <p><strong class="text-white">Titular:</strong> ${name}</p>
-          <p><strong class="text-white">Correo:</strong> ${email}</p>
-          <p><strong class="text-white">Teléfono:</strong> ${phone}</p>
-          ${country ? `<p><strong class="text-white">País:</strong> ${country}</p>` : ''}
-          <p><strong class="text-white">Área:</strong> ${service.toUpperCase()}</p>
-          ${horse !== 'general' ? `<p><strong class="text-white">Semental de Interés:</strong> ${horse.toUpperCase()}</p>` : ''}
-          ${date ? `<p><strong class="text-white">Fecha Solicitada:</strong> ${date}</p>` : ''}
-          ${notes ? `<p><strong class="text-white">Notas:</strong> ${notes}</p>` : ''}
+          <div class="space-y-2">
+            <p><strong class="text-[#ddc295]">Nombre / Empresa:</strong> <span class="text-white font-medium">${name}</span></p>
+            <p><strong class="text-[#ddc295]">Teléfono / WhatsApp:</strong> <span class="text-white font-medium">${phone}</span></p>
+            <p><strong class="text-[#ddc295]">Correo:</strong> <span class="text-white font-medium">${email}</span></p>
+            <p><strong class="text-[#ddc295]">Servicio de Interés:</strong> <span class="text-white font-medium">${serviceText}</span></p>
+            ${notes ? `<p class="pt-2 border-t border-slate-700/80"><strong class="text-[#ddc295] block mb-1">Mensaje:</strong> <span class="text-slate-200 whitespace-pre-line">${notes}</span></p>` : ''}
+          </div>
         `;
       }
 
       if (modal) modal.classList.remove('hidden');
       form.reset();
-      showToast('Solicitud enviada con éxito a la conserjería');
+      showToast('¡Mensaje enviado con éxito! Nos comunicaremos contigo pronto.');
     });
   }
 }

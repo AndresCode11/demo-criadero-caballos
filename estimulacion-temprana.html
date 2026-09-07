@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estimulación Temprana con Caballos (7m - 4 años) | Club Ecuestre LA CHUCUA J.C</title>
+  <meta name="description" content="Primeros aprendizajes, grandes experiencias. Estimulación temprana sensorial, motora y afectiva con caballos y naturaleza para bebés y niños de 7 meses a 4 años en La Chucua J.C. $325.000/mes." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#c8a675',
+              hover: '#ddc295',
+              container: '#af8c5c',
+              light: '#f1e6d6',
+            },
+            surface: {
+              base: '#1e222a',
+              lowest: '#181b22',
+              low: '#222832',
+              card: '#2b323f',
+              high: '#343d4d',
+              highest: '#3f495a',
+            },
+            sand: {
+              100: '#f8fafc',
+              300: '#cbd5e1',
+              500: '#64748b',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Inter"', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-[#1e222a] text-[#f1f5f9] font-sans antialiased selection:bg-[#c8a675] selection:text-[#1e222a] min-h-[100dvh] flex flex-col">
+
+  <!-- Header / Navigation Bar -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 glass-nav">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative">
+      <!-- Logo / Crest -->
+      <a href="index.html" class="flex items-center gap-3 group z-10">
+        <div class="w-10 h-10 rounded-sm bg-gradient-to-br from-[#c8a675] to-[#1e222a] p-0.5 border border-[#c8a675]/60 flex items-center justify-center shadow-lg">
+          <div class="w-full h-full bg-[#1e222a] flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#ddc295] text-xl group-hover:scale-110 transition-transform">military_tech</span>
+          </div>
+        </div>
+        <div>
+          <span class="font-serif text-lg tracking-widest uppercase font-bold text-white block group-hover:text-[#ddc295] transition-colors">LA CHUCUA J.C</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-[#c8a675] block">Genética de Calidad</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links (Centered) -->
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-xs font-semibold uppercase tracking-widest text-slate-300 absolute left-1/2 -translate-x-1/2 top-0 h-full">
+        <a href="index.html" class="hover:text-[#ddc295] transition-colors py-1">Inicio</a>
+        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors py-1">Nosotros</a>
+
+        <!-- Dropdown Servicios (Estimulación Temprana Activo) -->
+        <div class="relative group py-4">
+          <button class="flex items-center gap-1 text-[#ddc295] hover:text-white transition-colors cursor-pointer uppercase tracking-widest text-xs font-bold py-1 border-b-2 border-[#c8a675] pb-0.5">
+            <span>Servicios</span>
+            <span class="material-symbols-outlined text-base group-hover:rotate-180 transition-transform duration-300 text-[#c8a675]">expand_more</span>
+          </button>
+          <div class="dropdown-menu-fade absolute top-full left-0 bg-[#1e222a]/95 border border-[#c8a675]/30 rounded-xl shadow-2xl p-2.5 min-w-[285px] backdrop-blur-2xl z-50 space-y-1">
+            <!-- 1. Chalanería -->
+            <a href="chalaneria.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-[#2b323f] transition-all group/item">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] group-hover/item:scale-105 transition-transform shrink-0">
+                <span class="material-symbols-outlined text-base">sports_score</span>
+              </div>
+              <div>
+                <span class="font-bold text-white block">Chalanería</span>
+                <span class="text-[10px] text-slate-400">Formación, técnica & competencia</span>
+              </div>
+            </a>
+            <!-- 2. Estimulación Temprana (ACTIVE) -->
+            <a href="estimulacion-temprana.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs bg-[#2b323f] border border-[#c8a675]/50 text-white transition-all group/item shadow-md">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675] flex items-center justify-center text-[#1e222a] group-hover/item:scale-105 transition-transform shrink-0 font-bold">
+                <span class="material-symbols-outlined text-base">child_care</span>
+              </div>
+              <div>
+                <span class="font-bold text-[#ddc295] block">Estimulación Temprana</span>
+                <span class="text-[10px] text-slate-300">De 7 meses a 4 años & vínculo</span>
+              </div>
+            </a>
+            <!-- 3. Cabalgata Ecológica -->
+            <a href="turismo.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-[#2b323f] transition-all group/item">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] group-hover/item:scale-105 transition-transform shrink-0">
+                <span class="material-symbols-outlined text-base">nature_people</span>
+              </div>
+              <div>
+                <span class="font-bold text-white block">Cabalgata Ecológica</span>
+                <span class="text-[10px] text-slate-400">3 horas en Tabio ($150.000)</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a href="contacto.html" class="hover:text-[#ddc295] transition-colors py-1">Contacto</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-slate-200 hover:text-[#ddc295] p-2 z-10" aria-label="Abrir menú">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-[#c8a675]/20 px-6 py-6 space-y-4">
+      <a href="index.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Inicio</a>
+      <a href="nuestro-legado.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Nosotros</a>
+
+      <div class="border-t border-slate-700/60 pt-3 space-y-2">
+        <span class="text-[10px] uppercase tracking-wider text-[#c8a675] block font-bold">Servicios:</span>
+        <a href="chalaneria.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">sports_score</span>
+          <span>Chalanería & Formación</span>
+        </a>
+        <a href="estimulacion-temprana.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-[#ddc295] font-bold pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">child_care</span>
+          <span>Estimulación Temprana</span>
+        </a>
+        <a href="turismo.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">nature_people</span>
+          <span>Cabalgata Ecológica (Tabio)</span>
+        </a>
+      </div>
+
+      <a href="contacto.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Contacto</a>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-1 pt-24">
+
+    <!-- Hero Section (Asymmetric Split with Double-Bezel Hardware Frame) -->
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-16 lg:py-24 border-b border-[#c8a675]/20">
+      <!-- Ambient Glows -->
+      <div class="absolute -top-32 -left-32 w-96 h-96 bg-[#c8a675]/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/2 -right-32 w-96 h-96 bg-[#af8c5c]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-6 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Left Column: Copy & Value Proposition -->
+          <div class="lg:col-span-7 space-y-7 text-left">
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#2b323f]/90 border border-[#c8a675]/40 text-[#ddc295] text-xs font-semibold tracking-widest uppercase shadow-md">
+              <span class="material-symbols-outlined text-sm text-[#c8a675]">spa</span>
+              <span>🌱 De 7 meses a 4 años · Primera Infancia</span>
+            </div>
+
+            <div class="space-y-3">
+              <p class="text-sm md:text-base uppercase tracking-[0.25em] text-[#c8a675] font-semibold">
+                Primeros aprendizajes, grandes experiencias
+              </p>
+              <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.12]">
+                Estimulación Temprana <br />
+                <span class="text-[#ddc295] italic font-normal">con Caballos</span>
+              </h1>
+            </div>
+
+            <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light max-w-2xl">
+              En el Club Ecuestre La Chucua J.C. creemos que los primeros años de vida son una etapa fundamental para descubrir el mundo, desarrollar habilidades y construir vínculos.
+            </p>
+
+            <div class="p-4 sm:p-5 rounded-lg bg-[#222832]/80 border-l-4 border-[#c8a675] text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <strong class="text-white font-semibold">El objetivo no es enseñar a montar,</strong> sino brindar experiencias sensoriales y lúdicas que favorezcan el desarrollo motor, sensorial, cognitivo, emocional y social a través del juego y la interacción respetuosa con el caballo, la mini granja y el entorno natural.
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#plan-inversion" class="inline-flex items-center gap-3 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest px-7 py-4 rounded-sm transition-all shadow-lg hover:shadow-xl hover:scale-[1.02]">
+                <span>Plan Mensual: $325.000</span>
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+
+              <a href="#actividades" class="inline-flex items-center gap-2 border border-[#c8a675]/40 hover:border-[#c8a675] text-slate-200 hover:text-white text-xs uppercase tracking-widest px-6 py-4 rounded-sm transition-all bg-[#2b323f]/50 hover:bg-[#2b323f]">
+                <span class="material-symbols-outlined text-sm text-[#c8a675]">explore</span>
+                <span>Explorar Actividades</span>
+              </a>
+            </div>
+
+            <!-- Proof Indicators / Value Pillars -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-slate-800">
+              <div class="space-y-0.5">
+                <span class="font-serif text-2xl font-bold text-[#ddc295] block">7m - 4a</span>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400">Rango de Edad</span>
+              </div>
+              <div class="space-y-0.5">
+                <span class="font-serif text-2xl font-bold text-[#ddc295] block">1 Hora</span>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400">Sesión Adaptada</span>
+              </div>
+              <div class="space-y-0.5">
+                <span class="font-serif text-2xl font-bold text-[#ddc295] block">4 Clases</span>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400">Al Mes (1x semana)</span>
+              </div>
+              <div class="space-y-0.5">
+                <span class="font-serif text-2xl font-bold text-[#ddc295] block">100%</span>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400">Padres Presentes</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Featured Photography (Double-Bezel Hardware Frame) -->
+          <div class="lg:col-span-5 relative">
+            <div class="p-2 sm:p-3 rounded-2xl bg-gradient-to-br from-[#c8a675]/40 via-[#2b323f] to-[#181b22] shadow-2xl border border-[#c8a675]/30">
+              <div class="relative overflow-hidden rounded-xl bg-[#181b22] aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3]">
+                <img 
+                  src="assets/images/estimulacion_hero.jpg" 
+                  alt="Madre y bebé en estimulación temprana con caballo en La Chucua J.C" 
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                  loading="eager"
+                />
+                <!-- Subtle Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-[#181b22]/90 via-transparent to-transparent"></div>
+
+                <!-- Floating Badge in Image -->
+                <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-lg bg-[#1e222a]/90 backdrop-blur-md border border-[#c8a675]/30 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-[#c8a675]/20 border border-[#c8a675] flex items-center justify-center text-[#ddc295]">
+                      <span class="material-symbols-outlined text-lg">sentiment_satisfied</span>
+                    </div>
+                    <div>
+                      <span class="text-xs font-bold text-white block">Respeto al Ritmo Infantil</span>
+                      <span class="text-[10px] text-slate-400">Atención personalizada y libre de presiones</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-[#ddc295] bg-[#c8a675]/20 px-2 py-1 rounded">La Chucua J.C</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial Philosophy Quote Section -->
+    <section class="py-16 sm:py-20 bg-[#181b22] border-b border-[#c8a675]/20 relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
+        <span class="material-symbols-outlined text-[#c8a675] text-4xl block">format_quote</span>
+        <blockquote class="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-normal italic leading-snug">
+          “Aprender a tocar un caballo con suavidad, esperar su turno, observar sus reacciones, cuidarlo y confiar en él también se convierte en una oportunidad para aprender sobre empatía, paciencia, responsabilidad y comunicación.”
+        </blockquote>
+        <div class="pt-2">
+          <p class="text-xs uppercase tracking-[0.25em] text-[#c8a675] font-semibold">
+            Club Ecuestre La Chucua J.C. · Educación que Deja Huella
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nuestro Enfoque: 3 Pilares Respetuosos -->
+    <section class="py-20 bg-[#1e222a] border-b border-slate-800">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#c8a675] font-bold block">Fundamentos Pedagógicos</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            Nuestro Enfoque de <span class="text-[#ddc295] italic">Estimulación</span>
+          </h2>
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+            Cada niño tiene su propio ritmo. Por eso no buscamos comparar ni exigir resultados iguales. Buscamos crear un ambiente donde pueda explorar, descubrir, jugar, relacionarse y aprender.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Card 1 -->
+          <div class="glass-panel p-8 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/50 transition-all group">
+            <div class="w-12 h-12 rounded-lg bg-[#c8a675]/15 border border-[#c8a675]/40 flex items-center justify-center text-[#ddc295] mb-6 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-2xl">favorite</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white mb-3">Sin Comparaciones ni Presiones</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+              Respetamos las etapas individuales de maduración física y emocional. Jamás forzamos una interacción; invitamos a la curiosidad mediante el juego libre guiado.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="glass-panel p-8 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/50 transition-all group">
+            <div class="w-12 h-12 rounded-lg bg-[#c8a675]/15 border border-[#c8a675]/40 flex items-center justify-center text-[#ddc295] mb-6 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-2xl">pets</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white mb-3">El Caballo Como Compañero</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+              Nuestros caballos y animales de la mini granja son tratados con infinito bienestar y calma, transmitiendo al niño serenidad, calidez y un estímulo sensorial inigualable.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="glass-panel p-8 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/50 transition-all group">
+            <div class="w-12 h-12 rounded-lg bg-[#c8a675]/15 border border-[#c8a675]/40 flex items-center justify-center text-[#ddc295] mb-6 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-2xl">family_restroom</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white mb-3">Vínculo con la Familia</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+              Los padres o cuidadores acompañan activamente las sesiones cuando sea necesario, fortaleciendo el apego seguro y compartiendo momentos memorables e irrepetibles.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 10 Actividades y Experiencias (Bento Grid Visual & Editorial) -->
+    <section id="actividades" class="py-20 sm:py-28 bg-[#181b22] border-b border-[#c8a675]/20">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div class="max-w-2xl space-y-3">
+            <span class="text-xs uppercase tracking-[0.25em] text-[#c8a675] font-bold block">Experiencias Lúdicas Guiadas</span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+              ¿Qué Actividades Realizamos?
+            </h2>
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+              Dependiendo de la edad y del proceso de cada niño, articulamos 10 experiencias diseñadas para estimular armónicamente todos sus sentidos.
+            </p>
+          </div>
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-sm bg-[#2b323f] border border-[#c8a675]/40 text-xs text-[#ddc295] font-semibold">
+            <span class="material-symbols-outlined text-base">check_circle</span>
+            <span>10 Dimensiones de Desarrollo</span>
+          </div>
+        </div>
+
+        <!-- Bento Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+          
+          <!-- Column 1: Activities 1 to 5 (Span 4) -->
+          <div class="lg:col-span-4 space-y-4 flex flex-col justify-between">
+            
+            <div class="glass-panel p-5 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/60 transition-all">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-md bg-[#c8a675]/20 text-[#ddc295] flex items-center justify-center shrink-0 mt-0.5">
+                  <span class="material-symbols-outlined text-base">front_hand</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-sm mb-1">1. Acercamiento y Contacto Respetuoso</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed">Caricias suaves en el pelaje, sentir el calor corporal y el aliento tranquilo del caballo en calma.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-panel p-5 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/60 transition-all">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-md bg-[#c8a675]/20 text-[#ddc295] flex items-center justify-center shrink-0 mt-0.5">
+                  <span class="material-symbols-outlined text-base">grain</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-sm mb-1">2. Exploración Sensorial y Texturas</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed">Descubrimiento de texturas naturales: crin suave, heno fresco, tierra húmeda, sonido de relinchos y viento de sabana.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-panel p-5 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/60 transition-all">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-md bg-[#c8a675]/20 text-[#ddc295] flex items-center justify-center shrink-0 mt-0.5">
+                  <span class="material-symbols-outlined text-base">balance</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-sm mb-1">3. Coordinación y Equilibrio</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed">Ejercicios posturales sobre superficies variadas y estímulo del sistema vestibular con apoyo seguro.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-panel p-5 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/60 transition-all">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-md bg-[#c8a675]/20 text-[#ddc295] flex items-center justify-center shrink-0 mt-0.5">
+                  <span class="material-symbols-outlined text-base">directions_run</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-sm mb-1">4. Ejercicios de Movimiento y Motricidad</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed">Circuitos lúdicos sobre césped, gateo, alcance de objetos y desplazamientos al ritmo natural del entorno.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-panel p-5 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/60 transition-all">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-md bg-[#c8a675]/20 text-[#ddc295] flex items-center justify-center shrink-0 mt-0.5">
+                  <span class="material-symbols-outlined text-base">psychology</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-sm mb-1">5. Reconocimiento e Instrucciones Sencillas</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed">Juegos de imitación, señalar partes del caballo y comprender indicaciones afectivas cortas.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Column 2: Center Featured Image (Span 4) -->
+          <div class="lg:col-span-4 flex flex-col">
+            <div class="p-2 sm:p-3 rounded-2xl bg-[#222832] border border-[#c8a675]/30 shadow-2xl flex-1 flex flex-col">
+              <div class="relative overflow-hidden rounded-xl bg-[#181b22] flex-1 min-h-[320px]">
+                <img 
+                  src="assets/images/estimulacion_actividad.jpg" 
+                  alt="Niño cepillando un pony noble en La Chucua J.C" 
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#181b22] via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 p-4 rounded-lg bg-[#1e222a]/95 border border-[#c8a675]/30 text-center">
+                  <span class="font-serif text-base font-bold text-white block">Cuidado & Cepillado Afectivo</span>
+                  <p class="text-[11px] text-slate-300 mt-1">El infante aprende la paciencia y el cariño a través de pequeñas caricias con cepillos de cerdas ultra suaves.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: Activities 6 to 10 (Span 4) -->
+          <div class="lg:col-span-4 space-y-4 flex flex-col justify-between">
+            
+            <div class="glass-panel p-5 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/60 transition-all">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-md bg-[#c8a675]/20 text-[#ddc295] flex items-center justify-center shrink-0 mt-0.5">
+                  <span class="material-symbols-outlined text-base">visibility</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-sm mb-1">6. Actividades de Observación y Atención</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed">Fomentar la calma visual, la contemplación del pastoreo y la focalización de la mirada sin sobreestímulos digitales.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-panel p-5 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/60 transition-all">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-md bg-[#c8a675]/20 text-[#ddc295] flex items-center justify-center shrink-0 mt-0.5">
+                  <span class="material-symbols-outlined text-base">brush</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-sm mb-1">7. Cepillado y Cuidado Acompañado</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed">Práctica de motricidad fina y agarre mientras peinan suavemente las crines junto a su facilitador y padres.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-panel p-5 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/60 transition-all">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-md bg-[#c8a675]/20 text-[#ddc295] flex items-center justify-center shrink-0 mt-0.5">
+                  <span class="material-symbols-outlined text-base">cruelty_free</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-sm mb-1">8. Interacción con la Mini Granja</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed">Encuentros cercanos con conejitos, cabritas enanas y aves nobles para diversificar el repertorio afectivo.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-panel p-5 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/60 transition-all">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-md bg-[#c8a675]/20 text-[#ddc295] flex items-center justify-center shrink-0 mt-0.5">
+                  <span class="material-symbols-outlined text-base">park</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-sm mb-1">9. Juegos al Aire Libre y Naturaleza</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed">Caminatas sobre praderas verdes, respiración profunda de eucalipto y conexión con la biodiversidad viva.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-panel p-5 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/60 transition-all">
+              <div class="flex items-start gap-4">
+                <div class="w-8 h-8 rounded-md bg-[#c8a675]/20 text-[#ddc295] flex items-center justify-center shrink-0 mt-0.5">
+                  <span class="material-symbols-outlined text-base">volunteer_activism</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-white text-sm mb-1">10. Vínculo, Confianza y Comunicación</h4>
+                  <p class="text-xs text-slate-400 leading-relaxed">Desarrollo de seguridad emocional: el niño comprueba que es un entorno amable donde se siente protegido.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Selector de Edades Interactivo (7m - 4 años) -->
+    <section class="py-20 bg-[#1e222a] border-b border-slate-800">
+      <div class="max-w-6xl mx-auto px-6">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#c8a675] font-bold block">Desarrollo Evolutivo</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">
+            Adaptación Progresiva por Edades
+          </h2>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Las actividades se adaptan progresivamente a la etapa de desarrollo y características únicas de cada niño:
+          </p>
+        </div>
+
+        <!-- Age Navigation Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10">
+          <button data-age="7-12m" class="age-tab-btn active px-5 py-3 rounded-lg text-xs uppercase tracking-wider font-bold transition-all bg-[#c8a675] text-[#1e222a] border border-[#c8a675] shadow-md">
+            👶 7 a 12 Meses
+          </button>
+          <button data-age="1-2y" class="age-tab-btn px-5 py-3 rounded-lg text-xs uppercase tracking-wider font-semibold transition-all bg-[#222832] text-slate-300 border border-slate-700 hover:border-[#c8a675]/50">
+            🧸 1 a 2 Años
+          </button>
+          <button data-age="2-3y" class="age-tab-btn px-5 py-3 rounded-lg text-xs uppercase tracking-wider font-semibold transition-all bg-[#222832] text-slate-300 border border-slate-700 hover:border-[#c8a675]/50">
+            🎨 2 a 3 Años
+          </button>
+          <button data-age="3-4y" class="age-tab-btn px-5 py-3 rounded-lg text-xs uppercase tracking-wider font-semibold transition-all bg-[#222832] text-slate-300 border border-slate-700 hover:border-[#c8a675]/50">
+            🌟 3 a 4 Años
+          </button>
+        </div>
+
+        <!-- Age Stage Cards -->
+        <div class="relative">
+          
+          <!-- Card 7 - 12m -->
+          <div data-age-card="7-12m" class="age-content-card glass-panel p-8 sm:p-10 rounded-2xl border border-[#c8a675]/30">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+              <div class="md:col-span-8 space-y-4">
+                <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#ddc295] font-semibold">
+                  <span class="material-symbols-outlined text-sm">spa</span>
+                  Etapa Sensorial & Apego Temprano
+                </div>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">Descubrimiento Suave & Conexión en Brazos</h3>
+                <p class="text-sm text-slate-300 leading-relaxed font-light">
+                  En esta primera etapa, el bebé asiste en brazos de mamá, papá o cuidador. Se realizan experiencias de estimulación visual y táctil: sentir la suavidad del pelaje, escuchar el resoplido tranquilo del caballo y observar animales pequeños en la mini granja. Sesiones dosificadas para no saturar sus sentidos.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-slate-300">
+                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-[#c8a675]">check</span> Estimulación visual y táctil suave</div>
+                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-[#c8a675]">check</span> Regulación del tono postural en brazos</div>
+                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-[#c8a675]">check</span> Música y sonidos naturales de sabana</div>
+                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-[#c8a675]">check</span> Tiempos cortos de 30 a 45 min si se requiere</div>
+                </div>
+              </div>
+              <div class="md:col-span-4 bg-[#181b22] p-6 rounded-xl border border-slate-800 text-center space-y-3">
+                <span class="text-3xl">🌿</span>
+                <h4 class="font-serif text-base font-bold text-white">Objetivo Principal</h4>
+                <p class="text-xs text-slate-400">Generar familiaridad y placer sensorial sin miedo, reforzando la seguridad afectiva entre los padres y el bebé.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 1 - 2y -->
+          <div data-age-card="1-2y" class="age-content-card hidden glass-panel p-8 sm:p-10 rounded-2xl border border-[#c8a675]/30">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+              <div class="md:col-span-8 space-y-4">
+                <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#ddc295] font-semibold">
+                  <span class="material-symbols-outlined text-sm">directions_walk</span>
+                  Etapa de Motricidad y Exploración de Suelo
+                </div>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">Primeros Pasos, Texturas & Coordinación</h3>
+                <p class="text-sm text-slate-300 leading-relaxed font-light">
+                  Cuando el niño comienza a explorar caminando, el entorno del criadero ofrece una riqueza inigualable: pasto, desniveles suaves, heno y caminos de tierra. Se inician juegos de alcanzar el cepillo suave, acariciar la frente del pony y alimentar conejos bajo supervisión.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-slate-300">
+                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-[#c8a675]">check</span> Equilibrio en diferentes superficies</div>
+                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-[#c8a675]">check</span> Coordinación ojo-mano y prensión de cepillo</div>
+                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-[#c8a675]">check</span> Curiosidad motriz al aire libre</div>
+                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-[#c8a675]">check</span> Acompañamiento cercano de padres</div>
+                </div>
+              </div>
+              <div class="md:col-span-4 bg-[#181b22] p-6 rounded-xl border border-slate-800 text-center space-y-3">
+                <span class="text-3xl">🌾</span>
+                <h4 class="font-serif text-base font-bold text-white">Objetivo Principal</h4>
+                <p class="text-xs text-slate-400">Fortalecer el equilibrio corporal, la motricidad gruesa y la confianza en su capacidad de desplazarse.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 - 3y -->
+          <div data-age-card="2-3y" class="age-content-card hidden glass-panel p-8 sm:p-10 rounded-2xl border border-[#c8a675]/30">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+              <div class="md:col-span-8 space-y-4">
+                <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#ddc295] font-semibold">
+                  <span class="material-symbols-outlined text-sm">chat_bubble</span>
+                  Etapa de Lenguaje, Imitación y Granja
+                </div>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">Juego Simbólico, Órdenes & Empatía</h3>
+                <p class="text-sm text-slate-300 leading-relaxed font-light">
+                  Los niños comprenden consignas sencillas, imitan los sonidos de los animales y aprenden el concepto de esperar turno y tratar con delicadeza a seres vivos. Se realizan circuitos con aros, conos y descansos sobre la montura en reposo con asistencia total.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-slate-300">
+                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-[#c8a675]">check</span> Estimulación del lenguaje y vocabulario</div>
+                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-[#c8a675]">check</span> Seguimiento de instrucciones lúdicas</div>
+                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-[#c8a675]">check</span> Cuidado de animales de la mini granja</div>
+                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-[#c8a675]">check</span> Interacción en grupo reducido</div>
+                </div>
+              </div>
+              <div class="md:col-span-4 bg-[#181b22] p-6 rounded-xl border border-slate-800 text-center space-y-3">
+                <span class="text-3xl">🐴</span>
+                <h4 class="font-serif text-base font-bold text-white">Objetivo Principal</h4>
+                <p class="text-xs text-slate-400">Desarrollar la empatía temprana, el respeto por las pautas sociales y la autoexpresión alegre.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 - 4y -->
+          <div data-age-card="3-4y" class="age-content-card hidden glass-panel p-8 sm:p-10 rounded-2xl border border-[#c8a675]/30">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+              <div class="md:col-span-8 space-y-4">
+                <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#ddc295] font-semibold">
+                  <span class="material-symbols-outlined text-sm">stars</span>
+                  Etapa de Autonomía y Pre-Iniciación
+                </div>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">Confianza, Concentración y Destreza</h3>
+                <p class="text-sm text-slate-300 leading-relaxed font-light">
+                  A los 3 y 4 años, el niño muestra mayor independencia motriz. Realiza paseos asistidos de la mano del guía sobre ponys dóciles, juegos de equilibrio dinámico, pequeños retos de observación y adquiere las bases de seguridad para dar el salto natural a la Chalanería básica.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs text-slate-300">
+                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-[#c8a675]">check</span> Autonomía y superación de pequeños retos</div>
+                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-[#c8a675]">check</span> Concentración y atención sostenida</div>
+                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-[#c8a675]">check</span> Postura erguida y confianza en sí mismo</div>
+                  <div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm text-[#c8a675]">check</span> Transición fluida a Chalanería Nivel 1</div>
+                </div>
+              </div>
+              <div class="md:col-span-4 bg-[#181b22] p-6 rounded-xl border border-slate-800 text-center space-y-3">
+                <span class="text-3xl">⭐</span>
+                <h4 class="font-serif text-base font-bold text-white">Objetivo Principal</h4>
+                <p class="text-xs text-slate-400">Consolidar la seguridad personal, la disciplina lúdica y el amor profundo hacia los caballos y la naturaleza.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Duración, Modalidad & Condiciones -->
+    <section class="py-16 bg-[#181b22] border-b border-[#c8a675]/20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="bg-[#222832] p-8 rounded-xl border border-slate-800 space-y-3">
+            <div class="flex items-center gap-3 text-[#ddc295]">
+              <span class="material-symbols-outlined text-2xl">schedule</span>
+              <h3 class="font-serif text-lg font-bold text-white">⏱️ Duración de Sesiones</h3>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+              <strong class="text-white">Sesiones de 1 HORA.</strong> En niños más pequeños podremos realizar sesiones más cortas, aumentando progresivamente el tiempo de acuerdo con su respuesta y bienestar integral.
+            </p>
+          </div>
+
+          <div class="bg-[#222832] p-8 rounded-xl border border-slate-800 space-y-3">
+            <div class="flex items-center gap-3 text-[#ddc295]">
+              <span class="material-symbols-outlined text-2xl">groups</span>
+              <h3 class="font-serif text-lg font-bold text-white">👨‍👩‍👧 Modalidad de Atención</h3>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+              Las actividades pueden realizarse de manera <strong class="text-white">individual o en grupos pequeños</strong>, buscando ofrecer una atención cercana, cálida y personalizada con padres presentes.
+            </p>
+          </div>
+
+          <div class="bg-[#222832] p-8 rounded-xl border border-[#c8a675]/30 space-y-3">
+            <div class="flex items-center gap-3 text-[#ddc295]">
+              <span class="material-symbols-outlined text-2xl">health_and_safety</span>
+              <h3 class="font-serif text-lg font-bold text-white">Aviso de Responsabilidad</h3>
+            </div>
+            <p class="text-xs text-slate-400 leading-relaxed italic">
+              “Las actividades de estimulación temprana no sustituyen procesos médicos, terapéuticos o educativos especializados cuando estos sean necesarios.”
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Plan Mensual e Inversión (Cotizador Interactivo) -->
+    <section id="plan-inversion" class="py-20 sm:py-28 bg-[#1e222a] border-b border-slate-800 relative">
+      <div class="max-w-5xl mx-auto px-6">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#c8a675] font-bold block">Inversión Transparente</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            Plan Mensual de <span class="text-[#ddc295] italic">Estimulación</span>
+          </h2>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Formación continua con acompañamiento profesional, instalaciones campestres de élite y animales nobles garantizados.
+          </p>
+        </div>
+
+        <!-- Featured Pricing Card -->
+        <div class="glass-panel rounded-2xl border-2 border-[#c8a675] p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-[#c8a675] text-[#1e222a] text-[10px] font-bold uppercase tracking-widest py-1.5 px-6 rounded-bl-xl shadow-md">
+            Plan Oficial La Chucua J.C
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <!-- Left Side: Price & Calculator Inputs -->
+            <div class="lg:col-span-6 space-y-6">
+              <div>
+                <span class="text-xs uppercase tracking-widest text-slate-400 block font-semibold mb-1">Inversión Mensual</span>
+                <div class="flex items-baseline gap-2">
+                  <span id="estimulacion-total-price" class="font-serif text-4xl sm:text-5xl font-bold text-[#ddc295] tracking-tight">$325.000</span>
+                  <span class="text-sm text-slate-400 uppercase tracking-wider font-semibold">COP / mes</span>
+                </div>
+                <p id="estimulacion-summary-text" class="text-xs text-[#c8a675] mt-1.5 font-medium">
+                  4 sesiones al mes (1 clase semanal de 1 hora) · Atención personalizada
+                </p>
+              </div>
+
+              <!-- Interactive Controls -->
+              <div class="space-y-4 pt-2 border-t border-slate-700/60">
+                <div>
+                  <label for="estimulacion-freq" class="block text-xs uppercase tracking-wider text-slate-300 font-semibold mb-2">Frecuencia Mensual</label>
+                  <select id="estimulacion-freq" class="w-full bg-[#222832] border border-slate-700 text-slate-200 rounded-lg p-3 text-xs focus:border-[#c8a675] focus:outline-none transition-colors">
+                    <option value="1semana" selected>1 vez por semana (4 sesiones / mes) - $325.000</option>
+                    <option value="2semana">2 veces por semana (8 sesiones / mes) - $590.000 (Ahorro 10%)</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="estimulacion-mod" class="block text-xs uppercase tracking-wider text-slate-300 font-semibold mb-2">Modalidad de Atención</label>
+                  <select id="estimulacion-mod" class="w-full bg-[#222832] border border-slate-700 text-slate-200 rounded-lg p-3 text-xs focus:border-[#c8a675] focus:outline-none transition-colors">
+                    <option value="individual" selected>Atención Individual (1 a 1)</option>
+                    <option value="grupal">Grupo Reducido (2 a 3 niños) - 15% Descuento</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <a id="estimulacion-cta-btn" href="contacto.html?service=estimulacion" class="w-full flex items-center justify-center gap-3 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest py-4 rounded-sm transition-all shadow-lg hover:shadow-xl hover:scale-[1.01]">
+                  <span>Reservar Valoración para mi Hijo(a)</span>
+                  <span class="material-symbols-outlined text-base">arrow_forward</span>
+                </a>
+                <p class="text-[10px] text-slate-400 text-center mt-2">
+                  Cupos limitados para preservar la atención personalizada.
+                </p>
+              </div>
+            </div>
+
+            <!-- Right Side: Included Features -->
+            <div class="lg:col-span-6 bg-[#181b22]/90 p-6 sm:p-8 rounded-xl border border-slate-800 space-y-4">
+              <h4 class="font-serif text-lg font-bold text-white mb-2">¿Qué Incluye el Plan Mensual?</h4>
+              
+              <ul class="space-y-3 text-xs text-slate-300">
+                <li class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-base text-[#c8a675] shrink-0">check_circle</span>
+                  <span><strong>4 sesiones de 1 hora al mes</strong> programadas en día y horario fijo acordado.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-base text-[#c8a675] shrink-0">check_circle</span>
+                  <span><strong>Caballo o pony noble asignado,</strong> entrenado específicamente para contacto infantil seguro.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-base text-[#c8a675] shrink-0">check_circle</span>
+                  <span><strong>Acceso libre a la mini granja</strong> (conejos, cabritas, aves nobles) durante la sesión.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-base text-[#c8a675] shrink-0">check_circle</span>
+                  <span><strong>Padres y cuidadores participan</strong> activamente sin costo adicional alguno.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-base text-[#c8a675] shrink-0">check_circle</span>
+                  <span><strong>Pistas y zonas cubiertas</strong> garantizadas en caso de lluvia o sol intenso.</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="material-symbols-outlined text-base text-[#c8a675] shrink-0">check_circle</span>
+                  <span><strong>Ambiente campestre exclusivo,</strong> seguro, con parqueadero privado y cafetería campestre.</span>
+                </li>
+              </ul>
+
+              <div class="pt-2 border-t border-slate-800">
+                <a href="https://wa.me/573000000000?text=Hola,%20deseo%20información%20sobre%20Estimulación%20Temprana%20con%20Caballos" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-xs text-[#ddc295] hover:text-white font-semibold">
+                  <span class="material-symbols-outlined text-sm text-[#c8a675]">chat</span>
+                  <span>Consultar con una asesora por WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Preguntas Frecuentes (FAQ Accordion) -->
+    <section class="py-20 bg-[#181b22] border-b border-[#c8a675]/20">
+      <div class="max-w-4xl mx-auto px-6">
+        
+        <div class="text-center mb-14 space-y-3">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#c8a675] font-bold block">Claridad & Confianza</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">
+            Preguntas Frecuentes
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-400">Todo lo que las familias desean saber antes de su primera visita.</p>
+        </div>
+
+        <div class="space-y-4">
+          
+          <!-- FAQ 1 -->
+          <div class="faq-item glass-panel rounded-xl border border-slate-800 overflow-hidden transition-colors">
+            <button class="faq-question w-full p-5 text-left flex items-center justify-between text-white hover:text-[#ddc295] transition-colors cursor-pointer">
+              <span class="text-sm sm:text-base font-semibold">¿Desde qué edad exacta puede iniciar mi bebé?</span>
+              <span class="faq-icon material-symbols-outlined text-xl text-[#c8a675] transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed font-light border-t border-slate-800/60 pt-3">
+              Recibimos bebés desde los <strong>7 meses de edad hasta los 4 años cumplidos</strong>. A partir de los 4 años, los niños pueden iniciar de forma natural el Nivel 1 de Chalanería y Escuela Ecuestre.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item glass-panel rounded-xl border border-slate-800 overflow-hidden transition-colors">
+            <button class="faq-question w-full p-5 text-left flex items-center justify-between text-white hover:text-[#ddc295] transition-colors cursor-pointer">
+              <span class="text-sm sm:text-base font-semibold">¿Es una terapia médica o un programa vivencial?</span>
+              <span class="faq-icon material-symbols-outlined text-xl text-[#c8a675] transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed font-light border-t border-slate-800/60 pt-3">
+              Es un programa lúdico, sensorial y pedagógico de estimulación temprana. Brinda enormes beneficios psicomotores y socioemocionales, pero <strong>no sustituye procesos médicos, terapéuticos o de rehabilitación clínica</strong> si el niño cuenta con una prescripción médica específica.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item glass-panel rounded-xl border border-slate-800 overflow-hidden transition-colors">
+            <button class="faq-question w-full p-5 text-left flex items-center justify-between text-white hover:text-[#ddc295] transition-colors cursor-pointer">
+              <span class="text-sm sm:text-base font-semibold">¿Los papás podemos estar dentro de la pista en todo momento?</span>
+              <span class="faq-icon material-symbols-outlined text-xl text-[#c8a675] transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed font-light border-t border-slate-800/60 pt-3">
+              ¡Por supuesto! El acompañamiento familiar es uno de los pilares de nuestro programa. En los más pequeños (7 a 18 meses), el apego y la presencia de los padres aporta la calma necesaria para una experiencia inolvidable.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item glass-panel rounded-xl border border-slate-800 overflow-hidden transition-colors">
+            <button class="faq-question w-full p-5 text-left flex items-center justify-between text-white hover:text-[#ddc295] transition-colors cursor-pointer">
+              <span class="text-sm sm:text-base font-semibold">¿Qué ocurre si el día de la sesión llueve?</span>
+              <span class="faq-icon material-symbols-outlined text-xl text-[#c8a675] transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed font-light border-t border-slate-800/60 pt-3">
+              En La Chucua J.C. disponemos de picaderos cubiertos, pesebreras amplias y salones confortables para que las lluvias no suspendan la experiencia ni afecten el bienestar del bebé.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item glass-panel rounded-xl border border-slate-800 overflow-hidden transition-colors">
+            <button class="faq-question w-full p-5 text-left flex items-center justify-between text-white hover:text-[#ddc295] transition-colors cursor-pointer">
+              <span class="text-sm sm:text-base font-semibold">¿Qué vestimenta debe llevar mi hijo(a)?</span>
+              <span class="faq-icon material-symbols-outlined text-xl text-[#c8a675] transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed font-light border-t border-slate-800/60 pt-3">
+              Ropa cómoda y abrigada (preferiblemente pantalón suave y chaqueta ligera), calzado cerrado antideslizante y una muda extra por si exploran pasto húmedo o interactúan con la mini granja.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Final VIP CTA Banner -->
+    <section class="py-20 bg-gradient-to-br from-[#1e222a] via-[#222832] to-[#181b22] relative overflow-hidden">
+      <div class="max-w-5xl mx-auto px-6 text-center space-y-8 relative z-10">
+        <div class="w-16 h-16 rounded-full bg-[#c8a675]/20 border border-[#c8a675] flex items-center justify-center text-[#ddc295] mx-auto shadow-xl">
+          <span class="material-symbols-outlined text-3xl">child_care</span>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">
+            Regálale a tu Hijo una Experiencia que <br />
+            <span class="text-[#ddc295] italic">Dejará Huella en su Corazón</span>
+          </h2>
+          <p class="text-sm sm:text-base text-slate-300 max-w-xl mx-auto font-light leading-relaxed">
+            Coordina una sesión de valoración y conoce a nuestros caballos y equipo en las instalaciones del Club Ecuestre La Chucua J.C.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="contacto.html?service=estimulacion" class="inline-flex items-center gap-3 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all shadow-lg hover:shadow-xl hover:scale-105">
+            <span>Solicitar Cita de Valoración</span>
+            <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
+          <a href="chalaneria.html" class="inline-flex items-center gap-2 border border-slate-700 hover:border-[#c8a675] text-slate-300 hover:text-white text-xs uppercase tracking-widest px-6 py-4 rounded-sm transition-all bg-[#2b323f]/50">
+            <span>Ver Escuela de Chalanería</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#181b22] border-t border-slate-800 py-12 mt-auto">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-[#ddc295] text-2xl">military_tech</span>
+        <span class="font-serif text-lg font-bold text-white">LA CHUCUA J.C</span>
+      </div>
+      <p class="text-xs text-slate-400 text-center md:text-left">
+        &copy; 2026 LA CHUCUA J.C. Todos los derechos reservados. Estimulación temprana y formación de calidad.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
+        <a href="index.html" class="hover:text-[#ddc295] transition-colors">Inicio</a>
+        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors">Nosotros</a>
+        <a href="chalaneria.html" class="hover:text-[#ddc295] transition-colors">Chalanería</a>
+        <a href="estimulacion-temprana.html" class="text-[#ddc295] font-bold">Estimulación Temprana</a>
+        <a href="turismo.html" class="hover:text-[#ddc295] transition-colors">Cabalgata Ecológica</a>
+        <a href="contacto.html" class="hover:text-[#ddc295] transition-colors">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Page Interactions -->
+  <script src="js/estimulacion-page.js"></script>
+</body>
+</html>

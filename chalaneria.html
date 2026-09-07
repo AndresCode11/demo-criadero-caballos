@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chalanería y Formación Ecuestre | Club Ecuestre LA CHUCUA J.C</title>
+  <meta name="description" content="Aprende a montar, fórmate como jinete y prepárate para competir en el Club Ecuestre La Chucua J.C. Clases para niños, jóvenes y adultos desde $325.000/mes." />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#c8a675',
+              hover: '#ddc295',
+              container: '#af8c5c',
+              light: '#f1e6d6',
+            },
+            surface: {
+              base: '#1e222a',
+              lowest: '#181b22',
+              low: '#222832',
+              card: '#2b323f',
+              high: '#343d4d',
+              highest: '#3f495a',
+            },
+            sand: {
+              100: '#f8fafc',
+              300: '#cbd5e1',
+              500: '#64748b',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Inter"', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+
+  <!-- GSAP, ScrollTrigger & Lenis Smooth Scroll -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-[#1e222a] text-[#f1f5f9] font-sans antialiased selection:bg-[#c8a675] selection:text-[#1e222a] min-h-[100dvh] flex flex-col">
+
+  <!-- Header / Navigation Bar -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 glass-nav">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative">
+      <!-- Logo / Crest -->
+      <a href="index.html" class="flex items-center gap-3 group z-10">
+        <div class="w-10 h-10 rounded-sm bg-gradient-to-br from-[#c8a675] to-[#1e222a] p-0.5 border border-[#c8a675]/60 flex items-center justify-center shadow-lg">
+          <div class="w-full h-full bg-[#1e222a] flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#ddc295] text-xl group-hover:scale-110 transition-transform">military_tech</span>
+          </div>
+        </div>
+        <div>
+          <span class="font-serif text-lg tracking-widest uppercase font-bold text-white block group-hover:text-[#ddc295] transition-colors">LA CHUCUA J.C</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-[#c8a675] block">Genética de Calidad</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links (Centered) -->
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-xs font-semibold uppercase tracking-widest text-slate-300 absolute left-1/2 -translate-x-1/2 top-0 h-full">
+        <a href="index.html" class="hover:text-[#ddc295] transition-colors py-1">Inicio</a>
+        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors py-1">Nosotros</a>
+
+        <!-- Dropdown Servicios (1. Chalanería Activo, 2. Estimulación Temprana) -->
+        <div class="relative group py-4">
+          <button class="flex items-center gap-1 text-[#ddc295] hover:text-white transition-colors cursor-pointer uppercase tracking-widest text-xs font-bold py-1 border-b-2 border-[#c8a675] pb-0.5">
+            <span>Servicios</span>
+            <span class="material-symbols-outlined text-base group-hover:rotate-180 transition-transform duration-300 text-[#c8a675]">expand_more</span>
+          </button>
+          <div class="dropdown-menu-fade absolute top-full left-0 bg-[#1e222a]/95 border border-[#c8a675]/30 rounded-xl shadow-2xl p-2.5 min-w-[285px] backdrop-blur-2xl z-50 space-y-1">
+            <a href="chalaneria.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs bg-[#2b323f] border border-[#c8a675]/50 text-white transition-all group/item shadow-md">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675] flex items-center justify-center text-[#1e222a] group-hover/item:scale-105 transition-transform shrink-0 font-bold">
+                <span class="material-symbols-outlined text-base">sports_score</span>
+              </div>
+              <div>
+                <span class="font-bold text-[#ddc295] block">Chalanería</span>
+                <span class="text-[10px] text-slate-300">Formación, técnica & competencia</span>
+              </div>
+            </a>
+            <a href="estimulacion-temprana.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-[#2b323f] transition-all group/item">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] group-hover/item:scale-105 transition-transform shrink-0">
+                <span class="material-symbols-outlined text-base">child_care</span>
+              </div>
+              <div>
+                <span class="font-bold text-white block">Estimulación Temprana</span>
+                <span class="text-[10px] text-slate-400">De 7 meses a 4 años & vínculo</span>
+              </div>
+            </a>
+            <a href="turismo.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-[#2b323f] transition-all group/item">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] group-hover/item:scale-105 transition-transform shrink-0">
+                <span class="material-symbols-outlined text-base">nature_people</span>
+              </div>
+              <div>
+                <span class="font-bold text-white block">Cabalgata Ecológica</span>
+                <span class="text-[10px] text-slate-400">3 horas en Tabio ($150.000)</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a href="contacto.html" class="hover:text-[#ddc295] transition-colors py-1">Contacto</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden text-slate-200 hover:text-[#ddc295] p-2 z-10" aria-label="Abrir menú">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-[#c8a675]/20 px-6 py-6 space-y-4">
+      <a href="index.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Inicio</a>
+      <a href="nuestro-legado.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Nosotros</a>
+
+      <div class="border-t border-slate-700/60 pt-3 space-y-2">
+        <span class="text-[10px] uppercase tracking-wider text-[#c8a675] block font-bold">Servicios:</span>
+        <a href="chalaneria.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-[#ddc295] font-bold pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">sports_score</span>
+          <span>Chalanería & Formación</span>
+        </a>
+        <a href="estimulacion-temprana.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">child_care</span>
+          <span>Estimulación Temprana</span>
+        </a>
+        <a href="turismo.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">nature_people</span>
+          <span>Cabalgata Ecológica (Tabio)</span>
+        </a>
+      </div>
+
+      <a href="contacto.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Contacto</a>
+    </div>
+  </header>
+
+  <main class="flex-1">
+
+    <!-- 1. Hero Section (Cinematic Asymmetric Split with Double-Bezel Frame) -->
+    <section id="hero" class="relative min-h-[95dvh] flex items-center pt-28 pb-20 overflow-hidden">
+      <!-- Background Ambient Glow -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden -z-10">
+        <div class="absolute -top-40 -left-40 w-[600px] h-[600px] bg-[#c8a675]/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 -right-40 w-[500px] h-[500px] bg-[#3f495a]/20 rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Left Content Column -->
+          <div class="lg:col-span-7 space-y-8">
+            <!-- Eyebrow Badge -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#2b323f]/80 border border-[#c8a675]/40 text-[#ddc295] text-[11px] font-semibold tracking-[0.25em] uppercase shadow-lg backdrop-blur-md">
+              <span class="material-symbols-outlined text-sm text-[#c8a675]">sports_score</span>
+              <span>Club Ecuestre La Chucua J.C.</span>
+            </div>
+
+            <div class="space-y-4">
+              <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.05]">
+                Chalanería & <br />
+                <span class="italic font-normal text-[#ddc295]">Formación Ecuestre</span>
+              </h1>
+              <p class="text-base sm:text-lg text-[#c8a675] font-serif italic tracking-wide">
+                “Aprende a montar. Fórmate como jinete. Prepárate para competir.”
+              </p>
+            </div>
+
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-[62ch]">
+              En el <strong>Club Ecuestre La Chucua J.C.</strong> enseñamos chalanería desde una formación integral, donde el alumno aprende no solo a montar, sino también a conocer, respetar y comunicarse con el caballo. Desarrollamos técnica, equilibrio, postura, seguridad, disciplina, concentración y sensibilidad ecuestre.
+            </p>
+
+            <!-- CTA Buttons (Nested Button-in-Button Architecture) -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#calculadora-plan" class="group relative inline-flex items-center gap-4 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-semibold text-xs uppercase tracking-widest pl-7 pr-3 py-3.5 rounded-full transition-all duration-300 shadow-xl active:scale-[0.98]">
+                <span>Inscribirse al Plan Mensual</span>
+                <div class="w-8 h-8 rounded-full bg-[#1e222a]/10 flex items-center justify-center group-hover:scale-105 group-hover:translate-x-0.5 transition-transform duration-300">
+                  <span class="material-symbols-outlined text-base text-[#1e222a]">arrow_forward</span>
+                </div>
+              </a>
+
+              <a href="#niveles" class="inline-flex items-center gap-2 border border-slate-700 hover:border-[#c8a675] text-slate-200 hover:text-white px-6 py-3.5 rounded-full text-xs uppercase tracking-widest transition-all bg-[#181b22]/70 backdrop-blur-sm">
+                <span>Ver Niveles de Formación</span>
+                <span class="material-symbols-outlined text-sm">expand_more</span>
+              </a>
+            </div>
+
+            <!-- Key Feature Badges Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-slate-700/60">
+              <div class="space-y-1">
+                <span class="text-lg font-serif font-bold text-white block">$325.000</span>
+                <span class="text-[11px] text-slate-400 uppercase tracking-wider block">Plan Mensual</span>
+              </div>
+              <div class="space-y-1">
+                <span class="text-lg font-serif font-bold text-white block">4 Clases / Mes</span>
+                <span class="text-[11px] text-slate-400 uppercase tracking-wider block">1 hr semanal</span>
+              </div>
+              <div class="space-y-1">
+                <span class="text-lg font-serif font-bold text-white block">4 Niveles</span>
+                <span class="text-[11px] text-slate-400 uppercase tracking-wider block">Iniciación a Pista</span>
+              </div>
+              <div class="space-y-1">
+                <span class="text-lg font-serif font-bold text-white block">Todas las Edades</span>
+                <span class="text-[11px] text-slate-400 uppercase tracking-wider block">Niños a Adultos</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Visual Column (Double-Bezel Hardware Frame) -->
+          <div class="lg:col-span-5 relative">
+            <div class="p-2 rounded-[2rem] bg-white/5 border border-white/10 ring-1 ring-[#c8a675]/30 shadow-2xl backdrop-blur-xl">
+              <div class="rounded-[calc(2rem-0.5rem)] overflow-hidden relative aspect-[4/5] bg-[#181b22]">
+                <img src="assets/images/chalaneria_hero.jpg" alt="Entrenamiento de Chalanería en La Chucua J.C" class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" />
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-[#1e222a] via-[#1e222a]/20 to-transparent"></div>
+
+                <!-- Floating Glass Badge -->
+                <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl glass-panel border border-white/15 backdrop-blur-xl space-y-1.5 shadow-2xl">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-[#ddc295] font-semibold">Técnica & Tradición</span>
+                    <span class="material-symbols-outlined text-[#c8a675] text-lg">verified</span>
+                  </div>
+                  <h4 class="font-serif text-base font-bold text-white">Chalanería Colombiana de Excelencia</h4>
+                  <p class="text-xs text-slate-300 leading-tight">Enseñanza personalizada en pistas cubiertas de geotextil Otto Sport.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Philosophical Quote Banner (High-Agency Editorial Callout) -->
+    <section class="py-20 bg-[#181b22] border-y border-slate-800 relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-6 text-center space-y-6 relative z-10">
+        <span class="material-symbols-outlined text-[#c8a675] text-4xl block mx-auto opacity-70">format_quote</span>
+        
+        <blockquote class="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-medium italic leading-relaxed">
+          “Un buen jinete no solo aprende a dirigir a su caballo; aprende primero a dirigirse a sí mismo.”
+        </blockquote>
+
+        <div class="space-y-1">
+          <p class="text-xs uppercase tracking-[0.25em] text-[#c8a675] font-bold">Club Ecuestre La Chucua J.C.</p>
+          <p class="text-xs text-slate-400">Genética y educación equina con propósito</p>
+        </div>
+      </div>
+
+      <!-- Subtle background watermarked horse icon -->
+      <span class="material-symbols-outlined absolute -right-12 -bottom-12 text-white/[0.02] text-[280px] pointer-events-none select-none">
+        military_tech
+      </span>
+    </section>
+
+    <!-- 3. Edades y Niveles Section (Interactive Audience Tabs) -->
+    <section id="edades" class="py-28 bg-[#1e222a]">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div class="space-y-3 max-w-2xl">
+            <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block">Inclusión & Vocación</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Edades y Perfiles de Formación</h2>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Los grupos y actividades se organizan estrictamente de acuerdo con la edad, experiencia previa y objetivos particulares de cada alumno.
+            </p>
+          </div>
+
+          <!-- Tab Switcher Pills -->
+          <div class="flex flex-wrap gap-2 p-1.5 rounded-full bg-[#181b22] border border-slate-700/80 self-start md:self-auto">
+            <button data-profile="ninos" class="age-tab-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-[#c8a675] text-[#1e222a] shadow-lg">
+              Niños
+            </button>
+            <button data-profile="jovenes" class="age-tab-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-[#181b22] text-slate-300 hover:text-white">
+              Jóvenes
+            </button>
+            <button data-profile="adultos" class="age-tab-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-[#181b22] text-slate-300 hover:text-white">
+              Adultos
+            </button>
+            <button data-profile="competencia" class="age-tab-btn px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 bg-[#181b22] text-slate-300 hover:text-white">
+              Jinetes Expertos
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Container for Active Tab Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Left: Details Panel (Double-Bezel) -->
+          <div class="lg:col-span-7 p-2 rounded-[2rem] bg-white/5 border border-white/10 ring-1 ring-white/5 shadow-2xl">
+            <div id="age-profile-display" class="h-full rounded-[calc(2rem-0.5rem)] bg-[#222832] p-6 sm:p-10 border border-slate-700/50 flex flex-col justify-between">
+              <!-- Dynamically populated by JS -->
+            </div>
+          </div>
+
+          <!-- Right: Methodology Bento Card -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="glass-panel p-6 sm:p-8 rounded-[1.5rem] border border-[#c8a675]/30 space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-[#c8a675]/15 border border-[#c8a675]/40 flex items-center justify-center text-[#ddc295]">
+                <span class="material-symbols-outlined text-2xl">groups</span>
+              </div>
+              <h4 class="font-serif text-xl font-bold text-white">Metodología en Grupos Reducidos</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Priorizamos la seguridad y el progreso individual. Cada sesión cuenta con un máximo de 3 a 4 jinetes por instructor para asegurar atención continua en cada paso, postura y ayuda.
+              </p>
+            </div>
+
+            <div class="glass-panel p-6 sm:p-8 rounded-[1.5rem] border border-slate-700 space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-[#181b22] border border-slate-700 flex items-center justify-center text-[#c8a675]">
+                <span class="material-symbols-outlined text-2xl">shield</span>
+              </div>
+              <h4 class="font-serif text-xl font-bold text-white">Caballos Maestros Seleccionados</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Contamos con caballos de escuela de temperamento equilibrado, dóciles, seguros y con excelente rienda para acompañar cada fase del aprendizaje sin sobresaltos.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. Niveles de Formación Section (Progressive 4-Step Architecture) -->
+    <section id="niveles" class="py-28 bg-[#181b22] border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="text-center max-w-2xl mx-auto mb-20 space-y-3">
+          <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block">Currículo Pedagógico</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">4 Niveles de Formación</h2>
+          <p class="text-sm text-slate-400">
+            Un itinerario formativo estructurado para acompañar tu evolución desde el primer contacto hasta el podio de competencia.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Nivel 1 -->
+          <div class="group p-1.5 rounded-[1.8rem] bg-white/5 border border-white/10 hover:border-[#c8a675]/50 transition-all duration-500 shadow-xl hover:-translate-y-1">
+            <div class="h-full rounded-[calc(1.8rem-0.375rem)] bg-[#222832] p-6 sm:p-7 flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] uppercase font-bold tracking-[0.2em] text-[#c8a675] px-2.5 py-1 rounded-full bg-[#c8a675]/10 border border-[#c8a675]/30">Fase 1</span>
+                  <span class="font-serif text-3xl font-bold text-slate-600 group-hover:text-[#ddc295] transition-colors">01</span>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-white">Nivel 1 <br /><span class="text-[#ddc295] font-normal italic">Iniciación</span></h3>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Acercamiento al caballo, construcción de confianza, seguridad activa, postura correcta, equilibrio corporal y manejo básico del ejemplar.
+                </p>
+              </div>
+              <ul class="space-y-2 border-t border-slate-700/60 pt-4 text-xs text-slate-400">
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">check</span> Familiarización & Cuidado</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">check</span> Asiento & Estribado</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">check</span> Giros y detención segura</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Nivel 2 -->
+          <div class="group p-1.5 rounded-[1.8rem] bg-white/5 border border-white/10 hover:border-[#c8a675]/50 transition-all duration-500 shadow-xl hover:-translate-y-1">
+            <div class="h-full rounded-[calc(1.8rem-0.375rem)] bg-[#222832] p-6 sm:p-7 flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] uppercase font-bold tracking-[0.2em] text-[#c8a675] px-2.5 py-1 rounded-full bg-[#c8a675]/10 border border-[#c8a675]/30">Fase 2</span>
+                  <span class="font-serif text-3xl font-bold text-slate-600 group-hover:text-[#ddc295] transition-colors">02</span>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-white">Nivel 2 <br /><span class="text-[#ddc295] font-normal italic">Formación</span></h3>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Técnica de monta, aplicación de ayudas del jinete, manejo de riendas, control de aires, coordinación motriz y comunicación sutil con el caballo.
+                </p>
+              </div>
+              <ul class="space-y-2 border-t border-slate-700/60 pt-4 text-xs text-slate-400">
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">check</span> Ayudas de pierna y peso</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">check</span> Compás y ritmo de andares</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">check</span> Trabajo en picadero cerrado</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Nivel 3 -->
+          <div class="group p-1.5 rounded-[1.8rem] bg-white/5 border border-white/10 hover:border-[#c8a675]/50 transition-all duration-500 shadow-xl hover:-translate-y-1">
+            <div class="h-full rounded-[calc(1.8rem-0.375rem)] bg-[#222832] p-6 sm:p-7 flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] uppercase font-bold tracking-[0.2em] text-[#c8a675] px-2.5 py-1 rounded-full bg-[#c8a675]/10 border border-[#c8a675]/30">Fase 3</span>
+                  <span class="font-serif text-3xl font-bold text-slate-600 group-hover:text-[#ddc295] transition-colors">03</span>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-white">Nivel 3 <br /><span class="text-[#ddc295] font-normal italic">Perfeccionamiento</span></h3>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Trabajo técnico refinado, precisión en trayectorias, desarrollo de habilidades avanzadas, postura elegante y preparación ecuestre integral.
+                </p>
+              </div>
+              <ul class="space-y-2 border-t border-slate-700/60 pt-4 text-xs text-slate-400">
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">check</span> Finura de mano y contacto</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">check</span> Círculos, serpentinas y ochos</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">check</span> Flexibilidad y rectitud</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Nivel 4 -->
+          <div class="group p-1.5 rounded-[1.8rem] bg-gradient-to-b from-[#c8a675]/40 to-white/5 border border-[#c8a675]/60 hover:border-[#ddc295] transition-all duration-500 shadow-2xl hover:-translate-y-1">
+            <div class="h-full rounded-[calc(1.8rem-0.375rem)] bg-[#1e222a] p-6 sm:p-7 flex flex-col justify-between space-y-6">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <span class="text-[10px] uppercase font-bold tracking-[0.2em] text-[#1e222a] px-2.5 py-1 rounded-full bg-[#c8a675]">Élite</span>
+                  <span class="font-serif text-3xl font-bold text-[#ddc295]">04</span>
+                </div>
+                <h3 class="font-serif text-2xl font-bold text-white">Nivel 4 <br /><span class="text-[#ddc295] font-normal italic">Competencia</span></h3>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                  Entrenamiento especializado para jinetes que desean prepararse para participar en competencias de chalanería, ferias y juzgamientos oficiales.
+                </p>
+              </div>
+              <ul class="space-y-2 border-t border-slate-700/60 pt-4 text-xs text-slate-300">
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">trophy</span> Reglamento de Juzgamiento</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">trophy</span> Coreografía y tiempo en pista</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">trophy</span> Preparación mental del binomio</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. Modalidad, Duración & Plan Mensual (Interactive Pricing Simulator) -->
+    <section id="calculadora-plan" class="py-28 bg-[#1e222a]">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Info Column -->
+          <div class="lg:col-span-6 space-y-8">
+            <div class="space-y-3">
+              <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block">Modalidad & Inversión</span>
+              <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Plan Mensual Continuo</h2>
+              <p class="text-sm text-slate-300 leading-relaxed">
+                El plan está diseñado para mantener un proceso de formación continuo, permitiendo que el alumno avance progresivamente en su aprendizaje y habilidades ecuestres.
+              </p>
+            </div>
+
+            <!-- Key Modality Items -->
+            <div class="space-y-4">
+              <div class="p-4 rounded-xl bg-[#181b22] border border-slate-800 flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-[#c8a675]/10 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] shrink-0">
+                  <span class="material-symbols-outlined">schedule</span>
+                </div>
+                <div>
+                  <h4 class="font-serif text-base font-bold text-white">Duración: 1 Hora por Clase</h4>
+                  <p class="text-xs text-slate-400 mt-0.5">Tiempo óptimo de concentración y trabajo muscular sin fatigar al jinete ni al caballo.</p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-[#181b22] border border-slate-800 flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-[#c8a675]/10 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] shrink-0">
+                  <span class="material-symbols-outlined">calendar_month</span>
+                </div>
+                <div>
+                  <h4 class="font-serif text-base font-bold text-white">Frecuencia: 1 Clase Semanal</h4>
+                  <p class="text-xs text-slate-400 mt-0.5">4 clases de chalanería al mes, agendadas en horarios fijos para constancia pedagógica.</p>
+                </div>
+              </div>
+
+              <div class="p-4 rounded-xl bg-[#181b22] border border-slate-800 flex items-start gap-4">
+                <div class="w-10 h-10 rounded-lg bg-[#c8a675]/10 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] shrink-0">
+                  <span class="material-symbols-outlined">person</span>
+                </div>
+                <div>
+                  <h4 class="font-serif text-base font-bold text-white">Individual o Grupos Reducidos</h4>
+                  <p class="text-xs text-slate-400 mt-0.5">Adaptado al nivel, ritmo y objetivo particular de cada alumno.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Simulator Card (Double-Bezel Hardware Architecture) -->
+          <div class="lg:col-span-6">
+            <div class="p-2 rounded-[2.2rem] bg-gradient-to-b from-[#c8a675]/30 via-white/5 to-white/5 border border-white/10 ring-1 ring-[#c8a675]/30 shadow-2xl">
+              <div class="rounded-[calc(2.2rem-0.5rem)] bg-[#222832] p-8 sm:p-10 border border-slate-700/60 space-y-8">
+                
+                <!-- Card Header with Price -->
+                <div class="border-b border-slate-700/60 pb-6 flex items-start justify-between gap-4">
+                  <div>
+                    <span class="text-[10px] uppercase font-bold tracking-[0.2em] text-[#c8a675] block mb-1">Membresía Mensual</span>
+                    <h3 class="font-serif text-2xl font-bold text-white">Escuela de Chalanería</h3>
+                  </div>
+                  <div class="text-right">
+                    <span id="calc-total-price" class="font-serif text-3xl sm:text-4xl font-bold text-[#ddc295] block">$325.000</span>
+                    <span class="text-[10px] uppercase tracking-wider text-slate-400 block">COP / mes</span>
+                  </div>
+                </div>
+
+                <!-- Frequency Selector -->
+                <div class="space-y-3">
+                  <label class="text-xs uppercase tracking-widest text-slate-300 font-bold block">Frecuencia de Clases:</label>
+                  <div class="grid grid-cols-2 gap-3">
+                    <button type="button" data-freq="semanal" class="freq-option text-left p-4 rounded-xl border border-[#c8a675] bg-[#2b323f] text-white transition-all">
+                      <span class="text-xs font-bold block">1 Clase Semanal</span>
+                      <span class="text-[11px] text-[#ddc295] block mt-0.5">4 clases al mes</span>
+                    </button>
+                    <button type="button" data-freq="intensivo" class="freq-option text-left p-4 rounded-xl border border-slate-700 bg-[#181b22] text-slate-400 hover:text-white transition-all">
+                      <span class="text-xs font-bold block">2 Clases Semanales</span>
+                      <span class="text-[11px] text-slate-400 block mt-0.5">8 clases al mes (Ahorra $50k)</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Optional Addons -->
+                <div class="space-y-3">
+                  <label class="text-xs uppercase tracking-widest text-slate-300 font-bold block">Servicios Adicionales (Opcional):</label>
+                  <label class="flex items-center justify-between p-3.5 rounded-xl bg-[#181b22] border border-slate-700/70 cursor-pointer hover:border-[#c8a675]/50 transition-colors">
+                    <div class="flex items-center gap-3">
+                      <input type="checkbox" id="addon-biomechanics" class="w-4 h-4 rounded text-[#c8a675] focus:ring-[#c8a675] bg-slate-900 border-slate-700" />
+                      <div>
+                        <span class="text-xs font-semibold text-white block">Evaluación Biomecánica en Video</span>
+                        <span class="text-[10px] text-slate-400">Análisis computarizado de postura articular</span>
+                      </div>
+                    </div>
+                    <span class="text-xs font-bold text-[#c8a675]">+ $120.000</span>
+                  </label>
+                </div>
+
+                <!-- Included Checklist -->
+                <div class="space-y-2 text-xs text-slate-300 border-t border-slate-700/60 pt-6">
+                  <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block mb-2">Tu membresía incluye:</span>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">check_circle</span> Asignación de caballo maestro</div>
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">check_circle</span> Instructor profesional certificado</div>
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">check_circle</span> Pistas olímpicas cubiertas</div>
+                    <div class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">check_circle</span> Casillero y vestuarios VIP</div>
+                  </div>
+                </div>
+
+                <!-- Live Summary Note -->
+                <div class="p-3.5 rounded-lg bg-[#181b22]/90 border border-slate-800 text-xs text-slate-300">
+                  <span class="material-symbols-outlined text-[#c8a675] text-sm align-middle mr-1">info</span>
+                  <span id="calc-total-desc">Plan Mensual Estándar: 4 clases de 1 hora (1 por semana).</span>
+                </div>
+
+                <!-- Action Button -->
+                <a id="calc-cta-btn" href="contacto.html?service=chalaneria" class="block w-full py-4 text-center rounded-sm bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest transition-all shadow-xl">
+                  Inscribirse / Separar Cupo
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. Preparación para Competencia (High-Performance Division) -->
+    <section class="py-24 bg-[#181b22] border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="p-8 sm:p-12 rounded-[2.2rem] bg-gradient-to-r from-[#222832] via-[#2b323f] to-[#222832] border border-[#c8a675]/30 shadow-2xl relative overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+            
+            <div class="lg:col-span-8 space-y-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#c8a675]/20 border border-[#c8a675]/40 text-[#ddc295] text-[10px] uppercase font-bold tracking-widest">
+                <span class="material-symbols-outlined text-sm">emoji_events</span>
+                División de Alto Rendimiento
+              </div>
+
+              <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">
+                Preparación Especializada para Competencia
+              </h2>
+
+              <p class="text-sm text-slate-300 leading-relaxed max-w-[70ch]">
+                Los alumnos que deseen avanzar hacia un nivel competitivo podrán acceder a programas de entrenamiento especializados, de acuerdo con su nivel, objetivos y características del binomio.
+              </p>
+
+              <p class="text-xs text-[#c8a675] italic">
+                * La preparación para competencia se cotiza de manera independiente tras una sesión diagnóstica.
+              </p>
+            </div>
+
+            <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-4 justify-end">
+              <a href="contacto.html?service=chalaneria&tipo=competencia" class="inline-flex items-center justify-center gap-3 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all shadow-xl text-center">
+                <span>Solicitar Diagnóstico Competitivo</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+              <a href="https://wa.me/573001234567?text=Hola,%20deseo%20información%20sobre%20el%20entrenamiento%20para%20competencia%20de%20chalanería" target="_blank" class="inline-flex items-center justify-center gap-2 border border-slate-600 hover:border-white text-slate-200 hover:text-white text-xs uppercase tracking-widest px-6 py-4 rounded-sm transition-all text-center">
+                <span class="material-symbols-outlined text-sm">chat</span>
+                <span>Consultar por WhatsApp</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. Más que Aprender a Montar (Filosofía & Conexión) -->
+    <section class="py-28 bg-[#1e222a]">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Visual Column -->
+          <div class="lg:col-span-5 order-2 lg:order-1">
+            <div class="p-2 rounded-[2rem] bg-white/5 border border-white/10 ring-1 ring-[#c8a675]/30 shadow-2xl">
+              <div class="rounded-[calc(2rem-0.5rem)] overflow-hidden aspect-[4/5] bg-[#181b22]">
+                <img src="assets/images/chalaneria_conexion.jpg" alt="Conexión sincera entre caballo y jinete" class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Column -->
+          <div class="lg:col-span-7 order-1 lg:order-2 space-y-8">
+            <div class="space-y-3">
+              <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block">Nuestra Filosofía</span>
+              <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white leading-tight">
+                Más que Aprender a Montar: <br />
+                <span class="italic font-normal text-[#ddc295]">Una Verdadera Relación</span>
+              </h2>
+            </div>
+
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+              Nuestra formación busca crear una verdadera relación entre caballo y jinete. Aprender a observar, escuchar, sentir y comunicarse con el caballo es tan importante como aprender la técnica.
+            </p>
+
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Por eso, cada clase es una oportunidad para desarrollar los valores fundamentales que acompañan a un jinete tanto dentro de la pista como en la vida cotidiana:
+            </p>
+
+            <!-- 5 Pilares de Carácter Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-xl bg-[#181b22] border border-slate-800 space-y-1">
+                <div class="flex items-center gap-2 text-[#ddc295]">
+                  <span class="material-symbols-outlined text-lg">favorite</span>
+                  <h4 class="font-serif text-base font-bold text-white">Confianza Mutua</h4>
+                </div>
+                <p class="text-xs text-slate-400">Superar temores para transmitir calma y seguridad al ejemplar.</p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-[#181b22] border border-slate-800 space-y-1">
+                <div class="flex items-center gap-2 text-[#ddc295]">
+                  <span class="material-symbols-outlined text-lg">psychology</span>
+                  <h4 class="font-serif text-base font-bold text-white">Concentración Plena</h4>
+                </div>
+                <p class="text-xs text-slate-400">Atención presente a cada orden, ritmo y respiración del binomio.</p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-[#181b22] border border-slate-800 space-y-1">
+                <div class="flex items-center gap-2 text-[#ddc295]">
+                  <span class="material-symbols-outlined text-lg">verified</span>
+                  <h4 class="font-serif text-base font-bold text-white">Disciplina & Constancia</h4>
+                </div>
+                <p class="text-xs text-slate-400">La excelencia no es un acto fortuito; es el hábito de cada sesión.</p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-[#181b22] border border-slate-800 space-y-1">
+                <div class="flex items-center gap-2 text-[#ddc295]">
+                  <span class="material-symbols-outlined text-lg">handshake</span>
+                  <h4 class="font-serif text-base font-bold text-white">Responsabilidad</h4>
+                </div>
+                <p class="text-xs text-slate-400">Aprender a cuidar, cepillar, bañar y entender el bienestar del animal.</p>
+              </div>
+            </div>
+
+            <!-- Summary Slogan Card -->
+            <div class="p-5 rounded-xl bg-[#2b323f]/80 border border-[#c8a675]/40 flex items-center justify-between">
+              <div>
+                <span class="font-serif text-base text-white font-bold block">Club Ecuestre La Chucua J.C.</span>
+                <span class="text-xs text-[#c8a675]">Genética y educación equina con propósito.</span>
+              </div>
+              <a href="contacto.html?service=chalaneria" class="text-xs uppercase font-bold text-white bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] px-4 py-2.5 rounded-sm transition-colors">
+                Agendar
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. Preguntas Frecuentes (FAQ Accordion) -->
+    <section class="py-24 bg-[#181b22] border-t border-slate-800">
+      <div class="max-w-4xl mx-auto px-6">
+        
+        <div class="text-center mb-16 space-y-3">
+          <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block">Claridad & Confianza</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Preguntas Frecuentes de Chalanería</h2>
+        </div>
+
+        <div class="space-y-4">
+          <!-- FAQ 1 -->
+          <div class="faq-item glass-panel rounded-xl border border-slate-700/80 overflow-hidden">
+            <button class="faq-header w-full px-6 py-5 text-left flex items-center justify-between text-sm sm:text-base font-serif font-bold text-white hover:text-[#ddc295] transition-colors">
+              <span>¿A partir de qué edad pueden comenzar los niños?</span>
+              <span class="material-symbols-outlined faq-icon text-[#c8a675] transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-700/50 pt-4">
+              Recibimos niños a partir de los 4 años de edad para la etapa de iniciación lúdica. En estas primeras edades nos enfocamos en la confianza, el equilibrio natural y el respeto al caballo con instructores dedicados exclusivamente a su cuidado.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item glass-panel rounded-xl border border-slate-700/80 overflow-hidden">
+            <button class="faq-header w-full px-6 py-5 text-left flex items-center justify-between text-sm sm:text-base font-serif font-bold text-white hover:text-[#ddc295] transition-colors">
+              <span>¿Necesito tener mi propio caballo para tomar clases?</span>
+              <span class="material-symbols-outlined faq-icon text-[#c8a675] transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-700/50 pt-4">
+              No es necesario. El Club Ecuestre La Chucua J.C. pone a tu disposición caballos de escuela nobles, bien adiestrados y seleccionados específicamente para cada nivel de experiencia.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item glass-panel rounded-xl border border-slate-700/80 overflow-hidden">
+            <button class="faq-header w-full px-6 py-5 text-left flex items-center justify-between text-sm sm:text-base font-serif font-bold text-white hover:text-[#ddc295] transition-colors">
+              <span>¿Qué vestimenta o indumentaria se requiere para iniciar?</span>
+              <span class="material-symbols-outlined faq-icon text-[#c8a675] transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-700/50 pt-4">
+              Para tus primeras sesiones solo necesitas pantalón cómodo y elástico (tipo jean o legging sin costuras duras internas), calzado cerrado (botas o botines con tacón bajo) y casco de equitación reglamentario (si no tienes uno, el club te presta uno certificado durante tus primeras clases).
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item glass-panel rounded-xl border border-slate-700/80 overflow-hidden">
+            <button class="faq-header w-full px-6 py-5 text-left flex items-center justify-between text-sm sm:text-base font-serif font-bold text-white hover:text-[#ddc295] transition-colors">
+              <span>¿Qué ocurre en caso de lluvia o clima adverso?</span>
+              <span class="material-symbols-outlined faq-icon text-[#c8a675] transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-700/50 pt-4">
+              Nuestras instalaciones cuentan con 2 pistas olímpicas totalmente cubiertas con suelo geotextil de competición. Las clases se desarrollan con total normalidad y confort independientemente del clima.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. Final VIP Enrollment CTA Section -->
+    <section class="py-24 bg-gradient-to-b from-[#181b22] to-[#1e222a] border-t border-slate-800 text-center">
+      <div class="max-w-4xl mx-auto px-6 space-y-8">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#c8a675]/15 border border-[#c8a675]/30 text-[#ddc295] text-[10px] uppercase font-bold tracking-widest">
+          Cupos Limitados por Horario
+        </div>
+
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white leading-tight">
+          Empieza Hoy Tu Formación en Chalanería
+        </h2>
+
+        <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          Ven y conoce nuestras instalaciones en la Sabana, vive una clase de valoración diagnóstica y descubre el poder transformador de la conexión con el caballo.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+          <a href="contacto.html?service=chalaneria" class="bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all shadow-2xl">
+            Inscribirse al Plan Mensual ($325.000)
+          </a>
+          <a href="https://wa.me/573001234567?text=Hola,%20deseo%20agendar%20una%20clase%20de%20valoración%20de%20chalanería" target="_blank" class="border border-slate-700 hover:border-[#c8a675] text-slate-200 hover:text-white px-8 py-4 rounded-sm text-xs uppercase tracking-widest transition-all bg-[#181b22]/80 flex items-center gap-2">
+            <span class="material-symbols-outlined text-base">chat</span>
+            <span>Hablar con un Instructor</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (Unified 6 Links) -->
+  <footer class="bg-[#181b22] border-t border-slate-800 py-12 mt-auto">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <span class="material-symbols-outlined text-[#ddc295] text-2xl">military_tech</span>
+        <span class="font-serif text-lg font-bold text-white">LA CHUCUA J.C</span>
+      </div>
+      <p class="text-xs text-slate-400 text-center md:text-left">
+        &copy; 2026 LA CHUCUA J.C. Todos los derechos reservados. Genética y educación equina con propósito.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
+        <a href="index.html" class="hover:text-[#ddc295] transition-colors">Inicio</a>
+        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors">Nosotros</a>
+        <a href="chalaneria.html" class="text-[#ddc295]">Chalanería</a>
+        <a href="estimulacion-temprana.html" class="hover:text-[#ddc295] transition-colors">Estimulación Temprana</a>
+        <a href="turismo.html" class="hover:text-[#ddc295] transition-colors">Cabalgata Ecológica</a>
+        <a href="contacto.html" class="hover:text-[#ddc295] transition-colors">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Page Script Entrypoint -->
+  <script type="module" src="js/chalaneria-page.js"></script>
+</body>
+</html>

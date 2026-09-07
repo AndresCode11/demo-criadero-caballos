@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto & Citas Privadas | LA CHUCUA J.C</title>
-  <meta name="description" content="Coordine una cita privada, adquiera dosis genéticas de sementales campeones o reserve una visita guiada exclusiva en LA CHUCUA J.C." />
+  <title>Contacto Comercial & Servicios | LA CHUCUA J.C</title>
+  <meta name="description" content="Contáctanos para información comercial sobre clases de chalanería, estimulación temprana con caballos, cabalgatas ecológicas y servicios del criadero en Tabio, Cundinamarca." />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -61,9 +61,9 @@
 
   <!-- Header / Navigation Bar -->
   <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 glass-nav">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative">
       <!-- Logo / Crest -->
-      <a href="index.html" class="flex items-center gap-3 group">
+      <a href="index.html" class="flex items-center gap-3 group z-10">
         <div class="w-10 h-10 rounded-sm bg-gradient-to-br from-[#c8a675] to-[#1e222a] p-0.5 border border-[#c8a675]/60 flex items-center justify-center shadow-lg">
           <div class="w-full h-full bg-[#1e222a] flex items-center justify-center">
             <span class="material-symbols-outlined text-[#ddc295] text-xl group-hover:scale-110 transition-transform">military_tech</span>
@@ -75,26 +75,44 @@
         </div>
       </a>
 
-      <!-- Desktop Nav Links with Dropdown Servicios -->
-      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-slate-300">
-        <a href="index.html#catalogo" class="hover:text-[#ddc295] transition-colors">Sementales</a>
-        <a href="index.html#genealogia" class="hover:text-[#ddc295] transition-colors">Genealogía</a>
-        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors">Nuestro Legado</a>
+      <!-- Desktop Nav Links (Centered) -->
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-xs font-semibold uppercase tracking-widest text-slate-300 absolute left-1/2 -translate-x-1/2 top-0 h-full">
+        <a href="index.html" class="hover:text-[#ddc295] transition-colors py-1">Inicio</a>
+        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors py-1">Nosotros</a>
 
-        <!-- Dropdown Servicios -->
+        <!-- Dropdown Servicios (1. Chalanería, 2. Estimulación Temprana) -->
         <div class="relative group py-4">
-          <button class="flex items-center gap-1 hover:text-[#ddc295] transition-colors cursor-pointer">
+          <button class="flex items-center gap-1 hover:text-[#ddc295] transition-colors cursor-pointer uppercase tracking-widest text-xs font-semibold py-1">
             <span>Servicios</span>
-            <span class="material-symbols-outlined text-base group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+            <span class="material-symbols-outlined text-base group-hover:rotate-180 transition-transform duration-300 text-[#c8a675]">expand_more</span>
           </button>
-          <div class="dropdown-menu-fade absolute top-full left-0 bg-[#1e222a] border border-[#c8a675]/30 rounded-sm shadow-2xl p-2 min-w-[230px] backdrop-blur-xl z-50">
-            <a href="turismo.html" class="flex items-center gap-2 px-4 py-2.5 rounded-sm text-xs text-slate-300 hover:text-[#ddc295] hover:bg-[#2b323f] transition-colors">
-              <span class="material-symbols-outlined text-base text-[#c8a675]">nature_people</span>
-              <span>Turismo & Cabalgatas</span>
+          <div class="dropdown-menu-fade absolute top-full left-0 bg-[#1e222a]/95 border border-[#c8a675]/30 rounded-xl shadow-2xl p-2.5 min-w-[285px] backdrop-blur-2xl z-50 space-y-1">
+            <a href="chalaneria.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-[#2b323f] transition-all group/item">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] group-hover/item:scale-105 transition-transform shrink-0">
+                <span class="material-symbols-outlined text-base">sports_score</span>
+              </div>
+              <div>
+                <span class="font-bold text-white block">Chalanería</span>
+                <span class="text-[10px] text-slate-400">Formación, técnica & competencia</span>
+              </div>
             </a>
-            <a href="academia.html" class="flex items-center gap-2 px-4 py-2.5 rounded-sm text-xs text-slate-300 hover:text-[#ddc295] hover:bg-[#2b323f] transition-colors">
-              <span class="material-symbols-outlined text-base text-[#c8a675]">school</span>
-              <span>Academia Ecuestre</span>
+            <a href="estimulacion-temprana.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-[#2b323f] transition-all group/item">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] group-hover/item:scale-105 transition-transform shrink-0">
+                <span class="material-symbols-outlined text-base">child_care</span>
+              </div>
+              <div>
+                <span class="font-bold text-white block">Estimulación Temprana</span>
+                <span class="text-[10px] text-slate-400">De 7 meses a 4 años & vínculo</span>
+              </div>
+            </a>
+            <a href="turismo.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-[#2b323f] transition-all group/item">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] group-hover/item:scale-105 transition-transform shrink-0">
+                <span class="material-symbols-outlined text-base">nature_people</span>
+              </div>
+              <div>
+                <span class="font-bold text-white block">Cabalgata Ecológica</span>
+                <span class="text-[10px] text-slate-400">3 horas en Tabio ($150.000)</span>
+              </div>
             </a>
           </div>
         </div>
@@ -102,184 +120,223 @@
         <a href="contacto.html" class="text-[#ddc295] border-b-2 border-[#c8a675] pb-0.5 font-bold">Contacto</a>
       </nav>
 
-      <!-- Return to Home CTA -->
-      <div class="hidden md:flex items-center gap-4">
-        <a href="index.html" class="border border-[#c8a675]/40 text-slate-200 hover:text-[#ddc295] hover:border-[#c8a675] bg-[#2b323f]/50 backdrop-blur-md font-semibold text-xs uppercase tracking-widest px-5 py-2.5 rounded-sm transition-all flex items-center gap-2">
-          <span class="material-symbols-outlined text-sm">arrow_back</span>
-          Volver a la Finca
-        </a>
-      </div>
-
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="md:hidden text-slate-200 hover:text-[#ddc295] p-2">
+      <button id="mobile-menu-btn" class="md:hidden text-slate-200 hover:text-[#ddc295] p-2 z-10" aria-label="Abrir menú">
         <span class="material-symbols-outlined text-2xl">menu</span>
       </button>
     </div>
 
     <!-- Mobile Nav Dropdown -->
     <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-[#c8a675]/20 px-6 py-6 space-y-4">
-      <a href="index.html#catalogo" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Sementales</a>
-      <a href="index.html#genealogia" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Genealogía</a>
-      <a href="nuestro-legado.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Nuestro Legado</a>
-      
+      <a href="index.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Inicio</a>
+      <a href="nuestro-legado.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Nosotros</a>
+
       <div class="border-t border-slate-700/60 pt-3 space-y-2">
-        <span class="text-[10px] uppercase tracking-wider text-slate-400 block font-semibold">Nuestros Servicios:</span>
-        <a href="turismo.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">🐴 Turismo & Cabalgatas</a>
-        <a href="academia.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">🎓 Academia Ecuestre</a>
+        <span class="text-[10px] uppercase tracking-wider text-[#c8a675] block font-bold">Servicios:</span>
+        <a href="chalaneria.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">sports_score</span>
+          <span>Chalanería & Formación</span>
+        </a>
+        <a href="estimulacion-temprana.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">child_care</span>
+          <span>Estimulación Temprana</span>
+        </a>
+        <a href="turismo.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">nature_people</span>
+          <span>Cabalgata Ecológica (Tabio)</span>
+        </a>
       </div>
 
       <a href="contacto.html" class="block text-sm uppercase tracking-widest text-[#ddc295] font-bold">Contacto</a>
     </div>
   </header>
 
-  <main class="flex-1 pt-32 pb-24">
+  <main class="flex-1 pt-28 sm:pt-32 pb-24">
     <div class="max-w-7xl mx-auto px-6">
       
-      <!-- Page Hero Header -->
-      <div class="max-w-3xl mb-16 space-y-4">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-[#2b323f] border border-[#c8a675]/40 text-[#ddc295] text-[11px] font-semibold tracking-widest uppercase">
-          <span class="material-symbols-outlined text-sm">lock</span>
-          Atención Privada & Confidencial
+      <!-- Page Hero Header (Claro, Directo, Orientado a Negocio) -->
+      <div class="max-w-3xl mb-12 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#2b323f] border border-[#c8a675]/40 text-[#ddc295] text-xs font-semibold tracking-wider">
+          <span class="material-symbols-outlined text-sm text-[#c8a675]">handshake</span>
+          Atención Comercial & Información
         </div>
-        <h1 class="font-serif text-4xl sm:text-6xl font-bold text-white tracking-tight">
-          Conserjería Ecuestre & <br />
-          <span class="text-[#ddc295] italic">Citas Privadas</span>
+        <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight">
+          Hablemos de tus planes <br class="hidden sm:inline" />
+          <span class="text-[#ddc295] italic">y proyectos ecuestres</span>
         </h1>
-        <p class="text-base text-slate-300 leading-relaxed max-w-2xl font-light">
-          Invitamos a criadores distinguidos, jinetes de alta competición y familias a coordinar visitas personalizadas a la dehesa, reservas de sementales, actividades de turismo o admisiones a la academia.
+        <p class="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl font-light">
+          ¿Interesado en clases de chalanería, estimulación temprana, cabalgatas guiadas en Tabio, eventos para empresas o servicios del criadero? Escríbenos o contáctanos directamente por WhatsApp para brindarte atención inmediata.
         </p>
       </div>
 
+      <!-- Quick Action Bar (WhatsApp & Canales Directos) -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
+        <a href="https://wa.me/573108529410?text=Hola%20La%20Chucua%20J.C,%20deseo%20solicitar%20informaci%C3%B3n%20comercial%20sobre%20sus%20servicios" target="_blank" rel="noopener noreferrer" class="glass-panel p-4 rounded-xl border border-emerald-500/30 hover:border-emerald-400 bg-emerald-950/20 flex items-center gap-4 group transition-all">
+          <div class="w-12 h-12 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
+            <span class="material-symbols-outlined text-2xl">chat</span>
+          </div>
+          <div>
+            <span class="text-[11px] uppercase tracking-wider text-emerald-400 block font-semibold">WhatsApp Directo</span>
+            <span class="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">+57 310 852 9410</span>
+            <span class="text-[10px] text-slate-400 block">Respuesta rápida</span>
+          </div>
+        </a>
+
+        <a href="tel:+573108529410" class="glass-panel p-4 rounded-xl border border-[#c8a675]/30 hover:border-[#c8a675] flex items-center gap-4 group transition-all">
+          <div class="w-12 h-12 rounded-lg bg-[#c8a675]/15 text-[#ddc295] flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
+            <span class="material-symbols-outlined text-2xl">call</span>
+          </div>
+          <div>
+            <span class="text-[11px] uppercase tracking-wider text-[#c8a675] block font-semibold">Línea Telefónica</span>
+            <span class="text-sm font-bold text-white group-hover:text-[#ddc295] transition-colors">+57 310 852 9410</span>
+            <span class="text-[10px] text-slate-400 block">Llamada directa</span>
+          </div>
+        </a>
+
+        <div class="glass-panel p-4 rounded-xl border border-slate-700/60 flex items-center gap-4">
+          <div class="w-12 h-12 rounded-lg bg-slate-800 text-slate-300 flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-2xl">pin_drop</span>
+          </div>
+          <div>
+            <span class="text-[11px] uppercase tracking-wider text-slate-400 block font-semibold">Ubicación</span>
+            <span class="text-sm font-bold text-white">Tabio, Cundinamarca</span>
+            <span class="text-[10px] text-slate-400 block">A 35 min de Bogotá</span>
+          </div>
+        </div>
+      </div>
+
       <!-- Main Content Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         
-        <!-- Left Column: Form -->
-        <div class="lg:col-span-7 glass-panel p-8 sm:p-10 rounded-sm border border-[#c8a675]/30 shadow-2xl relative">
-          <div class="mb-8">
-            <h2 class="font-serif text-2xl text-white font-semibold mb-1">Formulario de Solicitud</h2>
-            <p class="text-xs text-slate-400">Complete sus datos y nuestro equipo le responderá en menos de 24 horas.</p>
+        <!-- Left Column: Simple & High-Converting Form -->
+        <div class="lg:col-span-7 glass-panel p-6 sm:p-8 rounded-xl border border-[#c8a675]/30 shadow-2xl relative">
+          <div class="mb-6">
+            <h2 class="font-serif text-2xl text-white font-semibold mb-1">Envíanos un Mensaje</h2>
+            <p class="text-xs text-slate-400">Déjanos tus datos de contacto y te responderemos a la brevedad con la información que necesitas.</p>
           </div>
 
-          <form id="contact-page-form" class="space-y-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <form id="contact-page-form" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
-                <label for="contact-name" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Nombre Completo *</label>
-                <input type="text" id="contact-name" required placeholder="Ej. Álvaro Mendoza" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none transition-colors" />
+                <label for="contact-name" class="block text-xs uppercase tracking-wider text-slate-300 mb-1.5 font-semibold">Nombre o Empresa *</label>
+                <input type="text" id="contact-name" required placeholder="Tu nombre o empresa" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-lg outline-none transition-colors" />
               </div>
               <div>
-                <label for="contact-email" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Correo Electrónico *</label>
-                <input type="email" id="contact-email" required placeholder="correo@ejemplo.com" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none transition-colors" />
-              </div>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
-                <label for="contact-phone" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Teléfono / WhatsApp *</label>
-                <input type="tel" id="contact-phone" required placeholder="+34 612 345 678" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none transition-colors" />
-              </div>
-              <div>
-                <label for="contact-country" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">País / Residencia</label>
-                <input type="text" id="contact-country" placeholder="España, México, Colombia, EE.UU..." class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none transition-colors" />
+                <label for="contact-phone" class="block text-xs uppercase tracking-wider text-slate-300 mb-1.5 font-semibold">Teléfono / WhatsApp *</label>
+                <input type="tel" id="contact-phone" required placeholder="+57 310 000 0000" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-lg outline-none transition-colors" />
               </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
-                <label for="contact-service" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Área de Interés Principal</label>
-                <select id="contact-service" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none transition-colors">
-                  <option value="genetica">Adquisición de Dosis Genética / Salto</option>
-                  <option value="turismo">Turismo Ecuestre & Cabalgata Familiar</option>
-                  <option value="visita">Visita Guiada Privada a la Dehesa</option>
-                  <option value="cursos">Matrícula Academia & Cursos Ecuestres</option>
-                  <option value="compra">Compra de Ejemplar / Potro P.R.E.</option>
-                  <option value="internacional">Exportación Genética Internacional</option>
-                </select>
+                <label for="contact-email" class="block text-xs uppercase tracking-wider text-slate-300 mb-1.5 font-semibold">Correo Electrónico *</label>
+                <input type="email" id="contact-email" required placeholder="correo@ejemplo.com" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-lg outline-none transition-colors" />
               </div>
               <div>
-                <label for="contact-horse" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Semental de Interés (Opcional)</label>
-                <select id="contact-horse" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none transition-colors">
-                  <option value="general">Cualquier Ejemplar / Asesoría General</option>
-                  <option value="imperioso-iv">Imperioso IV (Doma Clásica & Morfología)</option>
-                  <option value="valeroso-real">Valeroso Real (Salto de Obstáculos)</option>
-                  <option value="sultan-de-alba">Sultán de Alba (Paso de Alta Escuela)</option>
+                <label for="contact-service" class="block text-xs uppercase tracking-wider text-slate-300 mb-1.5 font-semibold">Servicio de Interés</label>
+                <select id="contact-service" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-lg outline-none transition-colors">
+                  <option value="chalaneria">🐎 Escuela de Chalanería (Niños, Jóvenes, Adultos)</option>
+                  <option value="estimulacion">🌱 Estimulación Temprana con Caballos (7m a 4 años)</option>
+                  <option value="turismo">🌿 Cabalgata Ecológica en Tabio (3 Horas - $150.000)</option>
+                  <option value="eventos">💼 Eventos Empresariales / Grupos / Team Building</option>
+                  <option value="genetica">🐴 Servicios de Criadero, Ejemplares y Genética</option>
+                  <option value="alianzas">🤝 Alianzas Comerciales y Patrocinios</option>
+                  <option value="general">💬 Consulta General / Información de Negocio</option>
                 </select>
               </div>
             </div>
 
             <div>
-              <label for="contact-date" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Fecha Estimada para la Cita / Cabalgata</label>
-              <input type="date" id="contact-date" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none transition-colors" />
+              <label for="contact-notes" class="block text-xs uppercase tracking-wider text-slate-300 mb-1.5 font-semibold">¿Cómo te podemos colaborar? (Mensaje o Detalle)</label>
+              <textarea id="contact-notes" rows="4" placeholder="Cuéntanos qué necesitas: número de personas, fechas de interés, edades de alumnos o detalles de tu consulta comercial..." class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-lg outline-none transition-colors"></textarea>
             </div>
 
-            <div>
-              <label for="contact-notes" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Notas Adicionales o Requerimientos</label>
-              <textarea id="contact-notes" rows="4" placeholder="Indique características de interés, número de personas si es cabalgata, consultas sobre fechas especiales..." class="w-full bg-[#181b22] border border-slate-700 focus:border-[#c8a675] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none transition-colors"></textarea>
-            </div>
-
-            <div class="pt-2">
-              <button type="submit" class="w-full bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-semibold text-xs uppercase tracking-widest py-4 rounded-sm transition-all shadow-md flex items-center justify-center gap-2">
+            <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
+              <button type="submit" class="w-full sm:flex-1 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest py-3.5 rounded-lg transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer">
                 <span class="material-symbols-outlined text-base">send</span>
-                Enviar Solicitud
+                Enviar Mensaje
               </button>
+
+              <a id="contact-whatsapp-link" href="https://wa.me/573108529410?text=Hola,%20quisiera%20recibir%20informaci%C3%B3n%20comercial%20sobre%20La%20Chucua%20J.C" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-5 py-3.5 rounded-lg bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-500/40 text-emerald-400 hover:text-emerald-300 text-xs font-semibold flex items-center justify-center gap-2 transition-all">
+                <span class="material-symbols-outlined text-base">chat</span>
+                WhatsApp Directo
+              </a>
             </div>
           </form>
         </div>
 
-        <!-- Right Column: Estate Information & Logistics -->
+        <!-- Right Column: Business Opportunities & Logistics -->
         <div class="lg:col-span-5 space-y-6">
           
-          <!-- Direct Concierge Card -->
-          <div class="glass-panel p-6 rounded-sm border-t-2 border-t-[#c8a675] space-y-4">
+          <!-- Business & Service Lines Card -->
+          <div class="glass-panel p-6 rounded-xl border border-[#c8a675]/30 space-y-4">
             <div class="flex items-center gap-3">
-              <span class="material-symbols-outlined text-[#ddc295] text-2xl">support_agent</span>
+              <div class="w-10 h-10 rounded-lg bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] shrink-0">
+                <span class="material-symbols-outlined text-xl">domain</span>
+              </div>
               <div>
-                <h3 class="font-serif text-lg text-white font-semibold">Atención Personalizada</h3>
-                <span class="text-xs text-slate-400">Horario de atención: 08:00 - 20:00 CET</span>
+                <h3 class="font-serif text-lg text-white font-semibold">Opciones para tu Negocio</h3>
+                <span class="text-xs text-slate-400">Servicios a tu medida en Tabio</span>
               </div>
             </div>
-            <div class="space-y-2 text-xs text-slate-300 pt-2 border-t border-slate-700">
+
+            <div class="space-y-3 pt-2 text-xs text-slate-300 border-t border-slate-700/60">
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-sm text-[#c8a675] shrink-0 mt-0.5">check_circle</span>
+                <p><strong class="text-white">Empresas & Grupos:</strong> Jornadas de desconexión, team building y cabalgatas ecológicas con almuerzo o picnic.</p>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-sm text-[#c8a675] shrink-0 mt-0.5">check_circle</span>
+                <p><strong class="text-white">Familias & Alumnos:</strong> Procesos continuos de chalanería y estimulación infantil en sede campestre.</p>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="material-symbols-outlined text-sm text-[#c8a675] shrink-0 mt-0.5">check_circle</span>
+                <p><strong class="text-white">Criadores & Genética:</strong> Asesoría técnica, ejemplares de paso y formación de jinetes de pista.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Details & Hours Card -->
+          <div class="glass-panel p-6 rounded-xl border border-slate-700/60 space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] shrink-0">
+                <span class="material-symbols-outlined text-xl">schedule</span>
+              </div>
+              <div>
+                <h3 class="font-serif text-lg text-white font-semibold">Horarios y Atención</h3>
+                <span class="text-xs text-slate-400">Club Ecuestre La Chucua J.C</span>
+              </div>
+            </div>
+
+            <div class="space-y-2.5 text-xs text-slate-300 pt-2 border-t border-slate-700/60">
               <p class="flex items-center justify-between">
-                <span>Teléfono:</span>
-                <strong class="text-white">+34 912 840 920</strong>
+                <span class="text-slate-400">Martes a Domingo:</span>
+                <strong class="text-white">8:00 a.m. – 5:00 p.m.</strong>
               </p>
               <p class="flex items-center justify-between">
-                <span>WhatsApp:</span>
-                <strong class="text-[#ddc295]">+34 650 900 800</strong>
+                <span class="text-slate-400">Lunes:</span>
+                <span class="text-slate-400 italic">Mantenimiento de ejemplares</span>
+              </p>
+              <p class="flex items-center justify-between pt-1 border-t border-slate-800">
+                <span class="text-slate-400">Correo comercial:</span>
+                <a href="mailto:comercial@lachucuajc.com" class="text-[#ddc295] hover:underline">comercial@lachucuajc.com</a>
               </p>
               <p class="flex items-center justify-between">
-                <span>Correo Electrónico:</span>
-                <strong class="text-white">contacto@equineheritage.com</strong>
+                <span class="text-slate-400">Ubicación:</span>
+                <strong class="text-white">Tabio, Cundinamarca • Colombia</strong>
               </p>
             </div>
           </div>
 
-          <!-- Location -->
-          <div class="glass-panel p-6 rounded-sm border-t-2 border-t-[#c8a675] space-y-4">
-            <div class="flex items-center gap-3">
-              <span class="material-symbols-outlined text-[#ddc295] text-2xl">location_on</span>
-              <div>
-                <h3 class="font-serif text-lg text-white font-semibold">Ubicación & Acceso</h3>
-                <span class="text-xs text-slate-400">Dehesa de San Jerónimo</span>
-              </div>
+          <!-- Easy Access / Directions Card -->
+          <div class="glass-panel p-5 rounded-xl border border-slate-700/50 bg-[#1e222a]/80 flex items-start gap-3">
+            <span class="material-symbols-outlined text-[#ddc295] text-xl shrink-0 mt-0.5">assistant_navigation</span>
+            <div class="text-xs text-slate-300 space-y-1">
+              <span class="font-bold text-white block">¿Cómo llegar a la sede?</span>
+              <p class="text-slate-400 leading-relaxed">
+                Fácil acceso vehicular asfaltado desde Chía o Cajicá vía Tabio. Contamos con parqueadero privado, zona de espera campestre y cafetería para acompañantes.
+              </p>
             </div>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              La Finca se encuentra en un entorno natural reservado a 20 minutos de la ciudad. Contamos con estacionamiento privado para visitantes y acceso asfaltado.
-            </p>
-            <div class="p-3 bg-[#181b22] border border-slate-700 rounded-sm text-xs text-slate-400">
-              <strong class="text-slate-300 block mb-1">Dirección:</strong>
-              Camino Real de la Dehesa, Km 14 • Sevilla / Madrid
-            </div>
-          </div>
-
-          <!-- Notice -->
-          <div class="glass-panel p-6 rounded-sm border border-[#c8a675]/20 bg-[#222832]/60 space-y-2">
-            <div class="flex items-center gap-2 text-[#ddc295]">
-              <span class="material-symbols-outlined text-sm">verified_user</span>
-              <span class="text-xs uppercase tracking-widest font-semibold">Visitas con Reserva Previa</span>
-            </div>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Para garantizar la tranquilidad de los ejemplares y la mejor atención a nuestros visitantes, todas las visitas y cabalgatas se realizan bajo reserva confirmada.
-            </p>
           </div>
 
         </div>
@@ -297,36 +354,37 @@
         <span class="font-serif text-lg font-bold text-white">LA CHUCUA J.C</span>
       </div>
       <p class="text-xs text-slate-400 text-center md:text-left">
-        &copy; 2026 LA CHUCUA J.C. Todos los derechos reservados.
+        &copy; 2026 LA CHUCUA J.C. Todos los derechos reservados. Genética de calidad certificada.
       </p>
-      <div class="flex items-center gap-6 text-xs text-slate-400">
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
         <a href="index.html" class="hover:text-[#ddc295] transition-colors">Inicio</a>
-        <a href="index.html#catalogo" class="hover:text-[#ddc295] transition-colors">Sementales</a>
-        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors">Legado</a>
-        <a href="turismo.html" class="hover:text-[#ddc295] transition-colors">Turismo</a>
-        <a href="contacto.html" class="text-[#ddc295]">Contacto</a>
+        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors">Nosotros</a>
+        <a href="chalaneria.html" class="hover:text-[#ddc295] transition-colors">Chalanería</a>
+        <a href="estimulacion-temprana.html" class="hover:text-[#ddc295] transition-colors">Estimulación Temprana</a>
+        <a href="turismo.html" class="hover:text-[#ddc295] transition-colors">Cabalgata Ecológica</a>
+        <a href="contacto.html" class="text-[#ddc295] font-bold">Contacto</a>
       </div>
     </div>
   </footer>
 
   <!-- Confirmation Modal -->
   <div id="contact-confirmation-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4 sm:p-6">
-    <div class="relative w-full max-w-lg bg-[#222832] border border-[#c8a675] rounded-sm p-8 text-center shadow-2xl">
-      <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-[#c8a675]/20 border border-[#c8a675] flex items-center justify-center text-[#ddc295]">
-        <span class="material-symbols-outlined text-3xl">verified</span>
+    <div class="relative w-full max-w-lg bg-[#222832] border border-[#c8a675] rounded-xl p-6 sm:p-8 text-center shadow-2xl">
+      <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-emerald-500/20 border border-emerald-500/50 flex items-center justify-center text-emerald-400">
+        <span class="material-symbols-outlined text-3xl">check_circle</span>
       </div>
-      <h3 class="font-serif text-2xl text-white font-bold mb-2">Solicitud Enviada</h3>
-      <p class="text-xs text-slate-300 mb-6">Hemos recibido su solicitud correctamente. Nos pondremos en contacto con usted a la brevedad.</p>
+      <h3 class="font-serif text-2xl text-white font-bold mb-1">¡Mensaje Enviado con Éxito!</h3>
+      <p class="text-xs text-slate-300 mb-5">Gracias por ponerte en contacto. Nuestro equipo revisará tu mensaje y te responderá en el menor tiempo posible.</p>
       
-      <div id="contact-summary-details" class="bg-[#181b22] p-5 rounded-sm border border-slate-700 text-left mb-6 space-y-2 text-xs text-slate-300">
+      <div id="contact-summary-details" class="bg-[#181b22] p-4 rounded-lg border border-slate-700 text-left mb-6 text-xs text-slate-300">
         <!-- Injected by JS -->
       </div>
 
-      <div class="flex gap-4">
-        <a href="index.html" class="flex-1 border border-slate-600 text-slate-200 hover:text-white py-3 text-xs font-semibold uppercase tracking-widest rounded-sm text-center">
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="index.html" class="flex-1 border border-slate-600 text-slate-200 hover:text-white py-3 text-xs font-semibold uppercase tracking-widest rounded-lg text-center transition-colors">
           Volver al Inicio
         </a>
-        <button id="close-contact-modal" class="flex-1 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-semibold text-xs uppercase tracking-widest py-3 rounded-sm transition-all">
+        <button id="close-contact-modal" class="flex-1 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest py-3 rounded-lg transition-all cursor-pointer">
           Aceptar
         </button>
       </div>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nuestro Legado & Tradición | LA CHUCUA J.C</title>
-  <meta name="description" content="Tres décadas de distinción, linajes de sangre pura y preservación del caballo de élite. Conoce la historia y visión de los fundadores de LA CHUCUA J.C." />
+  <title>Nosotros | Historia & Filosofía | Club Ecuestre La Chucua J.C.</title>
+  <meta name="description" content="Una historia que comenzó con un caballo y se convirtió en un propósito de vida. Genética de calidad, formación para la vida y conexión con el caballo en Tabio, Cundinamarca." />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -61,290 +61,606 @@
 
   <!-- Header / Navigation Bar -->
   <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 glass-nav">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative">
       <!-- Logo / Crest -->
-      <a href="index.html" class="flex items-center gap-3 group">
+      <a href="index.html" class="flex items-center gap-3 group z-10">
         <div class="w-10 h-10 rounded-sm bg-gradient-to-br from-[#c8a675] to-[#1e222a] p-0.5 border border-[#c8a675]/60 flex items-center justify-center shadow-lg">
           <div class="w-full h-full bg-[#1e222a] flex items-center justify-center">
-            <span class="material-symbols-outlined text-[#ddc295] text-xl group-hover:scale-110 transition-transform">auto_stories</span>
+            <span class="material-symbols-outlined text-[#ddc295] text-xl group-hover:scale-110 transition-transform">military_tech</span>
           </div>
         </div>
         <div>
           <span class="font-serif text-lg tracking-widest uppercase font-bold text-white block group-hover:text-[#ddc295] transition-colors">LA CHUCUA J.C</span>
-          <span class="text-[9px] uppercase tracking-[0.25em] text-[#c8a675] block">Legado & Tradición</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-[#c8a675] block">Genética de Calidad</span>
         </div>
       </a>
 
-      <!-- Desktop Nav Links -->
-      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-slate-300">
-        <a href="index.html" class="hover:text-[#ddc295] transition-colors">Criadero</a>
-        <a href="nuestro-legado.html" class="text-[#ddc295] border-b-2 border-[#c8a675] pb-0.5 font-bold">Nuestro Legado</a>
-        <a href="#vision" class="hover:text-[#ddc295] transition-colors">Visión</a>
-        <a href="#cronologia" class="hover:text-[#ddc295] transition-colors">Cronología</a>
-        <a href="#pilares" class="hover:text-[#ddc295] transition-colors">Pilares</a>
+      <!-- Desktop Nav Links (Centered) -->
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-xs font-semibold uppercase tracking-widest text-slate-300 absolute left-1/2 -translate-x-1/2 top-0 h-full">
+        <a href="index.html" class="hover:text-[#ddc295] transition-colors py-1">Inicio</a>
+        <a href="nuestro-legado.html" class="text-[#ddc295] border-b-2 border-[#c8a675] pb-0.5 font-bold">Nosotros</a>
 
-        <!-- Dropdown Servicios -->
+        <!-- Dropdown Servicios (1. Chalanería, 2. Estimulación Temprana, 3. Cabalgata) -->
         <div class="relative group py-4">
-          <button class="flex items-center gap-1 hover:text-[#ddc295] transition-colors cursor-pointer">
+          <button class="flex items-center gap-1 hover:text-[#ddc295] transition-colors cursor-pointer uppercase tracking-widest text-xs font-semibold py-1">
             <span>Servicios</span>
-            <span class="material-symbols-outlined text-base group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+            <span class="material-symbols-outlined text-base group-hover:rotate-180 transition-transform duration-300 text-[#c8a675]">expand_more</span>
           </button>
-          <div class="dropdown-menu-fade absolute top-full left-0 bg-[#1e222a] border border-[#c8a675]/30 rounded-sm shadow-2xl p-2 min-w-[230px] backdrop-blur-xl z-50">
-            <a href="turismo.html" class="flex items-center gap-2 px-4 py-2.5 rounded-sm text-xs text-slate-300 hover:text-[#ddc295] hover:bg-[#2b323f] transition-colors">
-              <span class="material-symbols-outlined text-base text-[#c8a675]">nature_people</span>
-              <span>Turismo & Cabalgatas</span>
+          <div class="dropdown-menu-fade absolute top-full left-0 bg-[#1e222a]/95 border border-[#c8a675]/30 rounded-xl shadow-2xl p-2.5 min-w-[285px] backdrop-blur-2xl z-50 space-y-1">
+            <a href="chalaneria.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-[#2b323f] transition-all group/item">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] group-hover/item:scale-105 transition-transform shrink-0">
+                <span class="material-symbols-outlined text-base">sports_score</span>
+              </div>
+              <div>
+                <span class="font-bold text-white block">Chalanería</span>
+                <span class="text-[10px] text-slate-400">Formación, técnica & competencia</span>
+              </div>
             </a>
-            <a href="academia.html" class="flex items-center gap-2 px-4 py-2.5 rounded-sm text-xs text-slate-300 hover:text-[#ddc295] hover:bg-[#2b323f] transition-colors">
-              <span class="material-symbols-outlined text-base text-[#c8a675]">school</span>
-              <span>Academia Ecuestre</span>
+            <a href="estimulacion-temprana.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-[#2b323f] transition-all group/item">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] group-hover/item:scale-105 transition-transform shrink-0">
+                <span class="material-symbols-outlined text-base">child_care</span>
+              </div>
+              <div>
+                <span class="font-bold text-white block">Estimulación Temprana</span>
+                <span class="text-[10px] text-slate-400">De 7 meses a 4 años & vínculo</span>
+              </div>
+            </a>
+            <a href="turismo.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-[#2b323f] transition-all group/item">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] group-hover/item:scale-105 transition-transform shrink-0">
+                <span class="material-symbols-outlined text-base">nature_people</span>
+              </div>
+              <div>
+                <span class="font-bold text-white block">Cabalgata Ecológica</span>
+                <span class="text-[10px] text-slate-400">3 horas en Tabio ($150.000)</span>
+              </div>
             </a>
           </div>
         </div>
 
-        <a href="contacto.html" class="hover:text-[#ddc295] transition-colors">Contacto</a>
+        <a href="contacto.html" class="hover:text-[#ddc295] transition-colors py-1">Contacto</a>
       </nav>
 
-      <!-- CTA -->
-      <div class="hidden md:flex items-center gap-4">
-        <a href="contacto.html" class="bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-semibold text-xs uppercase tracking-widest px-5 py-2.5 rounded-sm transition-all shadow-md">
-          Visita Privada
-        </a>
-      </div>
-
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="md:hidden text-slate-200 hover:text-[#ddc295] p-2">
+      <button id="mobile-menu-btn" class="md:hidden text-slate-200 hover:text-[#ddc295] p-2 z-10" aria-label="Abrir menú">
         <span class="material-symbols-outlined text-2xl">menu</span>
       </button>
     </div>
 
     <!-- Mobile Nav Dropdown -->
     <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-[#c8a675]/20 px-6 py-6 space-y-4">
-      <a href="index.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Criadero & Sementales</a>
-      <a href="nuestro-legado.html" class="block text-sm uppercase tracking-widest text-[#ddc295] font-bold">Nuestro Legado</a>
-      <a href="#vision" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Visión de los Fundadores</a>
-      <a href="#cronologia" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Cronología Histórica</a>
-      <a href="#pilares" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Pilares Fundamentales</a>
+      <a href="index.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Inicio</a>
+      <a href="nuestro-legado.html" class="block text-sm uppercase tracking-widest text-[#ddc295] font-bold">Nosotros</a>
 
       <div class="border-t border-slate-700/60 pt-3 space-y-2">
-        <span class="text-[10px] uppercase tracking-wider text-slate-400 block font-semibold">Nuestros Servicios:</span>
-        <a href="turismo.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">🐴 Turismo & Cabalgatas</a>
-        <a href="academia.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">🎓 Academia Ecuestre</a>
+        <span class="text-[10px] uppercase tracking-wider text-[#c8a675] block font-bold">Servicios:</span>
+        <a href="chalaneria.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">sports_score</span>
+          <span>Chalanería & Formación</span>
+        </a>
+        <a href="estimulacion-temprana.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">child_care</span>
+          <span>Estimulación Temprana</span>
+        </a>
+        <a href="turismo.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">nature_people</span>
+          <span>Cabalgata Ecológica (Tabio)</span>
+        </a>
       </div>
 
-      <a href="contacto.html" class="block text-center bg-[#c8a675] text-[#1e222a] font-semibold text-xs uppercase tracking-widest py-3 rounded-sm">Visita Privada</a>
+      <a href="contacto.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Contacto</a>
     </div>
   </header>
 
   <main class="flex-1">
     <!-- Hero Section -->
-    <section class="relative min-h-[90vh] flex items-center justify-center pt-28 pb-20 overflow-hidden">
+    <section class="relative min-h-[92vh] flex items-center justify-center pt-28 pb-20 overflow-hidden">
       <!-- Background Image with Light Soft Overlays -->
       <div class="absolute inset-0 z-0">
-        <img src="assets/images/hero_stallion.jpg" alt="Semental Fundador Equine Heritage" class="w-full h-full object-cover object-center transform scale-105" />
-        <div class="absolute inset-0 bg-gradient-to-r from-[#1e222a]/80 via-[#1e222a]/50 to-transparent"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-[#1e222a] via-transparent to-transparent opacity-70"></div>
+        <img src="assets/images/hero_stallion.jpg" alt="Club Ecuestre La Chucua J.C" class="w-full h-full object-cover object-center transform scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#1e222a]/90 via-[#1e222a]/65 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1e222a] via-transparent to-black/40 opacity-80"></div>
       </div>
 
       <div class="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-6">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-[#1e222a]/90 backdrop-blur-md border border-[#c8a675]/40 mx-auto">
-          <span class="material-symbols-outlined text-[#ddc295] text-sm">history_edu</span>
-          <span class="text-xs uppercase tracking-[0.2em] font-semibold text-[#ddc295]">Historia, Nobleza y Genética</span>
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1e222a]/90 backdrop-blur-md border border-[#c8a675]/40 mx-auto">
+          <span class="w-2 h-2 rounded-full bg-[#c8a675] animate-pulse"></span>
+          <span class="text-xs uppercase tracking-[0.25em] font-semibold text-[#ddc295]">Club Ecuestre La Chucua J.C. • Tabio, Cundinamarca</span>
         </div>
 
-        <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight text-white drop-shadow-md">
-          Un Legado Forjado en <br />
-          <span class="text-[#ddc295] italic">Sangre Real</span>
-        </h1>
+        <div class="space-y-2">
+          <p class="text-xs sm:text-sm uppercase tracking-[0.3em] font-bold text-[#c8a675]">
+            Genética de calidad. Formación con propósito.
+          </p>
+          <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold leading-tight text-white drop-shadow-md">
+            Una historia que comenzó con un caballo <br />
+            <span class="text-[#ddc295] italic">y se convirtió en un propósito de vida</span>
+          </h1>
+        </div>
 
         <p class="text-base sm:text-lg text-slate-200 max-w-3xl mx-auto leading-relaxed font-light drop-shadow">
-          Durante más de tres décadas, Equine Heritage ha cultivado un estándar de excelencia intransigente, criando campeones que definen la cúspide del rendimiento deportivo, la elegancia morfológica y la pureza genealógica.
+          Desde las enseñanzas imborrables de nuestro primer caballo profesor hasta la consolidación de un programa de crianza y formación humana. Creemos que cada caballo es un maestro y cada jinete tiene su propio proceso.
         </p>
 
-        <div class="pt-6">
-          <a href="#vision" class="inline-flex items-center gap-2 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-semibold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all shadow-lg">
-            <span>Conocer Nuestra Historia</span>
+        <div class="pt-6 flex flex-wrap justify-center gap-4">
+          <a href="#origen" class="inline-flex items-center gap-2 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all shadow-lg transform hover:-translate-y-0.5 cursor-pointer">
+            <span>Explorar Nuestra Historia</span>
             <span class="material-symbols-outlined text-sm">arrow_downward</span>
+          </a>
+          <a href="#temperamentos" class="inline-flex items-center gap-2 border border-[#c8a675]/40 text-slate-200 hover:text-[#ddc295] hover:border-[#c8a675] bg-[#2b323f]/50 backdrop-blur-md font-semibold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all">
+            <span>Nuestra Filosofía</span>
+            <span class="material-symbols-outlined text-sm">psychology</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Narrative Section: The Founders' Vision -->
-    <section id="vision" class="py-24 bg-[#181b22] border-t border-slate-800 relative">
+    <!-- Capítulo 1: El Origen — La Primera Yegua y Palomo, el Caballo Profesor -->
+    <section id="origen" class="py-24 bg-[#181b22] border-t border-slate-800 relative">
       <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Left Column: Editorial Styled Image Frame with Corner Accents -->
+        <!-- Left Column: Editorial Photo Frame of Palomo -->
         <div class="lg:col-span-5 relative">
-          <div class="w-full relative p-3 border border-[#c8a675]/30 rounded-sm bg-[#2b323f]/60 shadow-2xl">
+          <div class="w-full relative p-3 border border-[#c8a675]/30 rounded-xl bg-[#2b323f]/60 shadow-2xl">
             <!-- Decorative Corner Brackets -->
             <div class="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2 border-[#c8a675]"></div>
             <div class="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-[#c8a675]"></div>
             <div class="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-[#c8a675]"></div>
             <div class="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2 border-[#c8a675]"></div>
 
-            <div class="relative overflow-hidden aspect-[4/5] bg-[#181b22]">
-              <img src="assets/images/luxury_stables.jpg" alt="Instalaciones Históricas de la Finca" class="w-full h-full object-cover" />
-              <div class="absolute bottom-4 left-4 right-4 bg-[#1e222a]/95 backdrop-blur-md p-3 border border-[#c8a675]/30 text-[11px] text-slate-300">
-                <strong class="text-[#ddc295] block">Dehesa de San Jerónimo, 1995</strong>
-                El origen de nuestra estirpe cartujana y pura raza española.
+            <div class="relative overflow-hidden aspect-[4/3] rounded-lg bg-[#181b22]">
+              <img src="assets/images/palomo_profesor.jpg" alt="Palomo, el caballo profesor de La Chucua J.C." class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" />
+              <div class="absolute bottom-4 left-4 right-4 bg-[#1e222a]/95 backdrop-blur-md p-3.5 rounded-lg border border-[#c8a675]/30 text-[11px] text-slate-300 shadow-xl">
+                <strong class="text-[#ddc295] block text-xs mb-0.5">Palomo · El Caballo Profesor</strong>
+                Semipony blanco de largas crines que enseñó a montar, a confiar y a perder el miedo.
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right Column: Vision Story & Direct Quote -->
+        <!-- Right Column: Narrative Story -->
         <div class="lg:col-span-7 space-y-6">
-          <span class="text-xs uppercase tracking-[0.2em] text-[#c8a675] font-semibold block">La Visión de los Fundadores</span>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2b323f] border border-[#c8a675]/30">
+            <span class="material-symbols-outlined text-[#ddc295] text-sm">wb_twilight</span>
+            <span class="text-[11px] uppercase tracking-[0.2em] text-[#c8a675] font-semibold">Capítulo 01 · La Semilla de la Pasión</span>
+          </div>
           
           <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white leading-tight">
-            De un Solo Semental a un Linaje Mundial
+            Una Pasión que Nació en la Infancia
           </h2>
 
-          <div class="p-6 bg-[#2b323f]/80 border-l-4 border-l-[#c8a675] rounded-sm">
-            <p class="font-serif text-lg sm:text-xl text-[#ddc295] italic font-light leading-relaxed">
-              "No nos propusimos simplemente criar caballos; nos propusimos preservar una obra de arte viviente. La calidad requiere paciencia, observación y un respeto absoluto por la nobleza del animal."
+          <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-light">
+            La historia de La Chucua J.C. comenzó cuando tenía apenas cinco años, cuando mi padre me regaló mi primera yegua: una hermosa yegua pintada que, aunque tenía un carácter particular y no era fácil de montar para un niño, despertó en mí un amor por los caballos que nunca desapareció.
+          </p>
+
+          <!-- The Palomo Memory Block -->
+          <div class="p-6 bg-[#2b323f]/80 border-l-4 border-l-[#c8a675] rounded-r-xl space-y-3 shadow-lg">
+            <h3 class="font-serif text-lg text-[#ddc295] font-bold">La llegada de Palomo</h3>
+            <p class="font-serif text-base text-slate-200 italic font-light leading-relaxed">
+              “Con el tiempo llegó a mi vida Palomo, un hermoso semipony blanco, de largas crines, que se convirtió en mucho más que mi primer caballo. Palomo había sido utilizado anteriormente para dictar clases de chalanería y era, como decimos en el mundo ecuestre, un verdadero caballo profesor.”
             </p>
-            <span class="text-xs uppercase tracking-wider text-slate-400 block mt-3">— Familia Fundadora Mendoza-Borbón</span>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed pt-1">
+              Él me enseñó a montar, a confiar, a perder el miedo y a disfrutar de cada momento a caballo. Me acompañó hasta el final de sus días y dejó una huella que permanece hasta hoy.
+            </p>
           </div>
 
           <div class="space-y-4 text-sm text-slate-300 leading-relaxed">
             <p>
-              En el otoño de 1995, Equine Heritage nació con una filosofía inmutable: adquirir ejemplares fundacionales de insuperable estampa y nobleza para devolver a la cría española el rigor genealógico y el temperamento de los caballos reales.
+              Con los años comprendí que montar a caballo era mucho más que un deporte. Era mi espacio para desconectarme, recuperar energía, enfrentar mis miedos y encontrar tranquilidad.
             </p>
             <p>
-              Nuestra metodología fusiona trescientos años de tradición ecuestre clásica con la biotecnología reproductiva moderna. Cada potro nacido en nuestras praderas es el resultado de un estudio cromosómico minucioso y un programa etológico que potencia su inteligencia natural.
+              En la finca, los montadores que trabajaban los animales también se convirtieron en mis maestros. Allí aprendí a sentir al caballo, a cogerle el pulso, a observarlo y a entender que cada caballo y cada jinete tienen su propio proceso.
             </p>
+            <p>
+              Mis padres siempre me enseñaron que debía dedicarme a aquello que realmente me apasionara, pero con una condición: <strong class="text-white">hacerlo y buscar ser el mejor</strong>.
+            </p>
+          </div>
+
+          <div class="pt-2">
+            <div class="inline-block p-4 rounded-xl bg-gradient-to-r from-[#c8a675]/20 to-transparent border-l-2 border-[#c8a675]">
+              <span class="text-xs uppercase tracking-wider text-slate-400 block mb-1">Entonces surgió una pregunta que cambiaría mi vida:</span>
+              <span class="font-serif text-xl sm:text-2xl text-[#ddc295] font-bold">¿Por qué no vivir de los caballos?</span>
+            </div>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- Timeline: Three Decades of Distinction -->
-    <section id="cronologia" class="py-24 bg-[#1e222a] border-t border-slate-800">
+    <!-- Capítulo 2: El Comienzo de un Sueño (Hace ~10 Años) -->
+    <section id="sueno" class="py-24 bg-[#1e222a] border-t border-slate-800 relative">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block mb-2">Hitos y Trayectoria</span>
-          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Tres Décadas de Distinción</h2>
-          <p class="text-sm text-slate-300 mt-3">Los momentos determinantes que han forjado el prestigio internacional de nuestra ganadería.</p>
+        
+        <div class="max-w-3xl mx-auto text-center mb-16 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2b323f] border border-[#c8a675]/30">
+            <span class="material-symbols-outlined text-[#ddc295] text-sm">flag</span>
+            <span class="text-[11px] uppercase tracking-[0.2em] text-[#c8a675] font-semibold">Capítulo 02 · Hace ~10 Años</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">El Comienzo de un Sueño</h2>
+          <p class="text-base text-slate-300 leading-relaxed font-light">
+            Hace aproximadamente diez años decidí comenzar formalmente mi proyecto con caballos de paso. Empezar no fue fácil. Tuve que realizar grandes sacrificios y comenzar prácticamente desde cero para poder construir el proyecto que soñaba.
+          </p>
+          <div class="p-4 rounded-xl bg-[#2b323f]/90 border border-[#c8a675]/30 max-w-xl mx-auto">
+            <span class="text-xs uppercase tracking-widest text-slate-400 block mb-1">Desde el principio tuve algo muy claro:</span>
+            <p class="font-serif text-lg sm:text-xl text-[#ddc295] font-bold italic">
+              “Para saber para dónde vamos, primero debemos saber de dónde venimos.”
+            </p>
+          </div>
         </div>
 
-        <div class="max-w-4xl mx-auto relative border-l border-[#c8a675]/30 ml-4 md:ml-40 space-y-16 py-6">
+        <!-- Search for bloodlines & Foundational Mares Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           
-          <!-- 1995 -->
-          <div class="relative pl-8 md:pl-12 group">
-            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#1e222a] border-2 border-[#c8a675] group-hover:bg-[#ddc295] transition-colors shadow-lg"></div>
-            <span class="inline-block bg-[#2b323f] border border-[#c8a675]/40 text-[#ddc295] font-serif font-bold text-sm px-3.5 py-1 rounded-sm mb-2">
-              1995
-            </span>
-            <h3 class="font-serif text-2xl text-white group-hover:text-[#ddc295] transition-colors mb-2">
-              La Fundación & Primer Semental
+          <!-- Soberana de San Judas Card -->
+          <div class="glass-panel p-8 rounded-2xl border border-[#c8a675]/30 relative group hover:border-[#c8a675] transition-all">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295]">
+                <span class="material-symbols-outlined text-2xl">workspace_premium</span>
+              </div>
+              <span class="text-[10px] uppercase tracking-widest px-3 py-1 rounded-full bg-[#1e222a] border border-[#c8a675]/40 text-[#ddc295] font-semibold">
+                Línea Clave Histórica CCC
+              </span>
+            </div>
+            <h3 class="font-serif text-2xl text-white font-bold mb-3 group-hover:text-[#ddc295] transition-colors">
+              Soberana de San Judas
             </h3>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              Adquisición de la finca histórica de 500 hectáreas en la dehesa y la llegada de <em>'Aurelius'</em>, nuestro semental cartujano fundador que definió el temperamento noble de la yeguada.
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+              Uno de los ejemplares que marcó este camino fue Soberana de San Judas, una yegua con una línea de gran importancia dentro de la historia del Caballo Criollo Colombiano.
             </p>
+            <div class="grid grid-cols-2 gap-2 text-[11px] text-slate-300 pt-2 border-t border-slate-700/60">
+              <div><strong class="text-white block">Conformación & Aplomos:</strong> Balance morfológico y solidez ósea</div>
+              <div><strong class="text-white block">Temperamento & Movimientos:</strong> Cadencia, ritmo y nobleza de paso</div>
+            </div>
           </div>
 
-          <!-- 2005 -->
-          <div class="relative pl-8 md:pl-12 group">
-            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#1e222a] border-2 border-[#c8a675] group-hover:bg-[#ddc295] transition-colors shadow-lg"></div>
-            <span class="inline-block bg-[#2b323f] border border-[#c8a675]/40 text-[#ddc295] font-serif font-bold text-sm px-3.5 py-1 rounded-sm mb-2">
-              2005
-            </span>
-            <h3 class="font-serif text-2xl text-white group-hover:text-[#ddc295] transition-colors mb-2">
-              Primer Gran Campeón Internacional
+          <!-- Ilusión Card -->
+          <div class="glass-panel p-8 rounded-2xl border border-[#c8a675]/30 relative group hover:border-[#c8a675] transition-all">
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295]">
+                <span class="material-symbols-outlined text-2xl">verified</span>
+              </div>
+              <span class="text-[10px] uppercase tracking-widest px-3 py-1 rounded-full bg-[#1e222a] border border-[#c8a675]/40 text-[#ddc295] font-semibold">
+                Línea Comprobada
+              </span>
+            </div>
+            <h3 class="font-serif text-2xl text-white font-bold mb-3 group-hover:text-[#ddc295] transition-colors">
+              Ilusión · Reproductora
             </h3>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              El ejemplar <em>'Noble Ascendant'</em> obtiene los máximos galardones de Morfología y Movimientos en el Salón Internacional del Caballo (SICAB), consagrando el linaje a nivel europeo.
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+              Posteriormente llegaron otros ejemplares y nuevas líneas que fueron enriqueciendo el proyecto, entre ellos Ilusión, una reproductora con generaciones de genética importante y una trayectoria que demostraba el valor de una línea comprobada.
             </p>
-          </div>
-
-          <!-- 2015 -->
-          <div class="relative pl-8 md:pl-12 group">
-            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#1e222a] border-2 border-[#c8a675] group-hover:bg-[#ddc295] transition-colors shadow-lg"></div>
-            <span class="inline-block bg-[#2b323f] border border-[#c8a675]/40 text-[#ddc295] font-serif font-bold text-sm px-3.5 py-1 rounded-sm mb-2">
-              2015
-            </span>
-            <h3 class="font-serif text-2xl text-white group-hover:text-[#ddc295] transition-colors mb-2">
-              Laboratorio Biotecnológico de Vanguardia
-            </h3>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              Inauguración de nuestro centro de criopreservación seminal y biometría genética, permitiendo la exportación de dosis a los cinco continentes bajo los estándares sanitarios más exigentes.
-            </p>
-          </div>
-
-          <!-- 2024 -->
-          <div class="relative pl-8 md:pl-12 group">
-            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-[#1e222a] border-2 border-[#c8a675] group-hover:bg-[#ddc295] transition-colors shadow-lg"></div>
-            <span class="inline-block bg-[#2b323f] border border-[#c8a675]/40 text-[#ddc295] font-serif font-bold text-sm px-3.5 py-1 rounded-sm mb-2">
-              2024 - Presente
-            </span>
-            <h3 class="font-serif text-2xl text-white group-hover:text-[#ddc295] transition-colors mb-2">
-              Academia Ecuestre Internacional & Turismo
-            </h3>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              Apertura de los programas de formación residencial con maestros olímpicos y el programa de turismo ecuestre familiar, acercando la magia del caballo a las nuevas generaciones.
-            </p>
+            <div class="grid grid-cols-2 gap-2 text-[11px] text-slate-300 pt-2 border-t border-slate-700/60">
+              <div><strong class="text-white block">Genética Probada:</strong> Múltiples generaciones consistentes</div>
+              <div><strong class="text-white block">Aporte Maternal:</strong> Transmisión de docilidad y finura</div>
+            </div>
           </div>
 
         </div>
+
+        <div class="text-center">
+          <p class="text-sm text-slate-300 italic max-w-2xl mx-auto">
+            “Cada caballo, cada reproducción, cada acierto y cada error fueron formando lo que hoy conocemos como <strong class="text-[#ddc295]">La Chucua J.C.</strong>”
+          </p>
+        </div>
+
       </div>
     </section>
 
-    <!-- The Pillars of Our Heritage (Values Section) -->
-    <section id="pilares" class="py-24 bg-[#181b22] border-t border-slate-800">
+    <!-- Capítulo 3: Genética con Propósito -->
+    <section id="genetica" class="py-24 bg-[#181b22] border-t border-slate-800 relative">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block mb-2">Nuestros Principios</span>
-          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Los Pilares de Nuestro Legado</h2>
-          <p class="text-sm text-slate-300 mt-3">Los valores éticos y técnicos que guían cada decisión en el criadero.</p>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+          <div class="lg:col-span-7 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2b323f] border border-[#c8a675]/30">
+              <span class="material-symbols-outlined text-[#ddc295] text-sm">dna</span>
+              <span class="text-[11px] uppercase tracking-[0.2em] text-[#c8a675] font-semibold">Capítulo 03 · Visión Reproductiva</span>
+            </div>
+
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white leading-tight">
+              Genética con Propósito
+            </h2>
+
+            <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-light">
+              Hoy contamos con ejemplares que representan una parte fundamental de nuestra visión genética, entre ellos <strong class="text-[#ddc295]">Venus del Rancho</strong> y <strong class="text-[#ddc295]">Valentina de la Mariana</strong>. Cada una representa líneas, características y cualidades que hemos seleccionado cuidadosamente para continuar construyendo una genética de calidad.
+            </p>
+
+            <div class="p-6 bg-[#2b323f]/90 border-l-4 border-l-[#c8a675] rounded-r-xl space-y-2">
+              <p class="font-serif text-lg text-white font-semibold">
+                Nuestra filosofía no se basa en buscar cantidad.
+              </p>
+              <p class="text-sm text-[#ddc295] font-medium">
+                Buscamos calidad, salud, funcionalidad, temperamento y genética con propósito.
+              </p>
+            </div>
+
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Creemos que criar un caballo es pensar en generaciones futuras. Por eso cada decisión dentro del programa de reproducción tiene una razón y hace parte de una visión a largo plazo.
+            </p>
+
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Nuestro objetivo es aportar al futuro del Caballo Criollo Colombiano, conservando aquello que nos identifica y buscando, generación tras generación, producir animales de calidad.
+            </p>
+          </div>
+
+          <!-- Right Column: Visual highlights of Venus & Valentina -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="glass-panel p-6 rounded-xl border border-[#c8a675]/30 space-y-3">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-[#c8a675]/20 flex items-center justify-center text-[#ddc295]">
+                  <span class="material-symbols-outlined">stars</span>
+                </div>
+                <div>
+                  <h4 class="font-serif text-lg text-white font-bold">Venus del Rancho</h4>
+                  <span class="text-[11px] text-[#c8a675] uppercase tracking-wider">Matrona de Crianza Activa</span>
+                </div>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Seleccionada por su excelente conformación, aplomos perfectos, brío ordenado y la herencia de líneas tradicionales que potencian la cadencia de la trocha y el paso fino.
+              </p>
+            </div>
+
+            <div class="glass-panel p-6 rounded-xl border border-[#c8a675]/30 space-y-3">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-[#c8a675]/20 flex items-center justify-center text-[#ddc295]">
+                  <span class="material-symbols-outlined">stars</span>
+                </div>
+                <div>
+                  <h4 class="font-serif text-lg text-white font-bold">Valentina de la Mariana</h4>
+                  <span class="text-[11px] text-[#c8a675] uppercase tracking-wider">Línea de Paso & Nobleza</span>
+                </div>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Ejemplar de estampa distinguida, suavidad al andar y un temperamento colaborador y noble, cualidades indispensables en nuestro programa de reproducción.
+              </p>
+            </div>
+
+            <div class="pt-2">
+              <a href="index.html#catalogo" class="w-full flex items-center justify-center gap-2 bg-[#2b323f] hover:bg-[#c8a675] text-slate-200 hover:text-[#1e222a] border border-[#c8a675]/40 py-3 rounded-lg text-xs uppercase tracking-widest font-bold transition-all">
+                <span>Ver Ejemplares en Catálogo</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Pillar 1: Integridad -->
-          <div class="glass-panel p-8 rounded-sm space-y-4 border-t-2 border-t-[#c8a675] hover:border-[#c8a675]/70 transition-all duration-300">
-            <span class="material-symbols-outlined text-[#ddc295] text-4xl">verified</span>
-            <h3 class="font-serif text-2xl text-white font-bold">Integridad Ética</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Estándares inflexibles en la cría natural, transparencia absoluta en las pruebas de ADN y el compromiso innegociable con el bienestar físico y emocional de cada ejemplar.
-            </p>
+        <!-- The 4 Reproductive Principles -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="glass-panel p-6 rounded-xl border-t-2 border-t-[#c8a675] space-y-2">
+            <span class="material-symbols-outlined text-[#ddc295] text-3xl">health_and_safety</span>
+            <h4 class="font-serif text-lg text-white font-bold">Salud Integral</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">Bienestar físico, nutrición balanceada y aplomos correctos desde el nacimiento.</p>
           </div>
-
-          <!-- Pillar 2: Pedigrí -->
-          <div class="glass-panel p-8 rounded-sm space-y-4 border-t-2 border-t-[#c8a675] hover:border-[#c8a675]/70 transition-all duration-300">
-            <span class="material-symbols-outlined text-[#ddc295] text-4xl">account_tree</span>
-            <h3 class="font-serif text-2xl text-white font-bold">Pedigrí Certificado</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Curaduría meticulosa de líneas de sangre Cartujanas. Analizamos generaciones de ancestros para producir potros que transmitan la fisonomía y el temperamento de los campeones.
-            </p>
+          <div class="glass-panel p-6 rounded-xl border-t-2 border-t-[#c8a675] space-y-2">
+            <span class="material-symbols-outlined text-[#ddc295] text-3xl">speed</span>
+            <h4 class="font-serif text-lg text-white font-bold">Funcionalidad</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">Movimientos naturales, elasticidad, suavidad y cadencia en cada andadura.</p>
           </div>
-
-          <!-- Pillar 3: Rendimiento -->
-          <div class="glass-panel p-8 rounded-sm space-y-4 border-t-2 border-t-[#c8a675] hover:border-[#c8a675]/70 transition-all duration-300">
-            <span class="material-symbols-outlined text-[#ddc295] text-4xl">military_tech</span>
-            <h3 class="font-serif text-2xl text-white font-bold">Rendimiento en Pista</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              La forma sigue a la función. Criamos caballos no solo para admirar su belleza estética, sino por su fuerza muscular, elasticidad, ligereza y agilidad en las pistas de alta competición.
-            </p>
+          <div class="glass-panel p-6 rounded-xl border-t-2 border-t-[#c8a675] space-y-2">
+            <span class="material-symbols-outlined text-[#ddc295] text-3xl">psychology</span>
+            <h4 class="font-serif text-lg text-white font-bold">Temperamento</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">Brío manejable, nobleza, inteligencia y disposición receptiva al aprendizaje.</p>
+          </div>
+          <div class="glass-panel p-6 rounded-xl border-t-2 border-t-[#c8a675] space-y-2">
+            <span class="material-symbols-outlined text-[#ddc295] text-3xl">timeline</span>
+            <h4 class="font-serif text-lg text-white font-bold">Visión de Futuro</h4>
+            <p class="text-xs text-slate-300 leading-relaxed">Crianza pensada para generaciones venideras del Caballo Criollo Colombiano.</p>
           </div>
         </div>
+
       </div>
     </section>
 
-    <!-- VIP Banner CTA -->
+    <!-- Capítulo 4: Del Criadero al Club Ecuestre -->
+    <section id="transformacion" class="py-24 bg-[#1e222a] border-t border-slate-800 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="max-w-4xl mx-auto space-y-8">
+          
+          <div class="text-center space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2b323f] border border-[#c8a675]/30">
+              <span class="material-symbols-outlined text-[#ddc295] text-sm">diversity_3</span>
+              <span class="text-[11px] uppercase tracking-[0.2em] text-[#c8a675] font-semibold">Capítulo 04 · La Transformación</span>
+            </div>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">
+              Del Criadero al Club Ecuestre
+            </h2>
+            <p class="text-base sm:text-lg text-slate-300 font-light max-w-2xl mx-auto">
+              Pero nuestra historia no podía quedarse únicamente en la crianza.
+            </p>
+          </div>
+
+          <div class="p-8 sm:p-12 rounded-2xl bg-gradient-to-br from-[#2b323f] to-[#181b22] border border-[#c8a675]/40 shadow-2xl space-y-6 text-center">
+            <span class="material-symbols-outlined text-[#ddc295] text-5xl">volunteer_activism</span>
+            <p class="text-sm sm:text-base text-slate-200 leading-relaxed max-w-3xl mx-auto">
+              Los caballos habían hecho demasiado por mí como para limitar nuestra relación con ellos a la reproducción o al deporte. Ellos me enseñaron a enfrentar mis miedos, a confiar, a ser disciplinado, a tener paciencia y a encontrar tranquilidad.
+            </p>
+            <div class="pt-2">
+              <span class="text-xs uppercase tracking-widest text-[#c8a675] block mb-2 font-semibold">Entonces nació una nueva pregunta:</span>
+              <h3 class="font-serif text-2xl sm:text-4xl text-[#ddc295] font-bold italic leading-tight">
+                “¿Y si lo que los caballos hicieron por mí también pudiera ayudar a otras personas?”
+              </h3>
+            </div>
+            <p class="text-sm text-slate-300 max-w-2xl mx-auto pt-2">
+              De esa pregunta nace el <strong class="text-white font-semibold">Club Ecuestre La Chucua J.C.</strong> Un espacio donde nuestra experiencia con los caballos se convierte en una oportunidad de aprendizaje, crecimiento y desarrollo para niños, jóvenes y adultos.
+            </p>
+          </div>
+
+          <!-- El Caballo como Compañero de Evolución -->
+          <div class="glass-panel p-8 rounded-2xl border border-[#c8a675]/30 space-y-6">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-lg bg-[#c8a675]/20 flex items-center justify-center text-[#ddc295]">
+                <span class="material-symbols-outlined">auto_awesome</span>
+              </div>
+              <h3 class="font-serif text-2xl text-white font-bold">El Caballo como Compañero de Evolución</h3>
+            </div>
+            
+            <p class="text-sm text-slate-200 leading-relaxed">
+              En La Chucua J.C. creemos que la vida al lado de un caballo es una vida mejor. El caballo ha acompañado al ser humano durante siglos y ha sido parte fundamental de nuestra evolución. Nos ha ayudado a desplazarnos, trabajar, competir y superar límites.
+            </p>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Pero su aporte también puede ser emocional y educativo. A su lado aprendemos paciencia, disciplina, confianza, responsabilidad y respeto. Aprendemos a observar, a comunicarnos sin palabras y a reconocer nuestras propias emociones.
+            </p>
+
+            <div class="p-4 rounded-xl bg-[#181b22] border-l-4 border-l-[#c8a675] text-xs sm:text-sm text-slate-200">
+              <strong class="text-[#ddc295] block mb-1">Nuestro Máximo Respeto:</strong>
+              No es simplemente un animal para montar, competir o reproducir. Es un ser que también nos enseña y nos transforma.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Capítulo 5: Saber de Dónde Venimos para Saber para Dónde Vamos (Autoconocimiento & Temperamentos) -->
+    <section id="temperamentos" class="py-24 bg-[#181b22] border-t border-slate-800 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="max-w-3xl mx-auto text-center mb-16 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2b323f] border border-[#c8a675]/30">
+            <span class="material-symbols-outlined text-[#ddc295] text-sm">psychology</span>
+            <span class="text-[11px] uppercase tracking-[0.2em] text-[#c8a675] font-semibold">Capítulo 05 · Filosofía de Vida & Autoconocimiento</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white leading-tight">
+            Saber de Dónde Venimos <br />
+            <span class="text-[#ddc295] italic">para Saber para Dónde Vamos</span>
+          </h2>
+
+          <p class="text-base text-slate-200 leading-relaxed font-light">
+            Esta frase representa nuestra filosofía genética, pero también nuestra filosofía de vida. Así como estudiamos el origen de una línea genética para comprender sus características y decidir hacia dónde queremos llevarla, también debemos aprender a conocernos como personas.
+          </p>
+
+          <!-- The Self-Discovery Questions -->
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 pt-4">
+            <div class="p-3 bg-[#2b323f] rounded-lg border border-slate-700/60 text-xs text-[#ddc295] font-medium">¿De dónde venimos?</div>
+            <div class="p-3 bg-[#2b323f] rounded-lg border border-slate-700/60 text-xs text-[#ddc295] font-medium">¿Quiénes somos?</div>
+            <div class="p-3 bg-[#2b323f] rounded-lg border border-slate-700/60 text-xs text-[#ddc295] font-medium">¿Cuáles son nuestras fortalezas?</div>
+            <div class="p-3 bg-[#2b323f] rounded-lg border border-slate-700/60 text-xs text-[#ddc295] font-medium">¿Qué debemos mejorar?</div>
+            <div class="p-3 bg-[#2b323f] rounded-lg border border-slate-700/60 text-xs text-[#ddc295] font-medium col-span-2 sm:col-span-1">¿Hacia dónde queremos avanzar?</div>
+          </div>
+        </div>
+
+        <!-- The 4 Temperaments Concept -->
+        <div class="mb-16">
+          <div class="max-w-2xl mx-auto text-center mb-10 space-y-2">
+            <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block">Herramienta de Reflexión</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">Los Cuatro Temperamentos</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Como herramienta de autoconocimiento, nos acercamos al modelo clásico de los cuatro temperamentos. Todos podemos manifestar características de los cuatro, aunque algunas tendencias pueden presentarse con mayor fuerza. <em>No buscamos etiquetar ni diagnosticar a una persona: buscamos comprender mejor nuestra manera de actuar, reaccionar y relacionarnos.</em>
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Sanguíneo -->
+            <div class="glass-panel p-6 rounded-xl border border-amber-500/30 space-y-3 relative group hover:border-amber-400 transition-all">
+              <div class="w-10 h-10 rounded-lg bg-amber-500/15 flex items-center justify-center text-amber-400 font-bold font-serif">
+                S
+              </div>
+              <h4 class="font-serif text-xl text-white font-bold">Sanguíneo</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Entusiasmo, sociabilidad, expresividad y dinamismo. Con el caballo aprende a canalizar la atención, mantener la constancia y escuchar con calma.
+              </p>
+              <span class="text-[10px] uppercase tracking-wider text-amber-400 font-semibold block pt-2 border-t border-slate-700/60">
+                Alegría & Conexión
+              </span>
+            </div>
+
+            <!-- Colérico -->
+            <div class="glass-panel p-6 rounded-xl border border-rose-500/30 space-y-3 relative group hover:border-rose-400 transition-all">
+              <div class="w-10 h-10 rounded-lg bg-rose-500/15 flex items-center justify-center text-rose-400 font-bold font-serif">
+                C
+              </div>
+              <h4 class="font-serif text-xl text-white font-bold">Colérico</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Decisión, empuje, liderazgo e iniciativa. Con el caballo aprende a regular la intensidad, trabajar la sutileza en las ayudas y liderar desde la confianza.
+              </p>
+              <span class="text-[10px] uppercase tracking-wider text-rose-400 font-semibold block pt-2 border-t border-slate-700/60">
+                Fuerza & Autorregulación
+              </span>
+            </div>
+
+            <!-- Melancólico -->
+            <div class="glass-panel p-6 rounded-xl border border-sky-500/30 space-y-3 relative group hover:border-sky-400 transition-all">
+              <div class="w-10 h-10 rounded-lg bg-sky-500/15 flex items-center justify-center text-sky-400 font-bold font-serif">
+                M
+              </div>
+              <h4 class="font-serif text-xl text-white font-bold">Melancólico</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Sensibilidad, observación detallada, profundidad y empatía. Con el caballo aprende a transformar la duda en seguridad y fluir con el movimiento.
+              </p>
+              <span class="text-[10px] uppercase tracking-wider text-sky-400 font-semibold block pt-2 border-t border-slate-700/60">
+                Sensibilidad & Confianza
+              </span>
+            </div>
+
+            <!-- Flemático -->
+            <div class="glass-panel p-6 rounded-xl border border-emerald-500/30 space-y-3 relative group hover:border-emerald-400 transition-all">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/15 flex items-center justify-center text-emerald-400 font-bold font-serif">
+                F
+              </div>
+              <h4 class="font-serif text-xl text-white font-bold">Flemático</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Calma, serenidad, templanza y paciencia constante. Con el caballo aprende a imprimir energía oportuna, tomar decisiones ágiles y activar el ritmo.
+              </p>
+              <span class="text-[10px] uppercase tracking-wider text-emerald-400 font-semibold block pt-2 border-t border-slate-700/60">
+                Serenidad & Determinación
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Y allí aparece nuestro gran maestro: EL CABALLO -->
+        <div class="glass-panel p-8 sm:p-12 rounded-2xl border-2 border-[#c8a675] shadow-2xl relative overflow-hidden">
+          <div class="max-w-4xl mx-auto space-y-6 text-center">
+            
+            <div class="w-16 h-16 rounded-full bg-[#c8a675]/20 border border-[#c8a675] flex items-center justify-center text-[#ddc295] mx-auto">
+              <span class="material-symbols-outlined text-3xl">psychology_alt</span>
+            </div>
+
+            <div class="space-y-2">
+              <span class="text-xs uppercase tracking-[0.25em] text-[#c8a675] font-semibold block">El Gran Maestro y Espejo</span>
+              <h3 class="font-serif text-3xl sm:text-5xl font-bold text-white">
+                Frente a un Caballo nos Descubrimos
+              </h3>
+            </div>
+
+            <p class="text-sm sm:text-base text-slate-200 leading-relaxed max-w-3xl mx-auto font-light">
+              Frente a un caballo, muchas veces se hacen visibles aspectos de nosotros mismos que no habíamos reconocido. Nuestra seguridad, nuestros miedos, nuestra paciencia, nuestra impulsividad, nuestra capacidad de concentración y nuestra manera de comunicarnos pueden reflejarse en la relación que construimos con él.
+            </p>
+
+            <div class="p-6 bg-[#181b22]/90 rounded-xl border border-[#c8a675]/40 max-w-2xl mx-auto space-y-3">
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Por eso nuestras clases no buscan únicamente enseñar a montar: <strong class="text-white">buscamos que cada persona pueda conocerse, reconocer sus virtudes y trabajar aquello que necesita fortalecer</strong>.
+              </p>
+              <div class="pt-3 border-t border-slate-700/80">
+                <p class="font-serif text-lg sm:text-2xl text-[#ddc295] font-bold italic leading-relaxed">
+                  “Porque un buen jinete no solamente debe aprender a dirigir un caballo. Debe aprender primero a dirigirse a sí mismo.”
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- VIP Banner CTA: Conoce la Sede Campestre en Tabio -->
     <section class="py-20 bg-[#1e222a] border-t border-slate-800 text-center">
       <div class="max-w-4xl mx-auto px-6 space-y-6">
-        <span class="text-xs uppercase tracking-[0.2em] text-[#c8a675] font-semibold block">Visite Nuestra Dehesa</span>
-        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Viva la Tradición en Persona</h2>
-        <p class="text-sm text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          Le invitamos a conocer las caballerizas históricas, pasear por los pastos de yeguas con potros y dialogar con nuestros maestros sobre genética y cría.
+        <span class="text-xs uppercase tracking-[0.2em] text-[#c8a675] font-semibold block">Sede Campestre · Tabio, Cundinamarca</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Ven a Conocer La Chucua J.C.</h2>
+        <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          Te invitamos a recorrer nuestras pesebreras, pistas y senderos ecológicos, dialogar con nuestros instructores sobre tu proceso o el de tus hijos, y sentir la conexión con nuestros caballos.
         </p>
         <div class="pt-4 flex flex-wrap justify-center gap-4">
-          <a href="contacto.html" class="bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-semibold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all shadow-md">
-            Agendar Visita a la Finca
+          <a href="contacto.html" class="bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all shadow-md">
+            Agendar Visita a la Sede
           </a>
-          <a href="index.html#catalogo" class="border border-[#c8a675]/40 text-slate-200 hover:text-[#ddc295] hover:border-[#c8a675] bg-[#2b323f]/50 font-semibold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all">
-            Ver Sementales
+          <a href="https://wa.me/573143570864?text=Hola%20Club%20Ecuestre%20La%20Chucua%20J.C.,%20le%C3%AD%20su%20historia%20y%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20sus%20programas" target="_blank" rel="noopener noreferrer" class="border border-[#c8a675]/40 text-slate-200 hover:text-[#ddc295] hover:border-[#c8a675] bg-[#2b323f]/50 font-semibold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all flex items-center gap-2">
+            <span class="material-symbols-outlined text-base text-emerald-400">chat</span>
+            <span>Escribir por WhatsApp</span>
           </a>
         </div>
       </div>
@@ -355,17 +671,18 @@
   <footer class="bg-[#181b22] border-t border-slate-800 py-12 mt-auto">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-[#ddc295] text-2xl">auto_stories</span>
-        <span class="font-serif text-lg font-bold text-white">LA CHUCUA J.C • LEGADO</span>
+        <span class="material-symbols-outlined text-[#ddc295] text-2xl">military_tech</span>
+        <span class="font-serif text-lg font-bold text-white">LA CHUCUA J.C</span>
       </div>
       <p class="text-xs text-slate-400 text-center md:text-left">
-        &copy; 2026 LA CHUCUA J.C. Todos los derechos reservados.
+        &copy; 2026 Club Ecuestre La Chucua J.C. Todos los derechos reservados. Pasión por los caballos, formación para la vida.
       </p>
-      <div class="flex items-center gap-6 text-xs text-slate-400">
-        <a href="index.html" class="hover:text-[#ddc295] transition-colors">Criadero</a>
-        <a href="nuestro-legado.html" class="text-[#ddc295]">Legado</a>
-        <a href="turismo.html" class="hover:text-[#ddc295] transition-colors">Turismo</a>
-        <a href="academia.html" class="hover:text-[#ddc295] transition-colors">Academia</a>
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
+        <a href="index.html" class="hover:text-[#ddc295] transition-colors">Inicio</a>
+        <a href="nuestro-legado.html" class="text-[#ddc295]">Nosotros</a>
+        <a href="chalaneria.html" class="hover:text-[#ddc295] transition-colors">Chalanería</a>
+        <a href="estimulacion-temprana.html" class="hover:text-[#ddc295] transition-colors">Estimulación Temprana</a>
+        <a href="turismo.html" class="hover:text-[#ddc295] transition-colors">Cabalgata Ecológica</a>
         <a href="contacto.html" class="hover:text-[#ddc295] transition-colors">Contacto</a>
       </div>
     </div>

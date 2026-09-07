@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LA CHUCUA J.C | Criadero de Caballos & Genética de Calidad</title>
-  <meta name="description" content="Criadero de caballos LA CHUCUA J.C. Genética de calidad, sementales calificados, academia de alta escuela y preservación del linaje ecuestre de prestigio internacional." />
+  <title>Club Ecuestre La Chucua J.C | Pasión por los caballos, formación para la vida</title>
+  <meta name="description" content="En el Club Ecuestre La Chucua J.C. en Tabio, Cundinamarca, formamos jinetes integrales con clases de chalanería, estimulación temprana, equinoterapia y genética con propósito." />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -61,9 +61,9 @@
 
   <!-- Header / Navigation Bar -->
   <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 glass-nav">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative">
       <!-- Logo / Crest -->
-      <a href="#hero" class="flex items-center gap-3 group">
+      <a href="index.html" class="flex items-center gap-3 group z-10">
         <div class="w-10 h-10 rounded-sm bg-gradient-to-br from-[#c8a675] to-[#1e222a] p-0.5 border border-[#c8a675]/60 flex items-center justify-center shadow-lg">
           <div class="w-full h-full bg-[#1e222a] flex items-center justify-center">
             <span class="material-symbols-outlined text-[#ddc295] text-xl group-hover:scale-110 transition-transform">military_tech</span>
@@ -75,61 +75,79 @@
         </div>
       </a>
 
-      <!-- Desktop Nav Links -->
-      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-slate-300">
-        <a href="#catalogo" class="hover:text-[#ddc295] transition-colors">Sementales</a>
-        <a href="#genealogia" class="hover:text-[#ddc295] transition-colors">Genealogía</a>
-        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors">Nuestro Legado</a>
-        <a href="#instalaciones" class="hover:text-[#ddc295] transition-colors">Instalaciones</a>
-        
-        <!-- Dropdown Servicios -->
+      <!-- Desktop Nav Links (Centered) -->
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-xs font-semibold uppercase tracking-widest text-slate-300 absolute left-1/2 -translate-x-1/2 top-0 h-full">
+        <a href="index.html" class="text-[#ddc295] border-b-2 border-[#c8a675] pb-0.5 font-bold">Inicio</a>
+        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors py-1">Nosotros</a>
+
+        <!-- Dropdown Servicios (1. Chalanería, 2. Estimulación Temprana) -->
         <div class="relative group py-4">
-          <button class="flex items-center gap-1 hover:text-[#ddc295] transition-colors cursor-pointer">
+          <button class="flex items-center gap-1 hover:text-[#ddc295] transition-colors cursor-pointer uppercase tracking-widest text-xs font-semibold py-1">
             <span>Servicios</span>
-            <span class="material-symbols-outlined text-base group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+            <span class="material-symbols-outlined text-base group-hover:rotate-180 transition-transform duration-300 text-[#c8a675]">expand_more</span>
           </button>
-          <div class="dropdown-menu-fade absolute top-full left-0 bg-[#1e222a] border border-[#c8a675]/30 rounded-sm shadow-2xl p-2 min-w-[230px] backdrop-blur-xl z-50">
-            <a href="turismo.html" class="flex items-center gap-2 px-4 py-2.5 rounded-sm text-xs text-slate-300 hover:text-[#ddc295] hover:bg-[#2b323f] transition-colors">
-              <span class="material-symbols-outlined text-base text-[#c8a675]">nature_people</span>
-              <span>Turismo & Cabalgatas</span>
+          <div class="dropdown-menu-fade absolute top-full left-0 bg-[#1e222a]/95 border border-[#c8a675]/30 rounded-xl shadow-2xl p-2.5 min-w-[285px] backdrop-blur-2xl z-50 space-y-1">
+            <a href="chalaneria.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-[#2b323f] transition-all group/item">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] group-hover/item:scale-105 transition-transform shrink-0">
+                <span class="material-symbols-outlined text-base">sports_score</span>
+              </div>
+              <div>
+                <span class="font-bold text-white block">Chalanería</span>
+                <span class="text-[10px] text-slate-400">Formación, técnica & competencia</span>
+              </div>
             </a>
-            <a href="academia.html" class="flex items-center gap-2 px-4 py-2.5 rounded-sm text-xs text-slate-300 hover:text-[#ddc295] hover:bg-[#2b323f] transition-colors">
-              <span class="material-symbols-outlined text-base text-[#c8a675]">school</span>
-              <span>Academia Ecuestre</span>
+            <a href="estimulacion-temprana.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-[#2b323f] transition-all group/item">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] group-hover/item:scale-105 transition-transform shrink-0">
+                <span class="material-symbols-outlined text-base">child_care</span>
+              </div>
+              <div>
+                <span class="font-bold text-white block">Estimulación Temprana</span>
+                <span class="text-[10px] text-slate-400">De 7 meses a 4 años & vínculo</span>
+              </div>
+            </a>
+            <a href="turismo.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-[#2b323f] transition-all group/item">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] group-hover/item:scale-105 transition-transform shrink-0">
+                <span class="material-symbols-outlined text-base">nature_people</span>
+              </div>
+              <div>
+                <span class="font-bold text-white block">Cabalgata Ecológica</span>
+                <span class="text-[10px] text-slate-400">3 horas en Tabio ($150.000)</span>
+              </div>
             </a>
           </div>
         </div>
 
-        <a href="contacto.html" class="hover:text-[#ddc295] transition-colors">Contacto</a>
+        <a href="contacto.html" class="hover:text-[#ddc295] transition-colors py-1">Contacto</a>
       </nav>
 
-      <!-- VIP CTA -->
-      <div class="hidden md:flex items-center gap-4">
-        <a href="contacto.html" class="bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-semibold text-xs uppercase tracking-widest px-5 py-2.5 rounded-sm transition-all shadow-md">
-          Cita Privada
-        </a>
-      </div>
-
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="md:hidden text-slate-200 hover:text-[#ddc295] p-2">
+      <button id="mobile-menu-btn" class="md:hidden text-slate-200 hover:text-[#ddc295] p-2 z-10" aria-label="Abrir menú">
         <span class="material-symbols-outlined text-2xl">menu</span>
       </button>
     </div>
 
     <!-- Mobile Nav Dropdown -->
     <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-[#c8a675]/20 px-6 py-6 space-y-4">
-      <a href="#catalogo" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Sementales</a>
-      <a href="#genealogia" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Genealogía</a>
-      <a href="nuestro-legado.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Nuestro Legado</a>
-      <a href="#instalaciones" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Instalaciones</a>
-      
+      <a href="index.html" class="block text-sm uppercase tracking-widest text-[#ddc295] font-bold">Inicio</a>
+      <a href="nuestro-legado.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Nosotros</a>
+
       <div class="border-t border-slate-700/60 pt-3 space-y-2">
-        <span class="text-[10px] uppercase tracking-wider text-slate-400 block font-semibold">Nuestros Servicios:</span>
-        <a href="turismo.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">🐴 Turismo & Cabalgatas</a>
-        <a href="academia.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">🎓 Academia Ecuestre</a>
+        <span class="text-[10px] uppercase tracking-wider text-[#c8a675] block font-bold">Servicios:</span>
+        <a href="chalaneria.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">sports_score</span>
+          <span>Chalanería & Formación</span>
+        </a>
+        <a href="estimulacion-temprana.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">child_care</span>
+          <span>Estimulación Temprana</span>
+        </a>
+        <a href="turismo.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">nature_people</span>
+          <span>Cabalgata Ecológica (Tabio)</span>
+        </a>
       </div>
 
-      <a href="contacto.html" class="block text-center bg-[#c8a675] text-[#1e222a] font-semibold text-xs uppercase tracking-widest py-3 rounded-sm">Cita Privada</a>
+      <a href="contacto.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Contacto</a>
     </div>
   </header>
 
@@ -148,35 +166,39 @@
         >
           <source src="assets/images/me_puedes_dar_la_imagen_de_est.mp4" type="video/mp4" />
           <!-- Fallback image -->
-          <img src="assets/images/hero_stallion.jpg" alt="Semental Élite LA CHUCUA J.C" class="w-full h-full object-cover object-center" />
+          <img src="assets/images/hero_stallion.jpg" alt="Club Ecuestre La Chucua J.C" class="w-full h-full object-cover object-center" />
         </video>
-        <div class="absolute inset-0 bg-gradient-to-r from-[#1e222a]/80 via-[#1e222a]/45 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#1e222a]/85 via-[#1e222a]/50 to-transparent"></div>
         <div class="absolute inset-0 bg-gradient-to-t from-[#1e222a] via-transparent to-black/30 opacity-70"></div>
       </div>
 
       <!-- Hero Content -->
       <div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div class="lg:col-span-8 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-[#1e222a]/90 backdrop-blur-md border border-[#c8a675]/40">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1e222a]/90 backdrop-blur-md border border-[#c8a675]/40">
             <span class="w-2 h-2 rounded-full bg-[#c8a675] animate-pulse"></span>
-            <span class="text-xs uppercase tracking-[0.2em] font-semibold text-[#ddc295]">Linajes de Sangre Pura Cartujana & Española</span>
+            <span class="text-xs uppercase tracking-[0.2em] font-semibold text-[#ddc295]">Club Ecuestre La Chucua J.C • Tabio, Cundinamarca</span>
           </div>
 
           <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-white drop-shadow-md">
-            La Nobleza del <br />
-            <span class="text-[#ddc295] italic">Caballo de Élite</span>
+            Pasión por los caballos, <br />
+            <span class="text-[#ddc295] italic">formación para la vida</span>
           </h1>
 
           <p class="text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed font-light drop-shadow">
-            Dedicados a la preservación morfológica, pureza genética y alto rendimiento deportivo de los mejores ejemplares equinos del mundo.
+            En el Club Ecuestre La Chucua J.C. vivimos la chalanería como una experiencia de aprendizaje, disciplina y conexión con el caballo. Nuestro propósito es formar jinetes integrales, brindando una enseñanza responsable que fortalezca la confianza, el respeto, la seguridad y el amor por el mundo equino.
           </p>
 
-          <div class="flex flex-wrap items-center gap-4 pt-4">
-            <a href="#catalogo" class="bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-semibold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all shadow-lg transform hover:-translate-y-0.5">
-              Explorar Sementales
+          <p class="text-xs sm:text-sm text-[#ddc295] font-medium tracking-wide">
+            👦 Programas para niños, jóvenes y adultos, adaptados a diferentes niveles y objetivos.
+          </p>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#servicios" class="bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all shadow-lg transform hover:-translate-y-0.5 cursor-pointer">
+              Nuestros Servicios
             </a>
-            <a href="#genealogia" class="border border-[#c8a675]/40 text-slate-200 hover:text-[#ddc295] hover:border-[#c8a675] bg-[#2b323f]/50 backdrop-blur-md font-semibold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all">
-              Ver Genealogía
+            <a href="nuestro-legado.html" class="border border-[#c8a675]/40 text-slate-200 hover:text-[#ddc295] hover:border-[#c8a675] bg-[#2b323f]/50 backdrop-blur-md font-semibold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all">
+              Conoce Quiénes Somos
             </a>
           </div>
         </div>
@@ -185,55 +207,185 @@
         <div class="lg:col-span-4 grid grid-cols-2 gap-4">
           <div class="glass-panel p-6 rounded-sm text-center border-t-2 border-t-[#c8a675]">
             <span class="font-serif text-4xl font-bold text-[#ddc295] block mb-1">
-              <span class="stat-counter" data-target="40">0</span>+
+              <span class="stat-counter" data-target="10">0</span>+
             </span>
-            <span class="text-[11px] uppercase tracking-wider text-slate-400">Años de Tradición</span>
+            <span class="text-[11px] uppercase tracking-wider text-slate-400">Años de Proyecto</span>
           </div>
           <div class="glass-panel p-6 rounded-sm text-center border-t-2 border-t-[#c8a675]">
             <span class="font-serif text-4xl font-bold text-[#ddc295] block mb-1">
-              <span class="stat-counter" data-target="18">0</span>
+              <span class="stat-counter" data-target="4">0</span>
             </span>
-            <span class="text-[11px] uppercase tracking-wider text-slate-400">Sementales Élite</span>
+            <span class="text-[11px] uppercase tracking-wider text-slate-400">Programas de Formación</span>
           </div>
           <div class="glass-panel p-6 rounded-sm text-center border-t-2 border-t-[#c8a675]">
             <span class="font-serif text-4xl font-bold text-[#ddc295] block mb-1">
               <span class="stat-counter" data-target="100">0</span>%
             </span>
-            <span class="text-[11px] uppercase tracking-wider text-slate-400">Pureza Genética</span>
+            <span class="text-[11px] uppercase tracking-wider text-slate-400">Bienestar Equino</span>
           </div>
           <div class="glass-panel p-6 rounded-sm text-center border-t-2 border-t-[#c8a675]">
-            <span class="font-serif text-4xl font-bold text-[#ddc295] block mb-1">
-              <span class="stat-counter" data-target="52">0</span>
-            </span>
-            <span class="text-[11px] uppercase tracking-wider text-slate-400">Premios SICAB & FEI</span>
+            <span class="font-serif text-2xl font-bold text-[#ddc295] block mb-1 mt-1">Tabio</span>
+            <span class="text-[11px] uppercase tracking-wider text-slate-400">Cundinamarca</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Stallion Catalog Section -->
+    <!-- Institutional Philosophy Highlight Card -->
+    <section class="py-16 bg-[#181b22] border-t border-slate-800 relative">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="glass-panel p-8 sm:p-12 rounded-2xl border border-[#c8a675]/30 shadow-2xl relative overflow-hidden text-center space-y-4">
+          <div class="w-12 h-12 rounded-full bg-[#c8a675]/15 border border-[#c8a675]/40 flex items-center justify-center text-[#ddc295] mx-auto">
+            <span class="material-symbols-outlined text-2xl">favorite</span>
+          </div>
+          <span class="text-xs uppercase tracking-[0.25em] text-[#c8a675] font-semibold block">Nuestra Filosofía</span>
+          <p class="font-serif text-xl sm:text-2xl lg:text-3xl text-white font-light italic leading-relaxed max-w-3xl mx-auto">
+            “Creemos que cada caballo es un maestro y cada jinete tiene su propio proceso. Por eso trabajamos desde el respeto, el bienestar animal y una relación equilibrada entre caballo y jinete.”
+          </p>
+          <p class="text-xs sm:text-sm text-slate-300 max-w-2xl mx-auto leading-relaxed pt-2">
+            En La Chucua J.C. no solo enseñamos a montar a caballo: <strong class="text-[#ddc295]">formamos personas a través de la conexión con ellos</strong>.
+          </p>
+          <div class="pt-2">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-[#1e222a] border border-[#c8a675]/40 text-[11px] uppercase tracking-widest text-[#ddc295] font-bold">
+              “Un buen jinete no solo aprende a dirigir a su caballo; aprende primero a dirigirse a sí mismo”
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid Section (Los 4 Servicios del Negocio) -->
+    <section id="servicios" class="py-24 bg-[#1e222a] relative border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block mb-2">Programas Ecuestres Integrales</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Nuestros Servicios</h2>
+          <p class="text-sm text-slate-300 mt-3">Formación práctica, desarrollo humano y experiencias ecuestres guiadas para todas las edades.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- 1. Clases de Chalanería -->
+          <div class="glass-panel p-6 rounded-xl border border-[#c8a675]/30 hover:border-[#c8a675] transition-all flex flex-col justify-between group hover:shadow-2xl">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-lg bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] group-hover:scale-105 transition-transform">
+                <span class="material-symbols-outlined text-2xl">sports_score</span>
+              </div>
+              <h3 class="font-serif text-xl text-white font-bold group-hover:text-[#ddc295] transition-colors">🐴 Clases de Chalanería</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Formación práctica y progresiva para aprender y perfeccionar la equitación y el manejo del caballo. Niveles de iniciación, perfeccionamiento y preparación para competencia.
+              </p>
+              <div class="p-3 bg-[#181b22] rounded-lg border border-slate-700/60 text-[11px] text-slate-300">
+                <strong class="text-white block mb-0.5">Plan Mensual: $325.000 COP</strong>
+                <span>4 clases de 1 hora al mes · Caballo de escuela asignado</span>
+              </div>
+            </div>
+            <div class="pt-6">
+              <a href="chalaneria.html" class="w-full flex items-center justify-center gap-2 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest py-3 rounded-lg transition-all shadow-md">
+                <span>Ver Niveles & Horarios</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. Estimulación Temprana -->
+          <div class="glass-panel p-6 rounded-xl border border-[#c8a675]/30 hover:border-[#c8a675] transition-all flex flex-col justify-between group hover:shadow-2xl">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-lg bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] group-hover:scale-105 transition-transform">
+                <span class="material-symbols-outlined text-2xl">child_care</span>
+              </div>
+              <h3 class="font-serif text-xl text-white font-bold group-hover:text-[#ddc295] transition-colors">👶 Estimulación Temprana</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Experiencias diseñadas para niños desde temprana edad (de 7 meses a 4 años), favoreciendo el desarrollo de habilidades motoras, sensoriales y emocionales a través del juego.
+              </p>
+              <div class="p-3 bg-[#181b22] rounded-lg border border-slate-700/60 text-[11px] text-slate-300">
+                <strong class="text-white block mb-0.5">Plan Mensual: $325.000 COP</strong>
+                <span>Sesiones de 1 hora · Acompañamiento familiar activo</span>
+              </div>
+            </div>
+            <div class="pt-6">
+              <a href="estimulacion-temprana.html" class="w-full flex items-center justify-center gap-2 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest py-3 rounded-lg transition-all shadow-md">
+                <span>Conocer Programa</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. Equinoterapia -->
+          <div class="glass-panel p-6 rounded-xl border border-[#c8a675]/30 hover:border-[#c8a675] transition-all flex flex-col justify-between group hover:shadow-2xl">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-lg bg-rose-500/15 border border-rose-500/30 flex items-center justify-center text-rose-400 group-hover:scale-105 transition-transform">
+                <span class="material-symbols-outlined text-2xl">volunteer_activism</span>
+              </div>
+              <h3 class="font-serif text-xl text-white font-bold group-hover:text-[#ddc295] transition-colors">❤️ Equinoterapia</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Actividades asistidas con caballos orientadas al bienestar y desarrollo integral de nuestros participantes, fortaleciendo confianza, equilibrio postural y regulación emocional.
+              </p>
+              <div class="p-3 bg-[#181b22] rounded-lg border border-slate-700/60 text-[11px] text-slate-300">
+                <strong class="text-white block mb-0.5">Atención Guiada & Personalizada</strong>
+                <span>Caballos de temperamento noble y entorno seguro</span>
+              </div>
+            </div>
+            <div class="pt-6">
+              <a href="contacto.html?service=equinoterapia" class="w-full flex items-center justify-center gap-2 border border-[#c8a675]/50 hover:bg-[#c8a675] text-slate-200 hover:text-[#1e222a] font-bold text-xs uppercase tracking-widest py-3 rounded-lg transition-all shadow-md">
+                <span>Solicitar Información</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. Formación Ecuestre & Cabalgatas -->
+          <div class="glass-panel p-6 rounded-xl border border-[#c8a675]/30 hover:border-[#c8a675] transition-all flex flex-col justify-between group hover:shadow-2xl">
+            <div class="space-y-4">
+              <div class="w-12 h-12 rounded-lg bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform">
+                <span class="material-symbols-outlined text-2xl">nature_people</span>
+              </div>
+              <h3 class="font-serif text-xl text-white font-bold group-hover:text-[#ddc295] transition-colors">🏆 Formación & Cabalgatas</h3>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Preparación y acompañamiento para quienes desean avanzar en el mundo deportivo y ecuestre, junto a nuestras tradicionales cabalgatas ecológicas de 3 horas por los paisajes de Tabio.
+              </p>
+              <div class="p-3 bg-[#181b22] rounded-lg border border-slate-700/60 text-[11px] text-slate-300">
+                <strong class="text-white block mb-0.5">Cabalgata: $150.000 / Persona</strong>
+                <span>3 horas con guía · Alistamiento e inducción completa</span>
+              </div>
+            </div>
+            <div class="pt-6">
+              <a href="turismo.html" class="w-full flex items-center justify-center gap-2 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest py-3 rounded-lg transition-all shadow-md">
+                <span>Ver Cabalgata en Tabio</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Genética con Propósito (Catalog Section) -->
     <section id="catalogo" class="py-24 bg-[#181b22] relative border-t border-slate-800">
       <div class="max-w-7xl mx-auto px-6">
         <!-- Section Header -->
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block mb-2">Colección de Sementales</span>
-          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Genética y Potencia Suprema</h2>
-          <p class="text-sm text-slate-300 mt-3">Ejemplares calificados para la reproducción y el más alto nivel de doma y competición internacional.</p>
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+          <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block">Crianza del Caballo de Paso</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Genética con Propósito</h2>
+          <p class="text-sm text-slate-300 leading-relaxed font-light">
+            “Para saber para dónde vamos, primero debemos saber de dónde venimos.” Nuestra filosofía no se basa en buscar cantidad: buscamos calidad, salud, funcionalidad, temperamento y genética con visión a largo plazo para el futuro del Caballo Criollo Colombiano.
+          </p>
         </div>
 
         <!-- Filter Tabs -->
         <div class="flex flex-wrap items-center justify-center gap-2 mb-12">
-          <button data-filter="all" class="filter-btn bg-[#c8a675] text-[#1e222a] font-semibold text-xs uppercase tracking-widest px-5 py-2.5 rounded-sm transition-all border border-[#c8a675]">
+          <button data-filter="all" class="filter-btn bg-[#c8a675] text-[#1e222a] font-bold text-xs uppercase tracking-widest px-5 py-2.5 rounded-lg transition-all border border-[#c8a675] cursor-pointer">
             Todos los Ejemplares
           </button>
-          <button data-filter="doma" class="filter-btn bg-[#2b323f]/80 text-slate-300 hover:text-[#ddc295] text-xs uppercase tracking-widest px-5 py-2.5 rounded-sm transition-all border border-slate-700 hover:border-[#c8a675]/50">
-            Doma Clásica
+          <button data-filter="reproduccion" class="filter-btn bg-[#2b323f]/80 text-slate-300 hover:text-[#ddc295] text-xs uppercase tracking-widest px-5 py-2.5 rounded-lg transition-all border border-slate-700 hover:border-[#c8a675]/50 cursor-pointer">
+            Genética Actual
           </button>
-          <button data-filter="salto" class="filter-btn bg-[#2b323f]/80 text-slate-300 hover:text-[#ddc295] text-xs uppercase tracking-widest px-5 py-2.5 rounded-sm transition-all border border-slate-700 hover:border-[#c8a675]/50">
-            Salto de Obstáculos
+          <button data-filter="fundacional" class="filter-btn bg-[#2b323f]/80 text-slate-300 hover:text-[#ddc295] text-xs uppercase tracking-widest px-5 py-2.5 rounded-lg transition-all border border-slate-700 hover:border-[#c8a675]/50 cursor-pointer">
+            Líneas Fundacionales
           </button>
-          <button data-filter="paso" class="filter-btn bg-[#2b323f]/80 text-slate-300 hover:text-[#ddc295] text-xs uppercase tracking-widest px-5 py-2.5 rounded-sm transition-all border border-slate-700 hover:border-[#c8a675]/50">
-            Paso & Alta Escuela
+          <button data-filter="escuela" class="filter-btn bg-[#2b323f]/80 text-slate-300 hover:text-[#ddc295] text-xs uppercase tracking-widest px-5 py-2.5 rounded-lg transition-all border border-slate-700 hover:border-[#c8a675]/50 cursor-pointer">
+            Caballos Escuela
           </button>
         </div>
 
@@ -248,9 +400,9 @@
     <section id="genealogia" class="py-24 bg-[#1e222a] relative border-t border-slate-800">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center max-w-2xl mx-auto mb-10">
-          <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block mb-2">Linajes y Árbol Genealógico</span>
-          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Trazabilidad de la Sangre Real</h2>
-          <p class="text-sm text-slate-300 mt-3">Selecciona un ejemplar para explorar sus 3 generaciones de ancestros y títulos genéticos certificados.</p>
+          <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block mb-2">Trazabilidad y Linajes</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">El Árbol Genealógico</h2>
+          <p class="text-sm text-slate-300 mt-3">Selecciona un ejemplar para explorar sus generaciones de ancestros y consistencia genética comprobada.</p>
         </div>
 
         <!-- Pedigree Horse Selector Tabs -->
@@ -259,79 +411,51 @@
         </div>
 
         <!-- Pedigree Tree Interactive Viewer -->
-        <div id="pedigree-tree-container" class="glass-panel p-8 rounded-sm">
+        <div id="pedigree-tree-container" class="glass-panel p-8 rounded-xl border border-[#c8a675]/30">
           <!-- Populated by JS -->
         </div>
       </div>
     </section>
 
-    <!-- Equestrian Academy Teaser Section -->
-    <section id="academia" class="py-24 bg-[#181b22] relative border-t border-slate-800">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
-          <div class="lg:col-span-6 space-y-4">
-            <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block">Formación de Alta Escuela</span>
-            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Academia Ecuestre Internacional</h2>
-            <p class="text-sm text-slate-300 leading-relaxed">
-              Programas exclusivos de tecnificación, doma de Gran Premio y biotecnología reproductiva impartidos por maestros de renombre olímpico en instalaciones homologadas.
-            </p>
-            <div class="pt-2">
-              <a href="academia.html" class="inline-flex items-center gap-2 text-[#ddc295] hover:text-white font-semibold text-xs uppercase tracking-widest">
-                <span>Ver Todos los Cursos & Maestros</span>
-                <span class="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
-            </div>
-          </div>
-          <div class="lg:col-span-6 rounded-sm overflow-hidden border border-[#c8a675]/30 shadow-2xl">
-            <img src="assets/images/dressage_champion.jpg" alt="Entrenamiento de Alta Escuela" class="w-full h-72 object-cover" />
-          </div>
-        </div>
-
-        <!-- Courses Grid -->
-        <div id="courses-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Dynamically populated by JS -->
-        </div>
-      </div>
-    </section>
-
     <!-- Facilities Showcase Section -->
-    <section id="instalaciones" class="py-24 bg-[#1e222a] border-t border-slate-800">
+    <section id="instalaciones" class="py-24 bg-[#181b22] border-t border-slate-800">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block mb-2">Infraestructura de Primer Nivel</span>
-          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Un Santuario para el Caballo</h2>
-          <p class="text-sm text-slate-300 mt-3">Diseñado bajo los más estrictos estándares de bienestar animal, bioseguridad y comodidad.</p>
+          <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block mb-2">Sede Campestre en Tabio</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Infraestructura y Entorno Natural</h2>
+          <p class="text-sm text-slate-300 mt-3">Espacios diseñados para el bienestar animal, la seguridad de los alumnos y la tranquilidad de las familias.</p>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div class="glass-panel p-6 rounded-sm space-y-4 border-t-2 border-t-[#c8a675]">
+          <div class="glass-panel p-6 rounded-xl space-y-4 border-t-2 border-t-[#c8a675]">
             <span class="material-symbols-outlined text-[#ddc295] text-3xl">stadium</span>
-            <h3 class="font-serif text-xl text-white font-semibold">Pistas Geotextiles Climatizadas</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">Pistas cubiertas con arena de sílice y microfibras de amortiguación articular continua homologadas por la FEI.</p>
+            <h3 class="font-serif text-xl text-white font-semibold">Pistas de Chalanería y Picadero</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">Pistas de arena acondicionadas para la enseñanza progresiva, picadero redondo para estimulación y zonas cubiertas.</p>
           </div>
-          <div class="glass-panel p-6 rounded-sm space-y-4 border-t-2 border-t-[#c8a675]">
+          <div class="glass-panel p-6 rounded-xl space-y-4 border-t-2 border-t-[#c8a675]">
             <span class="material-symbols-outlined text-[#ddc295] text-3xl">domain</span>
-            <h3 class="font-serif text-xl text-white font-semibold">Boxes Reales de 4x4m</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">Caballerizas en maderas nobles con ventilación cenital individual, comederos de acero inoxidable y suelo de caucho anti-impacto.</p>
+            <h3 class="font-serif text-xl text-white font-semibold">Pesebreras y Bienestar Equino</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">Instalaciones higiénicas y ventiladas que garantizan el descanso, nutrición y cuidado permanente de nuestros caballos.</p>
           </div>
-          <div class="glass-panel p-6 rounded-sm space-y-4 border-t-2 border-t-[#c8a675]">
-            <span class="material-symbols-outlined text-[#ddc295] text-3xl">biotech</span>
-            <h3 class="font-serif text-xl text-white font-semibold">Centro de Criopreservación</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">Laboratorio biotecnológico para congelación seminal en nitrógeno líquido y control morfocelular de alta viabilidad.</p>
+          <div class="glass-panel p-6 rounded-xl space-y-4 border-t-2 border-t-[#c8a675]">
+            <span class="material-symbols-outlined text-[#ddc295] text-3xl">park</span>
+            <h3 class="font-serif text-xl text-white font-semibold">Senderos Ecológicos y Naturaleza</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">Entorno rural protegido en el valle de Tabio con acceso directo a caminos campestres y avistamiento paisajístico de la Sabana.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- History & Legacy Timeline Section -->
-    <section id="legado" class="py-24 bg-[#181b22] border-t border-slate-800">
+    <section id="legado" class="py-24 bg-[#1e222a] border-t border-slate-800">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block mb-2">Cuatro Décadas de Pasión</span>
-          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Nuestro Legado y Tradición</h2>
-          <div class="pt-3">
+          <span class="text-xs uppercase tracking-widest text-[#c8a675] font-semibold block mb-2">Una Historia que Comenzó con un Caballo</span>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Nuestra Trayectoria</h2>
+          <p class="text-sm text-slate-300 mt-2">De la primera yegua a los cinco años al sueño hecho realidad en Tabio, Cundinamarca.</p>
+          <div class="pt-4">
             <a href="nuestro-legado.html" class="inline-flex items-center gap-2 text-[#ddc295] hover:text-white font-semibold text-xs uppercase tracking-widest">
-              <span>Conocer la Historia Completa & Fundadores</span>
+              <span>Conocer la Historia Completa & Filosofía</span>
               <span class="material-symbols-outlined text-sm">arrow_forward</span>
             </a>
           </div>
@@ -343,21 +467,25 @@
       </div>
     </section>
 
-    <!-- VIP Callout Banner -->
-    <section class="py-20 bg-[#1e222a] border-t border-slate-800 relative overflow-hidden">
+    <!-- Commercial Callout Banner -->
+    <section class="py-20 bg-[#181b22] border-t border-slate-800 relative overflow-hidden">
       <div class="max-w-5xl mx-auto px-6 text-center space-y-6">
         <div class="w-12 h-12 mx-auto rounded-full bg-[#c8a675]/20 border border-[#c8a675] flex items-center justify-center text-[#ddc295]">
           <span class="material-symbols-outlined">support_agent</span>
         </div>
-        <span class="text-xs uppercase tracking-[0.2em] text-[#c8a675] font-semibold block">Conserjería Privada</span>
-        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">¿Desea Coordinar una Cita Privada?</h2>
+        <span class="text-xs uppercase tracking-[0.2em] text-[#c8a675] font-semibold block">Atención Comercial & Información</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">¿Interesado en Nuestros Servicios Ecuestres?</h2>
         <p class="text-sm text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          Atendemos personalmente a criadores, compradores internacionales y jinetes de alto nivel. Agende su visita privada a la dehesa o solicite asesoramiento genético personalizado.
+          Te brindamos asesoría personalizada para clases de chalanería, estimulación temprana con caballos, equinoterapia, cabalgatas ecológicas en Tabio y servicios del criadero.
         </p>
-        <div class="pt-4">
-          <a href="contacto.html" class="inline-flex items-center gap-3 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-semibold text-xs uppercase tracking-widest px-10 py-4 rounded-sm transition-all shadow-lg transform hover:-translate-y-0.5">
-            <span>Ir al Formulario de Contacto</span>
+        <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
+          <a href="contacto.html" class="inline-flex items-center gap-3 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-lg transition-all shadow-lg transform hover:-translate-y-0.5">
+            <span>Contactar Asesor</span>
             <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+          <a href="https://wa.me/573108529410?text=Hola%20La%20Chucua%20J.C,%20deseo%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20ecuestres" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-500/40 text-emerald-400 hover:text-emerald-300 text-xs font-semibold transition-all">
+            <span class="material-symbols-outlined text-base">chat</span>
+            <span>WhatsApp Directo</span>
           </a>
         </div>
       </div>
@@ -374,12 +502,12 @@
       <p class="text-xs text-slate-400 text-center md:text-left">
         &copy; 2026 LA CHUCUA J.C. Todos los derechos reservados. Genética de calidad certificada.
       </p>
-      <div class="flex items-center gap-6 text-xs text-slate-400">
-        <a href="#hero" class="hover:text-[#ddc295] transition-colors">Inicio</a>
-        <a href="#catalogo" class="hover:text-[#ddc295] transition-colors">Sementales</a>
-        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors">Legado</a>
-        <a href="turismo.html" class="hover:text-[#ddc295] transition-colors">Turismo</a>
-        <a href="academia.html" class="hover:text-[#ddc295] transition-colors">Academia</a>
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
+        <a href="index.html" class="text-[#ddc295]">Inicio</a>
+        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors">Nosotros</a>
+        <a href="chalaneria.html" class="hover:text-[#ddc295] transition-colors">Chalanería</a>
+        <a href="estimulacion-temprana.html" class="hover:text-[#ddc295] transition-colors">Estimulación Temprana</a>
+        <a href="turismo.html" class="hover:text-[#ddc295] transition-colors">Cabalgata Ecológica</a>
         <a href="contacto.html" class="hover:text-[#ddc295] transition-colors">Contacto</a>
       </div>
     </div>

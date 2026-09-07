@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Turismo & Cabalgatas Familiares | LA CHUCUA J.C</title>
-  <meta name="description" content="Cabalgatas guiadas, paseos en pony para niños y experiencias en la naturaleza para toda la familia en LA CHUCUA J.C." />
+  <title>🌿 Cabalgata Ecológica con Guía Personalizado en Tabio | Club Ecuestre LA CHUCUA J.C</title>
+  <meta name="description" content="Tres horas para conectar con el caballo, la naturaleza y disfrutar una experiencia diferente por los paisajes rurales de Tabio, Cundinamarca. Paquete básico $150.000 por persona." />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -15,10 +15,10 @@
         extend: {
           colors: {
             primary: {
-              DEFAULT: '#ba9666',
-              hover: '#cdad7d',
-              container: '#9f7d4e',
-              light: '#e8dcce',
+              DEFAULT: '#c8a675',
+              hover: '#ddc295',
+              container: '#af8c5c',
+              light: '#f1e6d6',
             },
             surface: {
               base: '#1e222a',
@@ -43,320 +43,748 @@
     }
   </script>
 
-  <!-- Google Fonts & Material Icons -->
+  <!-- Google Fonts & Material Symbols -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
 
-  <!-- GSAP, ScrollTrigger & Lenis Smooth Scroll -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
-
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="bg-[#1e222a] text-[#f1f5f9] font-sans antialiased selection:bg-[#ba9666] selection:text-[#1e222a] min-h-screen flex flex-col">
+<body class="bg-[#1e222a] text-[#f1f5f9] font-sans antialiased selection:bg-[#c8a675] selection:text-[#1e222a] min-h-[100dvh] flex flex-col">
+
   <!-- Header / Navigation Bar -->
   <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 glass-nav">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative">
       <!-- Logo / Crest -->
-      <a href="index.html" class="flex items-center gap-3 group">
+      <a href="index.html" class="flex items-center gap-3 group z-10">
         <div class="w-10 h-10 rounded-sm bg-gradient-to-br from-[#c8a675] to-[#1e222a] p-0.5 border border-[#c8a675]/60 flex items-center justify-center shadow-lg">
           <div class="w-full h-full bg-[#1e222a] flex items-center justify-center">
-            <span class="material-symbols-outlined text-[#ddc295] text-xl group-hover:scale-110 transition-transform">nature_people</span>
+            <span class="material-symbols-outlined text-[#ddc295] text-xl group-hover:scale-110 transition-transform">military_tech</span>
           </div>
         </div>
         <div>
           <span class="font-serif text-lg tracking-widest uppercase font-bold text-white block group-hover:text-[#ddc295] transition-colors">LA CHUCUA J.C</span>
-          <span class="text-[9px] uppercase tracking-[0.25em] text-[#c8a675] block">Turismo Ecuestre & Familias</span>
+          <span class="text-[9px] uppercase tracking-[0.25em] text-[#c8a675] block">Genética de Calidad</span>
         </div>
       </a>
 
-      <!-- Desktop Nav Links with Dropdown Servicios -->
-      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-widest text-slate-300">
-        <a href="index.html" class="hover:text-[#ddc295] transition-colors">Criadero</a>
-        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors">Nuestro Legado</a>
-        <a href="#experiencias" class="hover:text-[#ddc295] transition-colors">Cabalgatas</a>
-        <a href="#ninos" class="hover:text-[#ddc295] transition-colors">Niños & Ponies</a>
-        <a href="#calculadora" class="hover:text-[#ddc295] transition-colors">Cotizador</a>
-        <a href="#seguridad" class="hover:text-[#ddc295] transition-colors">Seguridad</a>
+      <!-- Desktop Nav Links (Centered) -->
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-xs font-semibold uppercase tracking-widest text-slate-300 absolute left-1/2 -translate-x-1/2 top-0 h-full">
+        <a href="index.html" class="hover:text-[#ddc295] transition-colors py-1">Inicio</a>
+        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors py-1">Nosotros</a>
 
-        <!-- Dropdown Servicios -->
+        <!-- Dropdown Servicios (Cabalgata Ecológica Activa) -->
         <div class="relative group py-4">
-          <button class="flex items-center gap-1 text-[#ddc295] hover:text-white transition-colors font-bold cursor-pointer">
+          <button class="flex items-center gap-1 text-[#ddc295] hover:text-white transition-colors cursor-pointer uppercase tracking-widest text-xs font-bold py-1 border-b-2 border-[#c8a675] pb-0.5">
             <span>Servicios</span>
-            <span class="material-symbols-outlined text-base group-hover:rotate-180 transition-transform duration-300">expand_more</span>
+            <span class="material-symbols-outlined text-base group-hover:rotate-180 transition-transform duration-300 text-[#c8a675]">expand_more</span>
           </button>
-          <div class="dropdown-menu-fade absolute top-full left-0 bg-[#1e222a] border border-[#c8a675]/30 rounded-sm shadow-2xl p-2 min-w-[230px] backdrop-blur-xl z-50">
-            <a href="turismo.html" class="flex items-center gap-2 px-4 py-2.5 rounded-sm text-xs text-[#ddc295] bg-[#2b323f]/80 font-bold">
-              <span class="material-symbols-outlined text-base text-[#c8a675]">nature_people</span>
-              <span>Turismo & Cabalgatas</span>
+          <div class="dropdown-menu-fade absolute top-full left-0 bg-[#1e222a]/95 border border-[#c8a675]/30 rounded-xl shadow-2xl p-2.5 min-w-[285px] backdrop-blur-2xl z-50 space-y-1">
+            <!-- 1. Chalanería -->
+            <a href="chalaneria.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-[#2b323f] transition-all group/item">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] group-hover/item:scale-105 transition-transform shrink-0">
+                <span class="material-symbols-outlined text-base">sports_score</span>
+              </div>
+              <div>
+                <span class="font-bold text-white block">Chalanería</span>
+                <span class="text-[10px] text-slate-400">Formación, técnica & competencia</span>
+              </div>
             </a>
-            <a href="academia.html" class="flex items-center gap-2 px-4 py-2.5 rounded-sm text-xs text-slate-300 hover:text-[#ddc295] hover:bg-[#2b323f] transition-colors">
-              <span class="material-symbols-outlined text-base text-[#c8a675]">school</span>
-              <span>Academia Ecuestre</span>
+            <!-- 2. Estimulación Temprana -->
+            <a href="estimulacion-temprana.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-[#2b323f] transition-all group/item">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675]/15 border border-[#c8a675]/30 flex items-center justify-center text-[#ddc295] group-hover/item:scale-105 transition-transform shrink-0">
+                <span class="material-symbols-outlined text-base">child_care</span>
+              </div>
+              <div>
+                <span class="font-bold text-white block">Estimulación Temprana</span>
+                <span class="text-[10px] text-slate-400">De 7 meses a 4 años & vínculo</span>
+              </div>
+            </a>
+            <!-- 3. Cabalgata Ecológica (ACTIVE) -->
+            <a href="turismo.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-xs bg-[#2b323f] border border-[#c8a675]/50 text-white transition-all group/item shadow-md">
+              <div class="w-8 h-8 rounded-md bg-[#c8a675] flex items-center justify-center text-[#1e222a] group-hover/item:scale-105 transition-transform shrink-0 font-bold">
+                <span class="material-symbols-outlined text-base">nature_people</span>
+              </div>
+              <div>
+                <span class="font-bold text-[#ddc295] block">Cabalgata Ecológica</span>
+                <span class="text-[10px] text-slate-300">3 horas en Tabio ($150.000)</span>
+              </div>
             </a>
           </div>
         </div>
 
-        <a href="contacto.html?service=turismo" class="hover:text-[#ddc295] transition-colors">Reservas</a>
+        <a href="contacto.html" class="hover:text-[#ddc295] transition-colors py-1">Contacto</a>
       </nav>
 
-      <!-- CTA -->
-      <div class="hidden md:flex items-center gap-4">
-        <a href="#calculadora" class="bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-semibold text-xs uppercase tracking-widest px-5 py-2.5 rounded-sm transition-all shadow-md">
-          Planear Cabalgata
-        </a>
-      </div>
-
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="md:hidden text-slate-200 hover:text-[#ddc295] p-2">
+      <button id="mobile-menu-btn" class="md:hidden text-slate-200 hover:text-[#ddc295] p-2 z-10" aria-label="Abrir menú">
         <span class="material-symbols-outlined text-2xl">menu</span>
       </button>
     </div>
 
     <!-- Mobile Nav Dropdown -->
     <div id="mobile-menu" class="hidden md:hidden glass-panel border-b border-[#c8a675]/20 px-6 py-6 space-y-4">
-      <a href="index.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Criadero & Sementales</a>
-      <a href="nuestro-legado.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Nuestro Legado</a>
-      <a href="#experiencias" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Cabalgatas</a>
-      <a href="#ninos" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Niños & Ponies</a>
-      <a href="#calculadora" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Cotizador Familiar</a>
-      <a href="#seguridad" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Seguridad</a>
-      
+      <a href="index.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Inicio</a>
+      <a href="nuestro-legado.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Nosotros</a>
+
       <div class="border-t border-slate-700/60 pt-3 space-y-2">
-        <span class="text-[10px] uppercase tracking-wider text-slate-400 block font-semibold">Nuestros Servicios:</span>
-        <a href="turismo.html" class="block text-sm uppercase tracking-widest text-[#ddc295] font-bold pl-2">🐴 Turismo & Cabalgatas</a>
-        <a href="academia.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">🎓 Academia Ecuestre</a>
+        <span class="text-[10px] uppercase tracking-wider text-[#c8a675] block font-bold">Servicios:</span>
+        <a href="chalaneria.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">sports_score</span>
+          <span>Chalanería & Formación</span>
+        </a>
+        <a href="estimulacion-temprana.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295] pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">child_care</span>
+          <span>Estimulación Temprana</span>
+        </a>
+        <a href="turismo.html" class="flex items-center gap-2 text-sm uppercase tracking-widest text-[#ddc295] font-bold pl-2">
+          <span class="material-symbols-outlined text-base text-[#c8a675]">nature_people</span>
+          <span>Cabalgata Ecológica (Tabio)</span>
+        </a>
       </div>
 
-      <a href="contacto.html?service=turismo" class="block text-center bg-[#c8a675] text-[#1e222a] font-semibold text-xs uppercase tracking-widest py-3 rounded-sm">Reservar Aventura</a>
+      <a href="contacto.html" class="block text-sm uppercase tracking-widest text-slate-300 hover:text-[#ddc295]">Contacto</a>
     </div>
   </header>
 
-  <main class="flex-1">
-    <!-- Hero Section -->
-    <section class="relative min-h-[90vh] flex items-center justify-center pt-28 pb-20 overflow-hidden">
-      <!-- Background Image with Lighter Soft Overlays -->
-      <div class="absolute inset-0 z-0">
-        <img src="assets/images/family_trail_ride.jpg" alt="Cabalgata Familiar en la Finca" class="w-full h-full object-cover object-center transform scale-105" />
-        <div class="absolute inset-0 bg-gradient-to-r from-[#1e222a]/75 via-[#1e222a]/40 to-transparent"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-[#1e222a] via-transparent to-transparent opacity-60"></div>
-      </div>
+  <!-- Main Content -->
+  <main class="flex-1 pt-24">
 
-      <div class="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-8 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-sm bg-[#1e222a]/90 backdrop-blur-md border border-[#ba9666]/40">
-            <span class="material-symbols-outlined text-[#cdad7d] text-sm">family_restroom</span>
-            <span class="text-xs uppercase tracking-[0.2em] font-semibold text-[#cdad7d]">Experiencias Familiares & Aventura Infantil</span>
+    <!-- Hero Section (Asymmetric Split with Double-Bezel Hardware Frame) -->
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-16 lg:py-24 border-b border-[#c8a675]/20">
+      <!-- Ambient Glows -->
+      <div class="absolute -top-32 -left-32 w-96 h-96 bg-[#c8a675]/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute top-1/2 -right-32 w-96 h-96 bg-[#af8c5c]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-6 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Left Column: Copy & Experience Proposition -->
+          <div class="lg:col-span-7 space-y-7 text-left">
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#2b323f]/90 border border-[#c8a675]/40 text-[#ddc295] text-xs font-semibold tracking-widest uppercase shadow-md">
+              <span class="material-symbols-outlined text-sm text-[#c8a675]">explore</span>
+              <span>🌿 Tabio, Cundinamarca · Paisajes de la Sabana</span>
+            </div>
+
+            <div class="space-y-3">
+              <p class="text-sm md:text-base uppercase tracking-[0.25em] text-[#c8a675] font-semibold">
+                Tres horas para conectar con el caballo, la naturaleza y disfrutar una experiencia diferente
+              </p>
+              <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.12]">
+                Cabalgata Ecológica <br />
+                <span class="text-[#ddc295] italic font-normal">con Guía Personalizado</span>
+              </h1>
+            </div>
+
+            <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light max-w-2xl">
+              En el Club Ecuestre La Chucua J.C. ofrecemos cabalgatas ecológicas personalizadas por los caminos y paisajes rurales de Tabio, Cundinamarca.
+            </p>
+
+            <div class="p-4 sm:p-5 rounded-lg bg-[#222832]/80 border-l-4 border-[#c8a675] text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <strong class="text-white font-semibold">Diseñada para personas con o sin experiencia previa.</strong> Seleccionamos caballos mansos, dóciles y de fácil manejo, buscando que cada participante disfrute del recorrido con tranquilidad, seguridad y respeto por el caballo.
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap items-center gap-4 pt-2">
+              <a href="#cotizador-reserva" class="inline-flex items-center gap-3 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest px-7 py-4 rounded-sm transition-all shadow-lg hover:shadow-xl hover:scale-[1.02]">
+                <span>Paquete Básico: $150.000 / pers.</span>
+                <span class="material-symbols-outlined text-base">arrow_forward</span>
+              </a>
+
+              <a href="#paquete-basico" class="inline-flex items-center gap-2 border border-[#c8a675]/40 hover:border-[#c8a675] text-slate-200 hover:text-white text-xs uppercase tracking-widest px-6 py-4 rounded-sm transition-all bg-[#2b323f]/50 hover:bg-[#2b323f]">
+                <span class="material-symbols-outlined text-sm text-[#c8a675]">list_alt</span>
+                <span>¿Qué Incluye?</span>
+              </a>
+            </div>
+
+            <!-- Proof Indicators / Key Pillars -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-slate-800">
+              <div class="space-y-0.5">
+                <span class="font-serif text-2xl font-bold text-[#ddc295] block">3 Horas</span>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400">Recorrido Completo</span>
+              </div>
+              <div class="space-y-0.5">
+                <span class="font-serif text-2xl font-bold text-[#ddc295] block">$150.000</span>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400">Por Persona</span>
+              </div>
+              <div class="space-y-0.5">
+                <span class="font-serif text-2xl font-bold text-[#ddc295] block">Desde 2</span>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400">Participantes Mín.</span>
+              </div>
+              <div class="space-y-0.5">
+                <span class="font-serif text-2xl font-bold text-[#ddc295] block">100%</span>
+                <span class="text-[11px] uppercase tracking-wider text-slate-400">Caballos Mansos</span>
+              </div>
+            </div>
           </div>
 
-          <h1 class="font-serif text-4xl sm:text-6xl font-bold leading-tight text-white drop-shadow-md">
-            Cabalgatas Mágicas & <br />
-            <span class="text-[#cdad7d] italic">Naturaleza en Familia</span>
-          </h1>
+          <!-- Right Column: Hero Image (Double-Bezel Hardware Frame) -->
+          <div class="lg:col-span-5 relative">
+            <div class="p-2 sm:p-3 rounded-2xl bg-gradient-to-br from-[#c8a675]/40 via-[#2b323f] to-[#181b22] shadow-2xl border border-[#c8a675]/30">
+              <div class="relative overflow-hidden rounded-xl bg-[#181b22] aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3]">
+                <img 
+                  src="assets/images/cabalgata_tabio_hero.jpg" 
+                  alt="Cabalgata ecológica guiada en los paisajes rurales de Tabio, Cundinamarca" 
+                  class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                  loading="eager"
+                />
+                <!-- Subtle Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-[#181b22]/90 via-transparent to-transparent"></div>
 
-          <p class="text-base sm:text-lg text-slate-200 max-w-2xl leading-relaxed font-light drop-shadow">
-            Descubre la belleza de la dehesa a lomos de caballos nobles y dóciles. Paseos guiados, contacto con potrillos y rutas especiales pensadas para el disfrute y seguridad de grandes y pequeños.
+                <!-- Floating Badge in Image -->
+                <div class="absolute bottom-4 left-4 right-4 p-3.5 rounded-lg bg-[#1e222a]/90 backdrop-blur-md border border-[#c8a675]/30 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full bg-[#c8a675]/20 border border-[#c8a675] flex items-center justify-center text-[#ddc295]">
+                      <span class="material-symbols-outlined text-lg">nature</span>
+                    </div>
+                    <div>
+                      <span class="text-xs font-bold text-white block">Senderos Rurales de Tabio</span>
+                      <span class="text-[10px] text-slate-400">Naturaleza virgen, aire puro y sabana andina</span>
+                    </div>
+                  </div>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-[#ddc295] bg-[#c8a675]/20 px-2 py-1 rounded">La Chucua J.C</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial Philosophy Quote Section -->
+    <section class="py-16 sm:py-20 bg-[#181b22] border-b border-[#c8a675]/20 relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-6 text-center space-y-6">
+        <span class="material-symbols-outlined text-[#c8a675] text-4xl block">format_quote</span>
+        <blockquote class="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-normal italic leading-snug">
+          “En el Club Ecuestre La Chucua J.C. creemos que una cabalgata es mucho más que montar a caballo. Es salir de la rutina, respirar aire puro, disfrutar el paisaje, compartir y descubrir la conexión especial que existe entre el ser humano y el caballo. Ven a vivir la Sabana desde otra perspectiva.”
+        </blockquote>
+        <div class="pt-2">
+          <p class="text-xs uppercase tracking-[0.25em] text-[#c8a675] font-semibold">
+            CLUB ECUESTRE LA CHUCUA J.C. · Genética y educación equina con propósito
           </p>
-
-          <div class="flex flex-wrap items-center gap-4 pt-2">
-            <a href="#experiencias" class="bg-[#ba9666] hover:bg-[#cdad7d] text-[#1e222a] font-semibold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all shadow-lg">
-              Ver Rutas & Cabalgatas
-            </a>
-            <a href="#calculadora" class="border border-[#ba9666]/40 text-slate-200 hover:text-[#cdad7d] hover:border-[#ba9666] bg-[#2b323f]/60 backdrop-blur-md font-semibold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all">
-              Calcular Precio Familiar
-            </a>
-          </div>
-        </div>
-
-        <!-- Highlights Badges Card -->
-        <div class="lg:col-span-4 space-y-4">
-          <div class="glass-panel p-6 rounded-sm border-l-4 border-l-[#ba9666] space-y-2">
-            <div class="flex items-center gap-2 text-[#cdad7d]">
-              <span class="material-symbols-outlined">child_care</span>
-              <span class="text-xs uppercase tracking-widest font-bold">Paseos en Pony para Niños</span>
-            </div>
-            <p class="text-xs text-slate-300">Monitores dedicados a pie que acompañan a cada niño en todo momento.</p>
-          </div>
-
-          <div class="glass-panel p-6 rounded-sm border-l-4 border-l-[#ba9666] space-y-2">
-            <div class="flex items-center gap-2 text-[#cdad7d]">
-              <span class="material-symbols-outlined">verified</span>
-              <span class="text-xs uppercase tracking-widest font-bold">Sin Experiencia Previa</span>
-            </div>
-            <p class="text-xs text-slate-300">Caballos de temperamento calmado ideales para primeros jinetes.</p>
-          </div>
-
-          <div class="glass-panel p-6 rounded-sm border-l-4 border-l-[#ba9666] space-y-2">
-            <div class="flex items-center gap-2 text-[#cdad7d]">
-              <span class="material-symbols-outlined">restaurant</span>
-              <span class="text-xs uppercase tracking-widest font-bold">Merienda & Picnics Rústicos</span>
-            </div>
-            <p class="text-xs text-slate-300">Degustación de productos locales y bebidas en praderas panorámicas.</p>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- Tourism Experiences Cards Section -->
-    <section id="experiencias" class="py-24 bg-[#181b22] border-t border-slate-800">
+    <!-- Paquete Básico: $150.000 por Persona (Bento Grid) -->
+    <section id="paquete-basico" class="py-20 sm:py-28 bg-[#1e222a] border-b border-slate-800">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-xs uppercase tracking-widest text-[#ba9666] font-semibold block mb-2">Rutas y Excursiones Guiadas</span>
-          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Elige Tu Aventura Ecuestre</h2>
-          <p class="text-sm text-slate-300 mt-3">Diseñadas para grupos familiares, parejas y niños con atención al detalle y máxima tranquilidad.</p>
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div class="max-w-2xl space-y-3">
+            <span class="text-xs uppercase tracking-[0.25em] text-[#c8a675] font-bold block">Transparencia & Confort</span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+              🐎 Paquete Básico
+            </h2>
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+              Una experiencia completa de inmersión rural con todo lo necesario para disfrutar sin preocupaciones.
+            </p>
+          </div>
+          <div class="bg-[#222832] border border-[#c8a675] p-4 sm:p-5 rounded-xl shadow-xl flex items-center gap-4">
+            <div class="text-right">
+              <span class="text-[10px] uppercase tracking-wider text-slate-400 block font-semibold">Inversión por Persona</span>
+              <span class="font-serif text-3xl font-bold text-[#ddc295]">$150.000</span>
+              <span class="text-[11px] text-slate-400"> COP</span>
+            </div>
+            <span class="w-px h-10 bg-slate-700"></span>
+            <div class="text-xs text-slate-300 space-y-0.5">
+              <span class="block font-bold text-white">3 Horas</span>
+              <span class="text-slate-400">Guía incluido</span>
+            </div>
+          </div>
         </div>
 
-        <div id="tourism-experiences-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Populated by JS -->
+        <!-- Bento Grid: 7 Inclusions -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Inclusion 1 -->
+          <div class="glass-panel p-7 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/60 transition-all group">
+            <div class="w-10 h-10 rounded-lg bg-[#c8a675]/15 border border-[#c8a675]/40 flex items-center justify-center text-[#ddc295] mb-5 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-xl">pets</span>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-white mb-2">Caballo Básico Asignado</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+              Seleccionado minuciosamente de acuerdo con el nivel y experiencia de cada participante (manso, dócil y de fácil manejo).
+            </p>
+          </div>
+
+          <!-- Inclusion 2 -->
+          <div class="glass-panel p-7 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/60 transition-all group">
+            <div class="w-10 h-10 rounded-lg bg-[#c8a675]/15 border border-[#c8a675]/40 flex items-center justify-center text-[#ddc295] mb-5 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-xl">timer</span>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-white mb-2">3 Horas de Recorrido</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+              Tres horas continuas a caballo a través de paisajes montañosos, aire puro y caminos campestres sin afanes.
+            </p>
+          </div>
+
+          <!-- Inclusion 3 -->
+          <div class="glass-panel p-7 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/60 transition-all group">
+            <div class="w-10 h-10 rounded-lg bg-[#c8a675]/15 border border-[#c8a675]/40 flex items-center justify-center text-[#ddc295] mb-5 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-xl">brush</span>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-white mb-2">Alistamiento & Preparación</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+              Participación guiada en el ensillado y cepillado previo para establecer una primera conexión de confianza con el ejemplar.
+            </p>
+          </div>
+
+          <!-- Inclusion 4 -->
+          <div class="glass-panel p-7 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/60 transition-all group">
+            <div class="w-10 h-10 rounded-lg bg-[#c8a675]/15 border border-[#c8a675]/40 flex items-center justify-center text-[#ddc295] mb-5 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-xl">sports_score</span>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-white mb-2">Inducción de Manejo & Seguridad</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+              Instrucción previa en pista sobre postura, uso correcto de riendas, frenado, giro y protocolos de seguridad en ruta.
+            </p>
+          </div>
+
+          <!-- Inclusion 5 -->
+          <div class="glass-panel p-7 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/60 transition-all group">
+            <div class="w-10 h-10 rounded-lg bg-[#c8a675]/15 border border-[#c8a675]/40 flex items-center justify-center text-[#ddc295] mb-5 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-xl">person_pin_circle</span>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-white mb-2">Acompañamiento y Guía Experto</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+              Guía ecuestre profesional durante todo el recorrido que asiste en tiempo real y comparte historias y datos de la región.
+            </p>
+          </div>
+
+          <!-- Inclusion 6 -->
+          <div class="glass-panel p-7 rounded-xl border border-[#c8a675]/20 hover:border-[#c8a675]/60 transition-all group">
+            <div class="w-10 h-10 rounded-lg bg-[#c8a675]/15 border border-[#c8a675]/40 flex items-center justify-center text-[#ddc295] mb-5 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-xl">verified_user</span>
+            </div>
+            <h3 class="font-serif text-lg font-bold text-white mb-2">Equipamiento Necesario</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+              Monturas ergonómicas tradicionales de cuero, jáquimas seguras y cascos de protección ecuestre homologados.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Full-width 7th Highlight -->
+        <div class="mt-6 p-6 sm:p-8 rounded-xl bg-[#222832] border border-[#c8a675]/30 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-[#c8a675]/20 border border-[#c8a675] flex items-center justify-center text-[#ddc295] shrink-0">
+              <span class="material-symbols-outlined text-2xl">landscape</span>
+            </div>
+            <div>
+              <h4 class="font-serif text-lg font-bold text-white">Ruta Escénica por Caminos Rurales de Tabio</h4>
+              <p class="text-xs sm:text-sm text-slate-300 font-light">Paisajes montañosos, senderos andinos, miradores hacia la peña y aire puro garantizado.</p>
+            </div>
+          </div>
+          <a href="#cotizador-reserva" class="shrink-0 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest px-6 py-3 rounded-sm transition-all shadow-md">
+            Calcular Mi Grupo
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Elección de Caballos Especiales & Grupos -->
+    <section class="py-20 bg-[#181b22] border-b border-[#c8a675]/20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Caballos Especiales -->
+          <div class="lg:col-span-6 space-y-6">
+            <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#ddc295] font-semibold">
+              <span class="material-symbols-outlined text-sm text-[#c8a675]">stars</span>
+              <span>Personalización Exclusiva</span>
+            </div>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">
+              ⭐ Elección de Caballos Especiales
+            </h2>
+            <p class="text-sm text-slate-300 leading-relaxed font-light">
+              El paquete básico incluye nuestros caballos más mansos, dóciles y fáciles de manejar, ideales para disfrutar con absoluta serenidad.
+            </p>
+            <div class="p-5 rounded-xl bg-[#222832] border border-[#c8a675]/30 space-y-3">
+              <h4 class="font-bold text-white text-sm">¿Deseas una montura de mayor nivel o genética?</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Si el participante desea montar un <strong>caballo específico, de mayor nivel, entrenamiento avanzado, genética de Paso Fino Colombiano o características particulares</strong>, podrá solicitarlo previamente. El valor adicional dependerá del ejemplar seleccionado.
+              </p>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-300">
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">check</span> Ejemplares de paso suave con brío controlado para jinetes con experiencia.</li>
+              <li class="flex items-center gap-2"><span class="material-symbols-outlined text-[#c8a675] text-sm">check</span> Asignación personalizada previa validación de afinidad del binomio.</li>
+            </ul>
+          </div>
+
+          <!-- Right Column: Grupos y Logística -->
+          <div class="lg:col-span-6 glass-panel p-8 sm:p-10 rounded-2xl border border-[#c8a675]/30 space-y-6">
+            <div class="w-12 h-12 rounded-lg bg-[#c8a675]/15 border border-[#c8a675]/40 flex items-center justify-center text-[#ddc295]">
+              <span class="material-symbols-outlined text-2xl">groups</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-white">👥 Política de Grupos & Seguridad</h3>
+            
+            <div class="space-y-4 text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+              <p>
+                <strong class="text-white">Servicio disponible a partir de 2 personas en adelante,</strong> con reserva previa obligatoria.
+              </p>
+              <p>
+                El número de participantes se organizará de acuerdo con la disponibilidad de caballos, guías, ruta y condiciones estrictas de <strong class="text-white">seguridad y bienestar animal</strong>.
+              </p>
+              <div class="p-4 rounded-lg bg-[#181b22] border border-slate-700">
+                <span class="font-bold text-[#ddc295] block mb-1">🎉 Grupos Numerosos & Eventos Especiales</span>
+                <span class="text-xs text-slate-300">Para grupos familiares grandes o empresariales podemos diseñar una experiencia y logística especial a la medida (rutas exclusivas, estaciones y asados campestres).</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- Kids & Ponies Special Spotlight -->
-    <section id="ninos" class="py-24 bg-[#1e222a] border-t border-slate-800 relative overflow-hidden">
-      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-6 space-y-6">
-          <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#2b323f] border border-[#ba9666]/40 text-[#cdad7d] text-xs font-semibold uppercase tracking-widest rounded-sm">
-            <span class="material-symbols-outlined text-sm">pets</span>
-            Especial Pequeños Jinetes (3 a 10 años)
+    <!-- Experiencias Adicionales Gastronómicas (Con Fotografía Editorial) -->
+    <section class="py-20 sm:py-28 bg-[#1e222a] border-b border-slate-800">
+      <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+          
+          <div class="lg:col-span-6 space-y-4">
+            <span class="text-xs uppercase tracking-[0.25em] text-[#c8a675] font-bold block">Gastronomía & Convivencia</span>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+              🍽️ Experiencias Adicionales
+            </h2>
+            <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+              La cabalgata puede complementarse con diferentes opciones, de acuerdo con los gustos y necesidades del grupo:
+            </p>
           </div>
 
-          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">
-            El Primer Abrazo con un Caballo
+          <div class="lg:col-span-6 p-4 rounded-xl bg-[#222832] border border-[#c8a675]/30 text-xs text-slate-300 leading-relaxed">
+            <strong class="text-white block mb-1">🍷 Opciones de Bebidas para Adultos (Consumo Responsable):</strong>
+            Para grupos de adultos, también podremos ofrecer opciones de bebidas alcohólicas como servicio adicional, siempre de manera responsable y de acuerdo con la normativa aplicable. <em>Las bebidas alcohólicas no hacen parte del paquete básico y no están disponibles para menores de edad.</em>
+          </div>
+
+        </div>
+
+        <!-- Layout with Image + Options Bento -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          <!-- Image Side -->
+          <div class="lg:col-span-6 rounded-2xl overflow-hidden border border-[#c8a675]/30 shadow-2xl relative min-h-[380px] bg-[#181b22]">
+            <img 
+              src="assets/images/cabalgata_refrigerio.jpg" 
+              alt="Mesa campestre con refrigerio y almuerzo después de la cabalgata en Tabio" 
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#181b22]/90 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-[#1e222a]/95 border border-[#c8a675]/30">
+              <span class="font-serif text-base font-bold text-white block">Picnic y Almuerzo en Mirador Campestre</span>
+              <p class="text-xs text-slate-300 mt-1">Saborea productos locales frescos, quesos madurados y platos típicos de la región con vista panorámica a la cordillera.</p>
+            </div>
+          </div>
+
+          <!-- Cards Side -->
+          <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <div class="glass-panel p-6 rounded-xl border border-slate-700/60 hover:border-[#c8a675]/50 transition-all">
+              <div class="w-10 h-10 rounded-lg bg-[#c8a675]/20 text-[#ddc295] flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-xl">local_cafe</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-white mb-2">🥤 Refrigerio Campestre</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Bebidas artesanales refrescantes, amasijos típicos calientes de Tabio y frutas frescas para reponer energía a mitad de ruta.
+              </p>
+            </div>
+
+            <div class="glass-panel p-6 rounded-xl border border-slate-700/60 hover:border-[#c8a675]/50 transition-all">
+              <div class="w-10 h-10 rounded-lg bg-[#c8a675]/20 text-[#ddc295] flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-xl">restaurant</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-white mb-2">🍽️ Almuerzo Tradicional</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Menú completo preparado a fuego lento con carnes seleccionadas, acompañamientos de la huerta y postre tradicional.
+              </p>
+            </div>
+
+            <div class="glass-panel p-6 rounded-xl border border-slate-700/60 hover:border-[#c8a675]/50 transition-all">
+              <div class="w-10 h-10 rounded-lg bg-[#c8a675]/20 text-[#ddc295] flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-xl">celebration</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-white mb-2">🎉 Experiencias para Grupos</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Celebración de cumpleaños, aniversarios, fogata privada y música tradicional o cuentería bajo las estrellas de Tabio.
+              </p>
+            </div>
+
+            <div class="glass-panel p-6 rounded-xl border border-slate-700/60 hover:border-[#c8a675]/50 transition-all">
+              <div class="w-10 h-10 rounded-lg bg-[#c8a675]/20 text-[#ddc295] flex items-center justify-center mb-4">
+                <span class="material-symbols-outlined text-xl">shopping_basket</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-white mb-2">🧺 Opciones Personalizadas</h4>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Canastas de picnic gourmet personalizadas con quesos, frutos secos, pan rústico y bebidas adaptadas a su preferencia.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Cotizador & Reservas Interactivas en Tiempo Real -->
+    <section id="cotizador-reserva" class="py-20 sm:py-28 bg-[#181b22] border-b border-[#c8a675]/20 relative">
+      <div class="max-w-5xl mx-auto px-6">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#c8a675] font-bold block">📅 Reserva Previa Obligatoria</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+            Cotiza Tu Cabalgata en <span class="text-[#ddc295] italic">Tabio</span>
           </h2>
-
-          <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
-            Nuestros ponis y caballos de escuela son criados bajo el método de doma natural y etología positiva. Los niños aprenden a perder el miedo, cepillar sus crines, darles zanahorias y disfrutar de un paseo de cuento por senderos floridos.
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Para garantizar la disponibilidad de caballos, guías, alimentación y servicios adicionales, recomendamos realizar la reserva con anticipación.
           </p>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-            <div class="p-4 bg-[#2b323f]/80 border border-slate-700 rounded-sm">
-              <span class="material-symbols-outlined text-[#cdad7d] text-2xl mb-1">sentiment_very_satisfied</span>
-              <h4 class="font-serif text-base text-white font-bold">Monitores Individuales</h4>
-              <p class="text-xs text-slate-300 mt-1">Un monitor a pie sostiene las riendas del pony en todo momento.</p>
-            </div>
-            <div class="p-4 bg-[#2b323f]/80 border border-slate-700 rounded-sm">
-              <span class="material-symbols-outlined text-[#cdad7d] text-2xl mb-1">workspace_premium</span>
-              <h4 class="font-serif text-base text-white font-bold">Diploma de Recuerdo</h4>
-              <p class="text-xs text-slate-300 mt-1">Certificado personalizado al finalizar su primer paseo.</p>
-            </div>
-          </div>
         </div>
 
-        <div class="lg:col-span-6 rounded-sm overflow-hidden border border-[#ba9666]/30 shadow-2xl relative">
-          <img src="assets/images/hero_stallion.jpg" alt="Potros y Niños en la Finca" class="w-full h-96 object-cover" />
-          <div class="absolute bottom-4 left-4 right-4 bg-[#1e222a]/95 backdrop-blur-md p-4 rounded-sm border border-[#ba9666]/30 text-xs text-slate-300">
-            <p><strong class="text-[#cdad7d]">Nota para los Padres:</strong> Contamos con área de terraza con sombra, café y refrigerios mientras observan a los pequeños disfrutar de su actividad.</p>
+        <!-- Calculator Box -->
+        <div class="glass-panel rounded-2xl border-2 border-[#c8a675] p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-[#c8a675] text-[#1e222a] text-[10px] font-bold uppercase tracking-widest py-1.5 px-6 rounded-bl-xl shadow-md">
+            Tarifa Oficial La Chucua J.C
           </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <!-- Left: Controls -->
+            <div class="lg:col-span-7 space-y-6">
+              
+              <!-- Participants Slider -->
+              <div>
+                <div class="flex justify-between items-center mb-2">
+                  <label for="cabalgata-pax" class="text-xs uppercase tracking-wider text-slate-300 font-semibold">Número de Participantes (Mínimo 2)</label>
+                  <span id="cabalgata-pax-val" class="font-bold text-[#ddc295] text-sm">2 personas</span>
+                </div>
+                <input 
+                  type="range" 
+                  id="cabalgata-pax" 
+                  min="2" 
+                  max="15" 
+                  value="2" 
+                  class="w-full accent-[#c8a675] bg-slate-700 h-2 rounded-lg cursor-pointer"
+                />
+                <div class="flex justify-between text-[10px] text-slate-400 mt-1">
+                  <span>2 pers. (Mínimo)</span>
+                  <span>5 pers.</span>
+                  <span>10 pers.</span>
+                  <span>15+ pers.</span>
+                </div>
+              </div>
+
+              <!-- Horse Type Select -->
+              <div>
+                <label for="cabalgata-horse-type" class="block text-xs uppercase tracking-wider text-slate-300 font-semibold mb-2">Tipo de Caballo Asignado</label>
+                <select id="cabalgata-horse-type" class="w-full bg-[#222832] border border-slate-700 text-slate-200 rounded-lg p-3 text-xs focus:border-[#c8a675] focus:outline-none transition-colors">
+                  <option value="basico" selected>🐎 Caballo Básico (Manso, dócil y fácil manejo - Incluido)</option>
+                  <option value="especial">⭐ Caballo Especial (Mayor nivel, entrenamiento & genética +$70.000/pers)</option>
+                </select>
+              </div>
+
+              <!-- Additional Addons Checkboxes -->
+              <div>
+                <span class="block text-xs uppercase tracking-wider text-slate-300 font-semibold mb-3">Experiencias Gastronómicas Adicionales</span>
+                <div class="space-y-2.5">
+                  <label class="flex items-center gap-3 p-3 rounded-lg bg-[#222832] border border-slate-800 hover:border-slate-700 cursor-pointer text-xs text-slate-200">
+                    <input type="checkbox" id="add-refrigerio" class="accent-[#c8a675] w-4 h-4 rounded">
+                    <span class="flex-1">🥤 Refrigerio Campestre artesanal</span>
+                    <span class="text-[#c8a675] font-semibold">+$25.000 / pers.</span>
+                  </label>
+
+                  <label class="flex items-center gap-3 p-3 rounded-lg bg-[#222832] border border-slate-800 hover:border-slate-700 cursor-pointer text-xs text-slate-200">
+                    <input type="checkbox" id="add-almuerzo" class="accent-[#c8a675] w-4 h-4 rounded">
+                    <span class="flex-1">🍽️ Almuerzo Tradicional de la Sabana</span>
+                    <span class="text-[#c8a675] font-semibold">+$45.000 / pers.</span>
+                  </label>
+
+                  <label class="flex items-center gap-3 p-3 rounded-lg bg-[#222832] border border-slate-800 hover:border-slate-700 cursor-pointer text-xs text-slate-200">
+                    <input type="checkbox" id="add-picnic" class="accent-[#c8a675] w-4 h-4 rounded">
+                    <span class="flex-1">🧺 Picnic Gourmet con maridaje responsable (Solo adultos)</span>
+                    <span class="text-[#c8a675] font-semibold">+$65.000 / pers.</span>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right: Dynamic Summary -->
+            <div class="lg:col-span-5 bg-[#181b22]/95 p-6 sm:p-8 rounded-xl border border-slate-800 space-y-6 text-center lg:text-left">
+              <div>
+                <span class="text-[11px] uppercase tracking-widest text-slate-400 block font-semibold mb-1">Total Estimado del Grupo</span>
+                <div class="font-serif text-4xl sm:text-5xl font-bold text-[#ddc295] tracking-tight" id="cabalgata-total-price">
+                  $300.000
+                </div>
+                <div class="text-xs text-slate-400 mt-1 font-medium" id="cabalgata-per-person-price">
+                  $150.000 / persona
+                </div>
+              </div>
+
+              <div class="p-3.5 rounded-lg bg-[#222832] border border-slate-800 text-left">
+                <span class="text-[10px] uppercase tracking-wider text-[#c8a675] block font-bold mb-1">Resumen del Plan:</span>
+                <p id="cabalgata-summary-breakdown" class="text-xs text-slate-300 leading-relaxed font-light">
+                  2 participantes · 3 horas de recorrido guiado · Caballo manso y dócil básico
+                </p>
+              </div>
+
+              <div class="space-y-3 pt-2">
+                <a id="cabalgata-reserve-btn" href="contacto.html?service=turismo" class="w-full flex items-center justify-center gap-3 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest py-4 rounded-sm transition-all shadow-lg hover:shadow-xl hover:scale-[1.01]">
+                  <span>Reservar Cupo en Línea</span>
+                  <span class="material-symbols-outlined text-base">arrow_forward</span>
+                </a>
+
+                <a id="cabalgata-whatsapp-btn" href="https://wa.me/573000000000" target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-2 border border-slate-700 hover:border-[#c8a675] text-slate-200 hover:text-white py-3 rounded-sm text-xs uppercase tracking-widest font-semibold transition-all">
+                  <span class="material-symbols-outlined text-sm text-[#c8a675]">chat</span>
+                  <span>Consultar por WhatsApp</span>
+                </a>
+              </div>
+
+              <p class="text-[10px] text-slate-400 text-center leading-relaxed">
+                Reserva sujeta a disponibilidad de caballos y guías. Los cupos se confirman con anticipación.
+              </p>
+            </div>
+
+          </div>
+
         </div>
+
       </div>
     </section>
 
-    <!-- Interactive Price Estimator / Calculator for Families -->
-    <section id="calculadora" class="py-24 bg-[#181b22] border-t border-slate-800">
+    <!-- Preguntas Frecuentes (FAQ Accordion) -->
+    <section class="py-20 bg-[#1e222a] border-b border-slate-800">
       <div class="max-w-4xl mx-auto px-6">
-        <div class="text-center mb-12">
-          <span class="text-xs uppercase tracking-widest text-[#ba9666] font-semibold block mb-2">Planificador Interactivo</span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Calcula Tu Paquete Familiar</h2>
-          <p class="text-xs text-slate-300 mt-2">Selecciona la actividad y el número de participantes para ver el presupuesto estimado al instante.</p>
+        
+        <div class="text-center mb-14 space-y-3">
+          <span class="text-xs uppercase tracking-[0.25em] text-[#c8a675] font-bold block">Claridad & Confianza</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">
+            Preguntas Frecuentes sobre la Cabalgata
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-400">Todo lo que necesitas saber antes de subirte al caballo.</p>
         </div>
 
-        <div class="glass-panel p-8 sm:p-10 rounded-sm border border-[#ba9666]/30 shadow-2xl">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-            <div>
-              <label for="calc-experience" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Experiencia Deseada</label>
-              <select id="calc-experience" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#ba9666] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none">
-                <!-- Injected via JS -->
-              </select>
-            </div>
-            <div>
-              <label for="calc-date" class="block text-xs uppercase tracking-wider text-slate-300 mb-2 font-semibold">Fecha Preferida</label>
-              <input type="date" id="calc-date" class="w-full bg-[#181b22] border border-slate-700 focus:border-[#ba9666] text-sm text-slate-100 px-4 py-3 rounded-sm outline-none" />
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-            <div class="p-4 bg-[#181b22] border border-slate-700 rounded-sm flex items-center justify-between">
-              <div>
-                <span class="text-xs font-semibold text-white block">Adultos / Mayores de 12 años</span>
-                <span id="adult-unit-price" class="text-[11px] text-slate-400">€65 / pers.</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <button id="btn-minus-adults" class="w-8 h-8 rounded-sm bg-[#2b323f] hover:bg-[#ba9666] hover:text-[#1e222a] border border-slate-600 font-bold flex items-center justify-center">-</button>
-                <span id="count-adults" class="font-serif text-lg font-bold text-[#cdad7d]">2</span>
-                <button id="btn-plus-adults" class="w-8 h-8 rounded-sm bg-[#2b323f] hover:bg-[#ba9666] hover:text-[#1e222a] border border-slate-600 font-bold flex items-center justify-center">+</button>
-              </div>
-            </div>
-
-            <div class="p-4 bg-[#181b22] border border-slate-700 rounded-sm flex items-center justify-between">
-              <div>
-                <span class="text-xs font-semibold text-white block">Niños (3 a 11 años)</span>
-                <span id="child-unit-price" class="text-[11px] text-slate-400">€45 / pers.</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <button id="btn-minus-children" class="w-8 h-8 rounded-sm bg-[#2b323f] hover:bg-[#ba9666] hover:text-[#1e222a] border border-slate-600 font-bold flex items-center justify-center">-</button>
-                <span id="count-children" class="font-serif text-lg font-bold text-[#cdad7d]">1</span>
-                <button id="btn-plus-children" class="w-8 h-8 rounded-sm bg-[#2b323f] hover:bg-[#ba9666] hover:text-[#1e222a] border border-slate-600 font-bold flex items-center justify-center">+</button>
-              </div>
+        <div class="space-y-4">
+          
+          <!-- FAQ 1 -->
+          <div class="faq-item glass-panel rounded-xl border border-slate-800 overflow-hidden transition-colors">
+            <button class="faq-question w-full p-5 text-left flex items-center justify-between text-white hover:text-[#ddc295] transition-colors cursor-pointer">
+              <span class="text-sm sm:text-base font-semibold">¿Necesito experiencia previa para hacer la cabalgata?</span>
+              <span class="faq-icon material-symbols-outlined text-xl text-[#c8a675] transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed font-light border-t border-slate-800/60 pt-3">
+              <strong>No, para nada.</strong> La cabalgata está especialmente diseñada tanto para principiantes absolutos como para personas con experiencia. Seleccionamos caballos sumamente mansos, dóciles y acostumbrados al sendero, y antes de salir realizamos una inducción básica de manejo.
             </div>
           </div>
 
-          <!-- Total Calculation Banner -->
-          <div class="p-6 bg-[#181b22] border border-[#ba9666]/30 rounded-sm flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
-            <div>
-              <span class="text-[11px] uppercase tracking-wider text-slate-400 block">Total Estimado del Paquete</span>
-              <div class="flex items-baseline gap-2">
-                <span id="calc-total-price" class="font-serif text-3xl sm:text-4xl font-bold text-[#cdad7d]">€175</span>
-                <span class="text-xs text-slate-300">(IVA, guía y material de seguridad incluidos)</span>
-              </div>
+          <!-- FAQ 2 -->
+          <div class="faq-item glass-panel rounded-xl border border-slate-800 overflow-hidden transition-colors">
+            <button class="faq-question w-full p-5 text-left flex items-center justify-between text-white hover:text-[#ddc295] transition-colors cursor-pointer">
+              <span class="text-sm sm:text-base font-semibold">¿Cuál es el número mínimo y máximo de participantes?</span>
+              <span class="faq-icon material-symbols-outlined text-xl text-[#c8a675] transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed font-light border-t border-slate-800/60 pt-3">
+              El servicio está disponible a partir de <strong>2 personas en adelante</strong>. Para grupos numerosos o empresas, coordinamos una logística especial con guías de apoyo adicionales y estaciones de descanso.
             </div>
-            <a id="btn-book-calculated" href="contacto.html?service=turismo" class="w-full sm:w-auto text-center bg-[#ba9666] hover:bg-[#cdad7d] text-[#1e222a] font-semibold text-xs uppercase tracking-widest px-8 py-3.5 rounded-sm transition-all shadow-md">
-              Confirmar Reserva
-            </a>
           </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item glass-panel rounded-xl border border-slate-800 overflow-hidden transition-colors">
+            <button class="faq-question w-full p-5 text-left flex items-center justify-between text-white hover:text-[#ddc295] transition-colors cursor-pointer">
+              <span class="faq-title text-sm sm:text-base font-semibold">¿Cómo funciona la elección de un caballo especial?</span>
+              <span class="faq-icon material-symbols-outlined text-xl text-[#c8a675] transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed font-light border-t border-slate-800/60 pt-3">
+              El paquete básico de $150.000 incluye nuestros caballos más tranquilos. Si deseas montar un caballo de alta escuela, entrenamiento superior o genética destacada de Paso Fino Colombiano, puedes solicitarlo previamente con un recargo adicional según el ejemplar.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item glass-panel rounded-xl border border-slate-800 overflow-hidden transition-colors">
+            <button class="faq-question w-full p-5 text-left flex items-center justify-between text-white hover:text-[#ddc295] transition-colors cursor-pointer">
+              <span class="text-sm sm:text-base font-semibold">¿Qué vestimenta y calzado debo llevar?</span>
+              <span class="faq-icon material-symbols-outlined text-xl text-[#c8a675] transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed font-light border-t border-slate-800/60 pt-3">
+              Recomendamos usar pantalón largo cómodo (jean o leggins gruesos), calzado cerrado (botas o tenis con buen agarre), bloqueador solar, gafas de sol y chaqueta ligera o impermeable. El casco de seguridad te lo suministramos nosotros.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item glass-panel rounded-xl border border-slate-800 overflow-hidden transition-colors">
+            <button class="faq-question w-full p-5 text-left flex items-center justify-between text-white hover:text-[#ddc295] transition-colors cursor-pointer">
+              <span class="text-sm sm:text-base font-semibold">¿Con cuánta anticipación debo hacer la reserva?</span>
+              <span class="faq-icon material-symbols-outlined text-xl text-[#c8a675] transition-transform duration-300">expand_more</span>
+            </button>
+            <div class="faq-answer hidden px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed font-light border-t border-slate-800/60 pt-3">
+              La reserva previa es obligatoria. Aconsejamos reservar con al menos <strong>48 a 72 horas de anticipación</strong> para fines de semana o festivos, con el fin de garantizar la disponibilidad del guía y el alistamiento óptimo de los caballos.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Final VIP CTA Banner -->
+    <section class="py-20 bg-gradient-to-br from-[#1e222a] via-[#222832] to-[#181b22] relative overflow-hidden">
+      <div class="max-w-5xl mx-auto px-6 text-center space-y-8 relative z-10">
+        <div class="w-16 h-16 rounded-full bg-[#c8a675]/20 border border-[#c8a675] flex items-center justify-center text-[#ddc295] mx-auto shadow-xl">
+          <span class="material-symbols-outlined text-3xl">nature_people</span>
+        </div>
+
+        <div class="space-y-3">
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">
+            Ven a Vivir la Sabana desde <br />
+            <span class="text-[#ddc295] italic">Otra Perspectiva</span>
+          </h2>
+          <p class="text-sm sm:text-base text-slate-300 max-w-xl mx-auto font-light leading-relaxed">
+            Coordina tu recorrido ecológico de 3 horas por los paisajes rurales de Tabio. Caballos nobles, guías expertos y atención personalizada.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="#cotizador-reserva" class="inline-flex items-center gap-3 bg-[#c8a675] hover:bg-[#ddc295] text-[#1e222a] font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-sm transition-all shadow-lg hover:shadow-xl hover:scale-105">
+            <span>Reservar Cabalgata ($150.000)</span>
+            <span class="material-symbols-outlined text-base">arrow_forward</span>
+          </a>
+          <a href="https://wa.me/573000000000?text=Hola,%20deseo%20reservar%20la%20Cabalgata%20Ecológica%20en%20Tabio" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-slate-700 hover:border-[#c8a675] text-slate-300 hover:text-white text-xs uppercase tracking-widest px-6 py-4 rounded-sm transition-all bg-[#2b323f]/50">
+            <span class="material-symbols-outlined text-sm text-[#c8a675]">chat</span>
+            <span>Hablar con un Guía por WhatsApp</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Safety & Protocols -->
-    <section id="seguridad" class="py-24 bg-[#1e222a] border-t border-slate-800">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-xs uppercase tracking-widest text-[#ba9666] font-semibold block mb-2">Tranquilidad Total</span>
-          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Compromiso de Seguridad</h2>
-        </div>
-
-        <div id="safety-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Populated by JS -->
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- Footer -->
   <footer class="bg-[#181b22] border-t border-slate-800 py-12 mt-auto">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-3">
-        <span class="material-symbols-outlined text-[#cdad7d] text-2xl">nature_people</span>
-        <span class="font-serif text-lg font-bold text-white">LA CHUCUA J.C • TURISMO</span>
+        <span class="material-symbols-outlined text-[#ddc295] text-2xl">military_tech</span>
+        <span class="font-serif text-lg font-bold text-white">LA CHUCUA J.C</span>
       </div>
       <p class="text-xs text-slate-400 text-center md:text-left">
-        &copy; 2026 LA CHUCUA J.C Turismo Ecuestre Familiar. Todos los derechos reservados.
+        &copy; 2026 LA CHUCUA J.C. Todos los derechos reservados. Genética y educación equina con propósito. Tabio, Cundinamarca.
       </p>
-      <div class="flex items-center gap-6 text-xs text-slate-400">
-        <a href="index.html" class="hover:text-[#cdad7d] transition-colors">Criadero</a>
-        <a href="nuestro-legado.html" class="hover:text-[#cdad7d] transition-colors">Legado</a>
-        <a href="turismo.html" class="text-[#cdad7d]">Turismo</a>
-        <a href="contacto.html" class="hover:text-[#cdad7d] transition-colors">Contacto</a>
+      <div class="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
+        <a href="index.html" class="hover:text-[#ddc295] transition-colors">Inicio</a>
+        <a href="nuestro-legado.html" class="hover:text-[#ddc295] transition-colors">Nosotros</a>
+        <a href="chalaneria.html" class="hover:text-[#ddc295] transition-colors">Chalanería</a>
+        <a href="estimulacion-temprana.html" class="hover:text-[#ddc295] transition-colors">Estimulación Temprana</a>
+        <a href="turismo.html" class="text-[#ddc295] font-bold">Cabalgata Ecológica</a>
+        <a href="contacto.html" class="hover:text-[#ddc295] transition-colors">Contacto</a>
       </div>
     </div>
   </footer>
 
   <!-- Tourism Page JS Script -->
-  <script type="module" src="js/tourism-page.js"></script>
+  <script src="js/tourism-page.js"></script>
 </body>
 </html>

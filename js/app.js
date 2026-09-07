@@ -1,13 +1,11 @@
 import { initCatalog } from './modules/catalog.js';
 import { initPedigree } from './modules/pedigree.js';
-import { initCourses } from './modules/courses.js';
 import { initTimeline } from './modules/timeline.js';
 import { initAnimations } from './modules/animations.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initCatalog();
   initPedigree();
-  initCourses();
   initTimeline();
   setupNavigation();
   setupCounters();
