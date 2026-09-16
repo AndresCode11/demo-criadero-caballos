@@ -2,8 +2,11 @@
  * Script interactivo para Cabalgata Ecológica en Tabio
  * Club Ecuestre La Chucua J.C.
  */
+import { initAnimations } from './modules/animations.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  initAnimations();
+
   // 1. Header scroll effect
   const header = document.getElementById('main-header');
   window.addEventListener('scroll', () => {

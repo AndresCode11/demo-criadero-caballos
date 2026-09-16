@@ -1,181 +1,245 @@
 export const horsesData = [
   {
-    id: "venus-del-rancho",
-    name: "Venus del Rancho",
-    title: "Pilar de Nuestra Visión Genética Actual",
-    breed: "Caballo Criollo Colombiano de Paso",
-    birthYear: 2019,
-    height: "1.44 m",
-    color: "Castaña Cerrada",
-    discipline: "Genética con Propósito & Andar Colombiano",
+    id: "esperada-valencia",
+    slug: "esperada",
+    name: "Esperada De La Valencia",
+    shortName: "Esperada",
+    folder: "esperada",
+    title: "Elegancia, Cadencia y Suavidad de Paso Fino",
+    breed: "Caballo Criollo Colombiano",
+    modality: "P1 - Paso Fino Colombiano",
+    modalityCode: "P1",
+    birthYear: 2020,
+    height: "1.42 m",
+    color: "Castaña",
+    discipline: "Paso Fino Colombiano & Genética Selecta",
     category: "reproduccion",
     studFee: "Consultar Disponibilidad",
-    image: "assets/images/hero_stallion.jpg",
-    description: "Representa una parte fundamental de nuestra visión genética: calidad, salud, funcionalidad, temperamento noble y movimientos rítmicos que aportan al futuro del Caballo Criollo Colombiano.",
+    image: "assets/images/esperada/esperada.jpg",
+    coverImage: "assets/images/esperada/esperada.jpg",
+    images: [
+      "assets/images/esperada/esperada.jpg"
+    ],
+    videos: [],
+    genealogyImage: "assets/images/esperada/genetica.png",
+    description: "Hija del gran Constante de la Luisa en Ilusión de Venecia. Posee una extraordinaria suavidad de desplazamiento en 4 tiempos laterales de compás isócrono, nobleza de temperamento y estampa femenina que reafirma nuestro compromiso con el futuro del Paso Fino.",
     awards: [
-      "Ejemplar Destacado en Conformación y Aplomos",
-      "Línea Genética Seleccionada con Propósito",
-      "Pilar de Crianza La Chucua J.C."
+      "Línea directa de Tupac Junior (FC) y Tupac Amaru (FC)",
+      "Cadencia de pistón y sonoridad impecable en tabla",
+      "Temperamento dócil, inteligente y de gran voluntad de trabajo"
     ],
     stats: {
-      cadencia: 96,
-      morfologia: 95,
-      temperamento: 98,
+      cadencia: 98,
+      morfologia: 96,
+      temperamento: 99,
       fuerza: 92,
-      nobleza: 99
+      nobleza: 100
     },
     pedigree: {
+      subject: "Esperada De La Valencia P1",
       father: {
-        name: "Línea de Paso Destacada",
-        breed: "Caballo Criollo Colombiano",
-        paternalGrandfather: "Ascendente Élite",
-        paternalGrandmother: "Matrona Fundacional"
+        name: "Constante De La Luisa P1",
+        breed: "Paso Fino Colombiano (P1)",
+        paternalGrandfather: "Tupac Junior (FC) P3",
+        paternalGrandmother: "Soñadora De La Luisa P1",
+        greatGrandparents: [
+          "Tupac Amaru (FC) P3",
+          "Rosarito Del Paso (FC) P2",
+          "Renegado De La Luisa P3",
+          "Coqueta De La Esmeralda P3"
+        ]
       },
       mother: {
-        name: "Matrona Seleccionada",
-        breed: "Caballo Criollo Colombiano",
-        maternalGrandfather: "Semental Comprobado",
-        maternalGrandmother: "Madre de Campeones"
+        name: "Ilusion De Venecia P3",
+        breed: "Trocha Pura Colombiana (P3)",
+        maternalGrandfather: "Poema De Marco Aurelio P3",
+        maternalGrandmother: "Provocacion De Encenillos P3",
+        greatGrandparents: [
+          "Cometa De Marco Aurelio P3",
+          "Jardinera Del Jardin P2",
+          "Comando De Villa Rocio P3",
+          "Tupamara De Mi Ranchito P3"
+        ]
       }
     }
   },
   {
     id: "valentina-mariana",
-    name: "Valentina de la Mariana",
-    title: "Selección Cuidadosa y Genética de Calidad",
+    slug: "valentina",
+    name: "Valentina De La Mariana",
+    shortName: "Valentina",
+    folder: "valentina",
+    title: "Potencia, Elasticidad y Brío Noble de Trocha Pura",
     breed: "Caballo Criollo Colombiano",
+    modality: "P3 - Trocha Pura Colombiana",
+    modalityCode: "P3",
     birthYear: 2020,
-    height: "1.42 m",
+    height: "1.43 m",
     color: "Alazana Tostada",
-    discipline: "Crianza, Suavidad y Brio Noble",
+    discipline: "Trocha Pura Colombiana",
     category: "reproduccion",
     studFee: "Consultar Disponibilidad",
-    image: "assets/images/dressage_champion.jpg",
-    description: "Reúne líneas, características y cualidades seleccionadas cuidadosamente para continuar construyendo una genética que piensa en las generaciones futuras del Caballo Criollo Colombiano.",
+    image: "assets/images/valentina/valentina.jpeg",
+    coverImage: "assets/images/valentina/valentina.jpeg",
+    images: [
+      "assets/images/valentina/valentina.jpeg"
+    ],
+    videos: [
+      {
+        src: "assets/images/valentina/valentina1.mp4",
+        poster: "assets/images/valentina/valentina1_poster.png",
+        title: "Valentina en Pista - Sonoridad & Elasticidad",
+        desc: "Demostración de ritmo continuo y franqueza en los bípedos diagonales."
+      },
+      {
+        src: "assets/images/valentina/valentina2.mp4",
+        poster: "assets/images/valentina/valentina2_poster.png",
+        title: "Valentina - Mansedumbre & Expresión",
+        desc: "Excelente disposición en pesebrera y respuesta a la rienda."
+      }
+    ],
+    genealogyImage: "assets/images/valentina/genetica.png",
+    description: "Hija del legendario Fuera de Concurso Prodigio de María Rosa en Piedad de Las Guacas. Destaca por sus aplomos correctos, cuello musculoso y una mecánica de trocha viva con remate limpio en sus posteriores y serenidad en su cabeza.",
     awards: [
-      "Excelente Expresión y Feminidad de Raza",
-      "Aplomos Correctos y Elasticidad de Marcha",
-      "Programa de Reproducción Responsable"
+      "Hija directa de Prodigio de María Rosa (FC) P3",
+      "Línea materna de Rey de la Arena y el inmortal Maracanazo",
+      "Gran sonoridad, elasticidad de corvejón y brío noble"
     ],
     stats: {
-      cadencia: 95,
-      morfologia: 94,
-      temperamento: 97,
-      fuerza: 90,
+      cadencia: 97,
+      morfologia: 96,
+      temperamento: 98,
+      fuerza: 95,
       nobleza: 98
     },
     pedigree: {
+      subject: "Valentina De La Mariana P3",
       father: {
-        name: "Línea Funcional Criolla",
-        breed: "Caballo Criollo Colombiano",
-        paternalGrandfather: "Gran Reproductor",
-        paternalGrandmother: "Yegua de Paso Fino"
+        name: "Prodigio De Maria Rosa (FC) P3",
+        breed: "Trocha Pura Colombiana (P3)",
+        paternalGrandfather: "Altanero Junior De La Romana P3",
+        paternalGrandmother: "Consentida De La Maria P3",
+        greatGrandparents: [
+          "Altanero De La Luisa (FC) P1",
+          "Singara De Santa Rita P1",
+          "Timonel De Santa Monica (FC) P3",
+          "Dinastia De La Maria P3"
+        ]
       },
       mother: {
-        name: "Línea Materna Consagrada",
-        breed: "Caballo Criollo Colombiano",
-        maternalGrandfather: "Pilar de Raza",
-        maternalGrandmother: "Genética Probada"
+        name: "Piedad De Las Guacas P3",
+        breed: "Trocha Pura Colombiana (P3)",
+        maternalGrandfather: "Rey De La Arena P3",
+        maternalGrandmother: "Doña Rosario De Los Naranjos P1",
+        greatGrandparents: [
+          "Maracanazo P3",
+          "Orquidea Antioqueña (FC) P2",
+          "Pibe De Los Naranjos P3",
+          "Linda Rosa De Los Naranjos P1"
+        ]
       }
     }
   },
   {
-    id: "soberana-san-judas",
-    name: "Soberana de San Judas",
-    title: "Yegua Matrona que Marcó el Camino",
+    id: "venus-rancho",
+    slug: "venus",
+    name: "Venus Del Rancho",
+    shortName: "Venus",
+    folder: "venus",
+    title: "Armonía, Talla Imponente y Doble Ritmo Funcional",
     breed: "Caballo Criollo Colombiano",
-    birthYear: 2014,
-    height: "1.43 m",
-    color: "Zaina Oscura",
-    discipline: "Línea Fundacional de la Crianza",
-    category: "fundacional",
-    studFee: "Línea Fundacional Registrada",
-    image: "assets/images/cabalgata_tabio_hero.jpg",
-    description: "Una yegua con una línea de gran importancia dentro de la historia del Caballo Criollo Colombiano. Su conformación, aplomos, temperamento y movimientos representaron muchas de las cualidades con las que iniciamos nuestro sueño.",
+    modality: "P2 - Trocha y Galope Colombianos",
+    modalityCode: "P2",
+    birthYear: 2019,
+    height: "1.44 m",
+    color: "Castaña Cerrada Calzada",
+    discipline: "Trocha y Galope Colombianos",
+    category: "reproduccion",
+    studFee: "Consultar Disponibilidad",
+    image: "assets/images/venus/venus.png",
+    coverImage: "assets/images/venus/venus.png",
+    images: [
+      "assets/images/venus/venus.png",
+      "assets/images/venus/venus2.png"
+    ],
+    videos: [
+      {
+        src: "assets/images/venus/venus1.mp4",
+        poster: "assets/images/venus/venus1_poster.png",
+        title: "Venus en Movimiento - Galope Reunido y Trocha Clara",
+        desc: "Transición armónica entre el andar diagonal y la elevación rítmica del galope."
+      }
+    ],
+    genealogyImage: "assets/images/venus/genetica.png",
+    description: "Hija de Faraón de la Gran Dinastía en Adoración de Inversiones H. Una yegua de gran presencia física, línea dorsal sólida, pecho amplio y una capacidad de galope reunido y cadencioso respaldado por sangre de Tayrona del Paso, Duelo y Monarca FC.",
     awards: [
-      "Línea de Gran Importancia Histórica Criolla",
-      "Referente Morfológico y de Aplomos",
-      "Matriz Fundadora de La Chucua J.C."
+      "Nieta de Tayrona del Paso P3 y Duelo P3",
+      "Sangre del fuera de concurso Monarca (FC) y Tupac Amaru (FC)",
+      "Imponente alzada y gran aptitud deportiva y funcional"
     ],
     stats: {
-      cadencia: 98,
-      morfologia: 97,
-      temperamento: 95,
-      fuerza: 94,
-      nobleza: 96
+      cadencia: 96,
+      morfologia: 98,
+      temperamento: 97,
+      fuerza: 96,
+      nobleza: 99
     },
     pedigree: {
+      subject: "Venus Del Rancho P2",
       father: {
-        name: "Línea San Judas",
-        breed: "Caballo Criollo Colombiano",
-        paternalGrandfather: "Patriarca del Paso",
-        paternalGrandmother: "Matrona de Élite"
+        name: "Faraon De La Gran Dinastia P3",
+        breed: "Trocha Pura Colombiana (P3)",
+        paternalGrandfather: "Tayrona Del Paso P3",
+        paternalGrandmother: "Bonancita Del Paso P3",
+        greatGrandparents: [
+          "Tupac Amaru (FC) P3",
+          "Consigna P1",
+          "Tupac Amaru (FC) P3",
+          "Bonanza De La Suiza P3"
+        ]
       },
       mother: {
-        name: "Soberana Madre",
-        breed: "Caballo Criollo Colombiano",
-        maternalGrandfather: "Fundador de Línea",
-        maternalGrandmother: "Soberanía Criolla"
+        name: "Adoracion De Inversiones H P1",
+        breed: "Paso Fino Colombiano (P1)",
+        maternalGrandfather: "Duelo P3",
+        maternalGrandmother: "Ovacion V-8 P3",
+        greatGrandparents: [
+          "Monarca (FC) P2",
+          "Venenosa De Nogales P1",
+          "Tupac Amaru (FC) P3",
+          "Navidad V-8 P3"
+        ]
       }
     }
   },
   {
-    id: "ilusion",
-    name: "Ilusión",
-    title: "Reproductora con Genética Comprobada",
-    breed: "Caballo Criollo Colombiano",
-    birthYear: 2015,
-    height: "1.41 m",
-    color: "Castaña Cerrada",
-    discipline: "Trayectoria y Herencia Genética",
-    category: "fundacional",
-    studFee: "Línea Comprobada",
-    image: "assets/images/chalaneria_conexion.jpg",
-    description: "Reproductora con generaciones de genética de gran importancia y una trayectoria que demostró el valor incalculable de una línea comprobada en el enriquecimiento de nuestro criadero.",
-    awards: [
-      "Generaciones de Genética Comprobada",
-      "Consistencia en Transmisión de Andar",
-      "Herencia de Brío y Mansedumbre"
-    ],
-    stats: {
-      cadencia: 94,
-      morfologia: 96,
-      temperamento: 96,
-      fuerza: 91,
-      nobleza: 97
-    },
-    pedigree: {
-      father: {
-        name: "Línea Ilusión Padre",
-        breed: "Caballo Criollo Colombiano",
-        paternalGrandfather: "Linaje Consagrado",
-        paternalGrandmother: "Matriz Histórica"
-      },
-      mother: {
-        name: "Madre de Ilusión",
-        breed: "Caballo Criollo Colombiano",
-        maternalGrandfather: "Baluarte del Paso",
-        maternalGrandmother: "Raigambre Criolla"
-      }
-    }
-  },
-  {
-    id: "palomo",
+    id: "palomo-profesor",
+    slug: "palomo",
     name: "Palomo",
+    shortName: "Palomo",
+    folder: "escuela",
     title: "El Caballo Profesor que Inspiró Nuestra Escuela",
     breed: "Semipony Blanco de Largas Crines",
+    modality: "Caballo de Escuela y Formación",
+    modalityCode: "Escuela",
     birthYear: 2005,
     height: "1.32 m",
     color: "Blanco Nieve",
     discipline: "Formación de Jinetes & Confianza",
     category: "escuela",
     studFee: "Memoria y Legado Imborrable",
-    image: "assets/images/chalaneria_hero.jpg",
-    description: "Palomo fue mucho más que un caballo: un verdadero caballo profesor que enseñó a montar, a confiar, a perder el miedo y a disfrutar cada instante. Su nobleza y recuerdo viven en cada clase de nuestro club.",
+    image: "assets/images/palomo_profesor.jpg",
+    coverImage: "assets/images/palomo_profesor.jpg",
+    images: [
+      "assets/images/palomo_profesor.jpg"
+    ],
+    videos: [],
+    genealogyImage: "assets/images/palomo_profesor.jpg",
+    description: "Palomo fue el pilar pedagógico de La Chucua J.C. Enseñó a montar, a confiar y a superar miedos a decenas de niños y adultos en Tabio.",
     awards: [
-      "Inspiración Fundacional del Club Ecuestre",
-      "Maestro de Docenas de Jinetes",
-      "Símbolo de Nobleza, Ternura y Paciencia"
+      "Pilar histórico de la escuela",
+      "Paciencia absoluta y ternura con niños",
+      "Símbolo del bienestar animal del criadero"
     ],
     stats: {
       cadencia: 92,
@@ -185,17 +249,20 @@ export const horsesData = [
       nobleza: 100
     },
     pedigree: {
+      subject: "Palomo (Maestro Fundacional)",
       father: {
-        name: "Caballo Escuela",
+        name: "Línea Mansa Escuela",
         breed: "Semipony",
         paternalGrandfather: "Pony Blanco",
-        paternalGrandmother: "Mansa Tradición"
+        paternalGrandmother: "Mansa Tradición",
+        greatGrandparents: ["Docilidad Criolla", "Tranquilidad", "Nobleza", "Tradición"]
       },
       mother: {
-        name: "Yegua Mansa",
+        name: "Matrona de Escuela",
         breed: "Semipony",
         maternalGrandfather: "Semipony Maestro",
-        maternalGrandmother: "Dulzura Equina"
+        maternalGrandmother: "Dulzura Equina",
+        greatGrandparents: ["Afecto", "Paciencia", "Serenidad", "Confianza"]
       }
     }
   }

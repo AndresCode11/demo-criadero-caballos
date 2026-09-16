@@ -60,6 +60,21 @@ function parseUrlParameters() {
     notesTextarea.value = note;
   }
 
+  // Genética / Consulta de Ejemplar pre-fill
+  if ((service === 'genetica' || service === 'video' || horse) && notesTextarea && !notesTextarea.value) {
+    const horseMap = {
+      'esperada': 'Esperada De La Valencia (P1 - Paso Fino)',
+      'esperada-valencia': 'Esperada De La Valencia (P1 - Paso Fino)',
+      'valentina': 'Valentina De La Mariana (P3 - Trocha Pura)',
+      'valentina-mariana': 'Valentina De La Mariana (P3 - Trocha Pura)',
+      'venus': 'Venus Del Rancho (P2 - Trocha y Galope)',
+      'venus-rancho': 'Venus Del Rancho (P2 - Trocha y Galope)'
+    };
+    const selectedHorse = horseMap[horse] || (horse ? `ejemplar (${horse})` : 'ejemplares de cría');
+    const action = service === 'video' ? 'solicitar material en video adicional' : 'consultar información de reproducción y genealogía';
+    notesTextarea.value = `Interés en: ${selectedHorse}.\nMe gustaría ${action}.`;
+  }
+
   // Chalanería pre-fill
   if (service === 'chalaneria' && notesTextarea && !notesTextarea.value) {
     notesTextarea.value = 'Interés en: Escuela de Chalanería & Formación Ecuestre. Solicito información sobre horarios, niveles y proceso de inscripción.';

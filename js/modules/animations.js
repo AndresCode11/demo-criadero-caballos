@@ -38,6 +38,8 @@ function initSmoothScroll() {
       smoothTouch: false,
     });
 
+    window.lenis = lenis;
+
     // Synchronize Lenis with GSAP ScrollTrigger
     if (typeof ScrollTrigger !== 'undefined') {
       lenis.on('scroll', ScrollTrigger.update);
@@ -52,6 +54,20 @@ function initSmoothScroll() {
       }
       requestAnimationFrame(raf);
     }
+
+    // Intercept internal hash/anchor links for consistent Lenis smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', (e) => {
+        const href = anchor.getAttribute('href');
+        if (href && href !== '#' && href.length > 1) {
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            lenis.scrollTo(target, { offset: -80, duration: 1.2 });
+          }
+        }
+      });
+    });
   }
 }
 

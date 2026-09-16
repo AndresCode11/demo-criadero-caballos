@@ -1,9 +1,11 @@
 import { initCatalog } from './modules/catalog.js';
+import { initHorseShowcase } from './modules/horseShowcase.js';
 import { initPedigree } from './modules/pedigree.js';
 import { initTimeline } from './modules/timeline.js';
 import { initAnimations } from './modules/animations.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  initHorseShowcase();
   initCatalog();
   initPedigree();
   initTimeline();
