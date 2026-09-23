@@ -5,14 +5,14 @@ export const horsesData = [
     name: "Esperada De La Valencia",
     shortName: "Esperada",
     folder: "esperada",
-    title: "Elegancia, Cadencia y Suavidad de Paso Fino",
+    title: "Trotona de Gran Alzada, Cadencia y Elevación (P1)",
     breed: "Caballo Criollo Colombiano",
-    modality: "P1 - Paso Fino Colombiano",
+    modality: "P1 - Trote y Galope (Trotona)",
     modalityCode: "P1",
     birthYear: 2020,
     height: "1.42 m",
     color: "Castaña",
-    discipline: "Paso Fino Colombiano & Genética Selecta",
+    discipline: "Trote y Galope Colombiano (Trotona P1)",
     category: "reproduccion",
     studFee: "Consultar Disponibilidad",
     image: "assets/images/esperada/esperada.jpg",
@@ -22,24 +22,24 @@ export const horsesData = [
     ],
     videos: [],
     genealogyImage: "assets/images/esperada/genetica.png",
-    description: "Hija del gran Constante de la Luisa en Ilusión de Venecia. Posee una extraordinaria suavidad de desplazamiento en 4 tiempos laterales de compás isócrono, nobleza de temperamento y estampa femenina que reafirma nuestro compromiso con el futuro del Paso Fino.",
+    description: "Yegua trotona de gran presencia y sonoridad en sus diagonales. Hija directa de Constante de la Luisa en Ilusión de Venecia. Destaca por su marcada elevación de manos, cadencia enérgica en dos tiempos y un galope reunido y armónico, con nobleza y estampa que consolidan nuestro programa de cría.",
     awards: [
+      "Yegua Trotona (P1 - Trote y Galope)",
       "Línea directa de Tupac Junior (FC) y Tupac Amaru (FC)",
-      "Cadencia de pistón y sonoridad impecable en tabla",
-      "Temperamento dócil, inteligente y de gran voluntad de trabajo"
+      "Cadencia diagonal de dos tiempos y galope suave y reunido"
     ],
     stats: {
       cadencia: 98,
       morfologia: 96,
       temperamento: 99,
-      fuerza: 92,
+      fuerza: 95,
       nobleza: 100
     },
     pedigree: {
-      subject: "Esperada De La Valencia P1",
+      subject: "Esperada De La Valencia P1 (Trotona)",
       father: {
         name: "Constante De La Luisa P1",
-        breed: "Paso Fino Colombiano (P1)",
+        breed: "Trote y Galope Colombiano (P1)",
         paternalGrandfather: "Tupac Junior (FC) P3",
         paternalGrandmother: "Soñadora De La Luisa P1",
         greatGrandparents: [
@@ -69,14 +69,14 @@ export const horsesData = [
     name: "Valentina De La Mariana",
     shortName: "Valentina",
     folder: "valentina",
-    title: "Potencia, Elasticidad y Brío Noble de Trocha Pura",
+    title: "Trochadora de Gran Potencia, Elasticidad y Brío Noble (P3)",
     breed: "Caballo Criollo Colombiano",
-    modality: "P3 - Trocha Pura Colombiana",
+    modality: "P3 - Trocha (Trochadora)",
     modalityCode: "P3",
     birthYear: 2020,
     height: "1.43 m",
     color: "Alazana Tostada",
-    discipline: "Trocha Pura Colombiana",
+    discipline: "Trocha Colombiana (Trochadora P3)",
     category: "reproduccion",
     studFee: "Consultar Disponibilidad",
     image: "assets/images/valentina/valentina.jpeg",
@@ -99,11 +99,11 @@ export const horsesData = [
       }
     ],
     genealogyImage: "assets/images/valentina/genetica.png",
-    description: "Hija del legendario Fuera de Concurso Prodigio de María Rosa en Piedad de Las Guacas. Destaca por sus aplomos correctos, cuello musculoso y una mecánica de trocha viva con remate limpio en sus posteriores y serenidad en su cabeza.",
+    description: "Yegua trochadora portadora de una de las sangres más consagradas de la trocha colombiana, hija directa del inmortal Prodigio de María Rosa (FC) en Piedad de Las Guacas. Destaca por sus aplomos correctos, cuello musculoso y una mecánica de trocha viva con remate limpio en sus posteriores y serenidad en su cabeza.",
     awards: [
+      "Yegua Trochadora (P3 - Trocha)",
       "Hija directa de Prodigio de María Rosa (FC) P3",
-      "Línea materna de Rey de la Arena y el inmortal Maracanazo",
-      "Gran sonoridad, elasticidad de corvejón y brío noble"
+      "Línea materna de Rey de la Arena y el inmortal Maracanazo"
     ],
     stats: {
       cadencia: 97,
@@ -113,7 +113,7 @@ export const horsesData = [
       nobleza: 98
     },
     pedigree: {
-      subject: "Valentina De La Mariana P3",
+      subject: "Valentina De La Mariana P3 (Trochadora)",
       father: {
         name: "Prodigio De Maria Rosa (FC) P3",
         breed: "Trocha Pura Colombiana (P3)",
@@ -146,14 +146,14 @@ export const horsesData = [
     name: "Venus Del Rancho",
     shortName: "Venus",
     folder: "venus",
-    title: "Armonía, Talla Imponente y Doble Ritmo Funcional",
+    title: "Armonía, Talla Imponente y Doble Ritmo Funcional (P2)",
     breed: "Caballo Criollo Colombiano",
-    modality: "P2 - Trocha y Galope Colombianos",
+    modality: "P2 - Trocha y Galope",
     modalityCode: "P2",
     birthYear: 2019,
     height: "1.44 m",
     color: "Castaña Cerrada Calzada",
-    discipline: "Trocha y Galope Colombianos",
+    discipline: "Trocha y Galope Colombianos (P2)",
     category: "reproduccion",
     studFee: "Consultar Disponibilidad",
     image: "assets/images/venus/venus.png",
@@ -200,7 +200,7 @@ export const horsesData = [
       },
       mother: {
         name: "Adoracion De Inversiones H P1",
-        breed: "Paso Fino Colombiano (P1)",
+        breed: "Trote y Galope Colombiano (P1)",
         maternalGrandfather: "Duelo P3",
         maternalGrandmother: "Ovacion V-8 P3",
         greatGrandparents: [
@@ -228,13 +228,13 @@ export const horsesData = [
     discipline: "Formación de Jinetes & Confianza",
     category: "escuela",
     studFee: "Memoria y Legado Imborrable",
-    image: "assets/images/palomo_profesor.jpg",
-    coverImage: "assets/images/palomo_profesor.jpg",
+    image: "assets/images/palomo.jpeg",
+    coverImage: "assets/images/palomo.jpeg",
     images: [
-      "assets/images/palomo_profesor.jpg"
+      "assets/images/palomo.jpeg"
     ],
     videos: [],
-    genealogyImage: "assets/images/palomo_profesor.jpg",
+    genealogyImage: "assets/images/palomo.jpeg",
     description: "Palomo fue el pilar pedagógico de La Chucua J.C. Enseñó a montar, a confiar y a superar miedos a decenas de niños y adultos en Tabio.",
     awards: [
       "Pilar histórico de la escuela",

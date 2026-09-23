@@ -63,10 +63,10 @@ function parseUrlParameters() {
   // Genética / Consulta de Ejemplar pre-fill
   if ((service === 'genetica' || service === 'video' || horse) && notesTextarea && !notesTextarea.value) {
     const horseMap = {
-      'esperada': 'Esperada De La Valencia (P1 - Paso Fino)',
-      'esperada-valencia': 'Esperada De La Valencia (P1 - Paso Fino)',
-      'valentina': 'Valentina De La Mariana (P3 - Trocha Pura)',
-      'valentina-mariana': 'Valentina De La Mariana (P3 - Trocha Pura)',
+      'esperada': 'Esperada De La Valencia (Trotona, P1 - Trote y Galope)',
+      'esperada-valencia': 'Esperada De La Valencia (Trotona, P1 - Trote y Galope)',
+      'valentina': 'Valentina De La Mariana (Trochadora, P3 - Trocha)',
+      'valentina-mariana': 'Valentina De La Mariana (Trochadora, P3 - Trocha)',
       'venus': 'Venus Del Rancho (P2 - Trocha y Galope)',
       'venus-rancho': 'Venus Del Rancho (P2 - Trocha y Galope)'
     };

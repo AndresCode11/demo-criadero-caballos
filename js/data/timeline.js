@@ -2,7 +2,9 @@ export const timelineData = [
   {
     year: "Infancia",
     title: "La Primera Yegua y la Llegada de Palomo",
-    description: "A los cinco años, un regalo de mi padre despertó un amor eterno por los caballos. Poco después llegó Palomo, un semipony blanco y verdadero 'caballo profesor' que me enseñó a montar, confiar y superar los miedos."
+    description: "A los cinco años, un regalo de mi padre despertó un amor eterno por los caballos. Poco después llegó Palomo, un semipony blanco y verdadero 'caballo profesor' que me enseñó a montar, confiar y superar los miedos.",
+    image: "assets/images/palomo.jpeg",
+    imageCaption: "Palomo · El Caballo Profesor en la infancia del fundador"
   },
   {
     year: "Hace ~10 Años",

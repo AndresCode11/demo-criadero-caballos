@@ -23,6 +23,20 @@ export function initTimeline() {
           <p class="text-sm text-slate-300 leading-relaxed max-w-2xl">
             ${item.description}
           </p>
+
+          ${item.image ? `
+            <div class="mt-4 max-w-sm rounded-xl overflow-hidden border border-[#c8a675]/30 bg-[#2b323f]/50 p-2 shadow-xl group/img">
+              <div class="relative aspect-[4/3] rounded-lg overflow-hidden bg-[#181b22]">
+                <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover object-top group-hover/img:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#181b22]/90 via-transparent to-transparent opacity-80"></div>
+                ${item.imageCaption ? `
+                  <span class="absolute bottom-2 left-3 right-3 text-[11px] text-[#ddc295] font-serif font-medium leading-tight">
+                    ${item.imageCaption}
+                  </span>
+                ` : ''}
+              </div>
+            </div>
+          ` : ''}
         </div>
       `).join('')}
     </div>
