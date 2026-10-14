@@ -1,14 +1,17 @@
 import { initAnimations } from './modules/animations.js';
 
 // State for Tuition Calculator
-let selectedFrequency = 'semanal'; // 'semanal' (4 clases) or 'intensivo' (8 clases)
-let addBiomechanicalAnalysis = false;
+let selectedPeriod = 1; // 1, 3, 6, 12 months
 let studentCategory = 'ninos';
 
-const PRICING = {
-  semanal: 325000,
-  intensivo: 600000,
-  biomechanicsAddon: 120000
+const BASE_MONTHLY_RATE = 280000;
+const REGISTRATION_FEE = 250000; // Matrícula Anual
+
+const PERIOD_CONFIG = {
+  1: { months: 1, discount: 0, label: '1 Mes', desc: 'Plan 1 Mes: 4 clases agendadas en el horario a tarifa mensual base.' },
+  3: { months: 3, discount: 0.05, label: '3 Meses', desc: 'Plan Trimestral: 12 clases agendadas en el horario con 5% de descuento mensual.' },
+  6: { months: 6, discount: 0.10, label: '6 Meses', desc: 'Plan Semestral: 24 clases agendadas en el horario con 10% de descuento mensual.' },
+  12: { months: 12, discount: 0.15, label: '12 Meses', desc: 'Plan Anual: 48 clases agendadas en el horario con 15% de descuento mensual.' }
 };
 
 // Age Profile Data
@@ -16,7 +19,7 @@ const ageProfiles = {
   ninos: {
     title: "Formación Infantil & Semillero Ecuestre",
     subtitle: "Iniciación lúdica, confianza y postura desde temprana edad",
-    description: "Para niños desde los 4 años. Desarrollamos la psicomotricidad, equilibrio, respeto animal y serenidad a través de dinámicas respetuosas con el caballo.",
+    description: "Para niños desde los 2 años. Desarrollamos la psicomotricidad, equilibrio, respeto animal y serenidad a través de dinámicas respetuosas con el caballo.",
     bulletPoints: [
       "Acercamiento seguro y familiarización sin miedo.",
       "Desarrollo de postura natural, equilibrio sobre la montura y coordinación motriz.",
@@ -165,63 +168,82 @@ function setupAgeTabs() {
 
 // 3. Tuition Calculator
 function setupCalculator() {
-  const freqOptions = document.querySelectorAll('.freq-option');
-  const addonBio = document.getElementById('addon-biomechanics');
-  const totalPriceEl = document.getElementById('calc-total-price');
-  const totalDescEl = document.getElementById('calc-total-desc');
+  const periodOptions = document.querySelectorAll('.period-option');
+  const monthlyRateEl = document.getElementById('calc-monthly-rate');
+  const summaryPeriodEl = document.getElementById('calc-summary-period');
+  const totalInvestmentEl = document.getElementById('calc-total-investment');
+  const summaryClassesEl = document.getElementById('calc-summary-classes');
+  const savingsBox = document.getElementById('calc-savings-box');
+  const savingsAmountEl = document.getElementById('calc-savings-amount');
+  const discountBadge = document.getElementById('calc-discount-badge');
   const ctaBtn = document.getElementById('calc-cta-btn');
 
-  function updateCalculation() {
-    let total = PRICING[selectedFrequency];
-    let descriptionText = '';
-
-    if (selectedFrequency === 'semanal') {
-      descriptionText = 'Plan Mensual Estándar: 4 clases de 1 hora (1 por semana).';
-    } else {
-      descriptionText = 'Plan Intensivo: 8 clases de 1 hora (2 por semana con descuento).';
-    }
-
-    if (addBiomechanicalAnalysis) {
-      total += PRICING.biomechanicsAddon;
-      descriptionText += ' + Evaluación Biomecánica Digital en Video.';
-    }
-
-    // Format COP
-    const formatted = new Intl.NumberFormat('es-CO', {
+  function formatCOP(val) {
+    return new Intl.NumberFormat('es-CO', {
       style: 'currency',
       currency: 'COP',
       maximumFractionDigits: 0
-    }).format(total);
+    }).format(val);
+  }
 
-    if (totalPriceEl) totalPriceEl.innerText = formatted;
-    if (totalDescEl) totalDescEl.innerText = descriptionText;
+  function updateCalculation() {
+    const cfg = PERIOD_CONFIG[selectedPeriod] || PERIOD_CONFIG[1];
+    const discountedMonthly = Math.round(BASE_MONTHLY_RATE * (1 - cfg.discount));
+    const totalClassesCost = discountedMonthly * cfg.months;
+    const totalWithoutDiscount = BASE_MONTHLY_RATE * cfg.months;
+    const totalSavings = totalWithoutDiscount - totalClassesCost;
+    const totalClasses = cfg.months * 4;
+
+    const finalTotal = totalClassesCost;
+    const descriptionText = cfg.desc;
+
+    if (monthlyRateEl) monthlyRateEl.innerText = formatCOP(discountedMonthly);
+    if (summaryPeriodEl) summaryPeriodEl.innerText = cfg.label;
+    if (totalInvestmentEl) totalInvestmentEl.innerText = `${formatCOP(totalClassesCost)} COP`;
+    if (summaryClassesEl) summaryClassesEl.innerText = `(${totalClasses} clases agendadas en el horario)`;
+
+    if (discountBadge) {
+      if (cfg.discount > 0) {
+        discountBadge.innerText = `${Math.round(cfg.discount * 100)}% DCTO`;
+        discountBadge.classList.remove('hidden');
+      } else {
+        discountBadge.classList.add('hidden');
+      }
+    }
+
+    if (savingsBox && savingsAmountEl) {
+      if (totalSavings > 0) {
+        savingsAmountEl.innerText = `-${formatCOP(totalSavings)} COP`;
+        savingsBox.classList.remove('hidden');
+      } else {
+        savingsBox.classList.add('hidden');
+      }
+    }
 
     if (ctaBtn) {
-      const targetUrl = `contacto.html?service=chalaneria&plan=${selectedFrequency}&total=${total}&addonBio=${addBiomechanicalAnalysis}`;
+      const targetUrl = `contacto.html?service=chalaneria&period=${selectedPeriod}&monthlyRate=${discountedMonthly}&total=${finalTotal}`;
       ctaBtn.setAttribute('href', targetUrl);
     }
   }
 
-  freqOptions.forEach(opt => {
+  periodOptions.forEach(opt => {
     opt.addEventListener('click', () => {
-      freqOptions.forEach(o => {
+      periodOptions.forEach(o => {
         o.classList.remove('border-[#c8a675]', 'bg-[#2b323f]', 'text-white');
         o.classList.add('border-slate-700', 'bg-[#181b22]', 'text-slate-400');
+        const textSpan = o.querySelector('span:first-child');
+        if (textSpan) textSpan.classList.remove('text-white');
       });
+
       opt.classList.add('border-[#c8a675]', 'bg-[#2b323f]', 'text-white');
       opt.classList.remove('border-slate-700', 'bg-[#181b22]', 'text-slate-400');
+      const activeTextSpan = opt.querySelector('span:first-child');
+      if (activeTextSpan) activeTextSpan.classList.add('text-white');
 
-      selectedFrequency = opt.getAttribute('data-freq') || 'semanal';
+      selectedPeriod = parseInt(opt.getAttribute('data-period')) || 1;
       updateCalculation();
     });
   });
-
-  if (addonBio) {
-    addonBio.addEventListener('change', (e) => {
-      addBiomechanicalAnalysis = e.target.checked;
-      updateCalculation();
-    });
-  }
 
   updateCalculation();
 }

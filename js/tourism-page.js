@@ -29,11 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Interactive Pricing & Booking Calculator
   const paxInput = document.getElementById('cabalgata-pax');
   const paxValueDisplay = document.getElementById('cabalgata-pax-val');
-  const horseTypeSelect = document.getElementById('cabalgata-horse-type');
-  const addRefrigerio = document.getElementById('add-refrigerio');
-  const addAlmuerzo = document.getElementById('add-almuerzo');
-  const addPicnic = document.getElementById('add-picnic');
-  
   const totalPriceDisplay = document.getElementById('cabalgata-total-price');
   const perPersonDisplay = document.getElementById('cabalgata-per-person-price');
   const summaryBreakdown = document.getElementById('cabalgata-summary-breakdown');
@@ -46,67 +41,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const pax = parseInt(paxInput.value, 10) || 2;
     if (paxValueDisplay) paxValueDisplay.textContent = `${pax} ${pax === 1 ? 'persona' : 'personas'}`;
 
-    let basePerPerson = 150000; // Paquete básico $150.000 COP
-    let horseExtra = 0;
-    let horseName = 'Caballo manso y dócil básico';
-
-    if (horseTypeSelect && horseTypeSelect.value === 'especial') {
-      horseExtra = 70000;
-      horseName = 'Caballo especial de alta genética/entrenamiento';
-    }
-
-    let foodExtra = 0;
-    const extrasList = [];
-
-    if (addRefrigerio && addRefrigerio.checked) {
-      foodExtra += 25000;
-      extrasList.push('Refrigerio campestre');
-    }
-    if (addAlmuerzo && addAlmuerzo.checked) {
-      foodExtra += 45000;
-      extrasList.push('Almuerzo tradicional');
-    }
-    if (addPicnic && addPicnic.checked) {
-      foodExtra += 65000;
-      extrasList.push('Picnic gourmet');
-    }
-
-    const pricePerPerson = basePerPerson + horseExtra + foodExtra;
-    const totalPrice = pricePerPerson * pax;
+    const basePerPerson = 220000; // Tarifa estándar $220.000 COP por persona (3 horas)
+    const totalPrice = basePerPerson * pax;
 
     totalPriceDisplay.textContent = `$${totalPrice.toLocaleString('es-CO')}`;
     if (perPersonDisplay) {
-      perPersonDisplay.textContent = `$${pricePerPerson.toLocaleString('es-CO')} / persona`;
+      perPersonDisplay.textContent = `$${basePerPerson.toLocaleString('es-CO')} / persona`;
     }
 
     if (summaryBreakdown) {
-      let breakdownText = `${pax} participantes · 3 horas de recorrido guiado · ${horseName}`;
-      if (extrasList.length > 0) {
-        breakdownText += ` + ${extrasList.join(', ')}`;
-      }
-      summaryBreakdown.textContent = breakdownText;
+      summaryBreakdown.textContent = `${pax} participantes · 3 horas de recorrido guiado · Caballo manso y seguro`;
     }
 
     // Update reservation links
-    const serviceParams = `service=turismo&exp=Cabalgata%20Ecologica%20Tabio&pax=${pax}&horse=${horseTypeSelect ? horseTypeSelect.value : 'basico'}&addons=${encodeURIComponent(extrasList.join(', '))}`;
+    const serviceParams = `service=turismo&exp=Cabalgata%20Ecologica%20Tabio&pax=${pax}`;
     if (reserveBtn) {
       reserveBtn.href = `contacto.html?${serviceParams}`;
     }
 
     if (whatsappBtn) {
       const waMsg = encodeURIComponent(
-        `Hola Club Ecuestre La Chucua J.C. Deseo reservar la Cabalgata Ecológica en Tabio para ${pax} personas (${horseName}). Extras: ${extrasList.join(', ') || 'Ninguno'}. Total estimado: $${totalPrice.toLocaleString('es-CO')} COP.`
+        `Hola Club Ecuestre La Chucua J.C. Deseo reservar la Cabalgata Ecológica en Tabio para ${pax} personas (3 horas de recorrido guiado). Total estimado: $${totalPrice.toLocaleString('es-CO')} COP.`
       );
       whatsappBtn.href = `https://wa.me/573000000000?text=${waMsg}`;
     }
   }
 
   paxInput?.addEventListener('input', calculateCabalgata);
-  horseTypeSelect?.addEventListener('change', calculateCabalgata);
-  addRefrigerio?.addEventListener('change', calculateCabalgata);
-  addAlmuerzo?.addEventListener('change', calculateCabalgata);
-  addPicnic?.addEventListener('change', calculateCabalgata);
-
   calculateCabalgata();
 
   // 4. FAQ Accordions

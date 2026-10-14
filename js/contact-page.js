@@ -54,9 +54,23 @@ function parseUrlParameters() {
 
   // Estimulación temprana pre-fill
   if (service === 'estimulacion' && notesTextarea) {
+    const periodParam = urlParams.get('period');
+    const monthlyRateParam = urlParams.get('monthlyRate');
+    const totalParam = urlParams.get('total');
+
     let note = `Interés en: Estimulación Temprana con Caballos (7m - 4 años).`;
-    if (plan) note += `\nFrecuencia: ${plan === '2semana' ? '2 sesiones/semana (8 clases/mes)' : '1 sesión/semana (4 clases/mes - $325.000)'}`;
-    if (mod) note += `\nModalidad: ${mod === 'grupal' ? 'Grupo Reducido (2-3 niños)' : 'Atención Individual (1 a 1)'}`;
+    if (periodParam) {
+      note += `\nPlan: ${periodParam} mes(es) (${Number(periodParam) * 4} sesiones agendadas en el horario).`;
+      if (monthlyRateParam) {
+        note += `\nTarifa mensual: $${Number(monthlyRateParam).toLocaleString('es-CO')} COP/mes.`;
+      }
+      if (totalParam) {
+        note += `\nInversión sesiones: $${Number(totalParam).toLocaleString('es-CO')} COP.`;
+      }
+      note += `\nMatrícula anual: $250.000 COP (incluye uniforme y seguro de 1 año).`;
+    } else {
+      note += `\nPlan Mensual Estándar (4 sesiones/mes - $280.000 COP).`;
+    }
     notesTextarea.value = note;
   }
 
@@ -77,7 +91,24 @@ function parseUrlParameters() {
 
   // Chalanería pre-fill
   if (service === 'chalaneria' && notesTextarea && !notesTextarea.value) {
-    notesTextarea.value = 'Interés en: Escuela de Chalanería & Formación Ecuestre. Solicito información sobre horarios, niveles y proceso de inscripción.';
+    const periodParam = urlParams.get('period');
+    const monthlyRateParam = urlParams.get('monthlyRate');
+    const totalParam = urlParams.get('total');
+
+    let note = 'Interés en: Escuela de Chalanería & Formación Ecuestre.';
+    if (periodParam) {
+      note += `\nPlan: ${periodParam} mes(es) (${Number(periodParam) * 4} clases agendadas en el horario).`;
+      if (monthlyRateParam) {
+        note += `\nTarifa mensual: $${Number(monthlyRateParam).toLocaleString('es-CO')} COP/mes.`;
+      }
+      if (totalParam) {
+        note += `\nInversión clases: $${Number(totalParam).toLocaleString('es-CO')} COP.`;
+      }
+      note += `\nMatrícula anual: $250.000 COP (incluye uniforme y seguro de 1 año).`;
+    } else {
+      note += ' Solicito información sobre horarios, niveles y proceso de inscripción.';
+    }
+    notesTextarea.value = note;
   }
 
   // Generic course or other

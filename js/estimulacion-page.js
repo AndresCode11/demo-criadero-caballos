@@ -57,45 +57,89 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 4. Calculador / Modalidad del Plan Mensual
-  const freqSelect = document.getElementById('estimulacion-freq');
-  const modSelect = document.getElementById('estimulacion-mod');
-  const priceDisplay = document.getElementById('estimulacion-total-price');
-  const summaryDetails = document.getElementById('estimulacion-summary-text');
+  const periodOptions = document.querySelectorAll('.est-period-opt');
+  const monthlyRateEl = document.getElementById('estimulacion-monthly-rate');
+  const summaryPeriodEl = document.getElementById('estimulacion-summary-period');
+  const totalInvestmentEl = document.getElementById('estimulacion-total-investment');
+  const summaryClassesEl = document.getElementById('estimulacion-summary-classes');
+  const savingsBox = document.getElementById('estimulacion-savings-box');
+  const savingsAmountEl = document.getElementById('estimulacion-savings-amount');
+  const discountBadge = document.getElementById('estimulacion-discount-badge');
   const ctaBtn = document.getElementById('estimulacion-cta-btn');
 
+  let selectedPeriod = 1;
+  const BASE_MONTHLY_RATE = 280000;
+
+  const PERIOD_CONFIG = {
+    1: { months: 1, discount: 0, label: '1 Mes' },
+    3: { months: 3, discount: 0.05, label: '3 Meses' },
+    6: { months: 6, discount: 0.10, label: '6 Meses' },
+    12: { months: 12, discount: 0.15, label: '12 Meses' }
+  };
+
+  function formatCOP(val) {
+    return new Intl.NumberFormat('es-CO', {
+      style: 'currency',
+      currency: 'COP',
+      maximumFractionDigits: 0
+    }).format(val);
+  }
+
   function calculateTuition() {
-    if (!freqSelect || !priceDisplay) return;
+    const cfg = PERIOD_CONFIG[selectedPeriod] || PERIOD_CONFIG[1];
+    const discountedMonthly = Math.round(BASE_MONTHLY_RATE * (1 - cfg.discount));
+    const totalClassesCost = discountedMonthly * cfg.months;
+    const totalWithoutDiscount = BASE_MONTHLY_RATE * cfg.months;
+    const totalSavings = totalWithoutDiscount - totalClassesCost;
+    const totalSessions = cfg.months * 4;
 
-    const freq = freqSelect.value; // '1semana' (4 clases) or '2semana' (8 clases)
-    const mod = modSelect ? modSelect.value : 'individual';
+    if (monthlyRateEl) monthlyRateEl.innerText = formatCOP(discountedMonthly);
+    if (summaryPeriodEl) summaryPeriodEl.innerText = cfg.label;
+    if (totalInvestmentEl) totalInvestmentEl.innerText = `${formatCOP(totalClassesCost)} COP`;
+    if (summaryClassesEl) summaryClassesEl.innerText = `(${totalSessions} sesiones agendadas en el horario)`;
 
-    let base = 325000;
-    let descText = '4 sesiones al mes (1 clase semanal de 1 hora)';
-
-    if (freq === '2semana') {
-      base = 590000; // Descuento paquete bimensual / 2 veces por semana
-      descText = '8 sesiones al mes (2 clases semanales de 1 hora) · 10% dto.';
+    if (discountBadge) {
+      if (cfg.discount > 0) {
+        discountBadge.innerText = `${Math.round(cfg.discount * 100)}% DCTO`;
+        discountBadge.classList.remove('hidden');
+      } else {
+        discountBadge.classList.add('hidden');
+      }
     }
 
-    if (mod === 'grupal') {
-      base = Math.round(base * 0.85); // 15% de descuento en grupo reducido (máx 3 niños)
-      descText += ' · Grupo reducido (2-3 niños)';
-    } else {
-      descText += ' · Atención 1 a 1 personalizada';
-    }
-
-    priceDisplay.textContent = `$${base.toLocaleString('es-CO')}`;
-    if (summaryDetails) {
-      summaryDetails.textContent = descText;
+    if (savingsBox && savingsAmountEl) {
+      if (totalSavings > 0) {
+        savingsAmountEl.innerText = `-${formatCOP(totalSavings)} COP`;
+        savingsBox.classList.remove('hidden');
+      } else {
+        savingsBox.classList.add('hidden');
+      }
     }
 
     if (ctaBtn) {
-      ctaBtn.href = `contacto.html?service=estimulacion&plan=${freq}&mod=${mod}`;
+      ctaBtn.href = `contacto.html?service=estimulacion&period=${selectedPeriod}&monthlyRate=${discountedMonthly}&total=${totalClassesCost}`;
     }
   }
 
-  freqSelect?.addEventListener('change', calculateTuition);
-  modSelect?.addEventListener('change', calculateTuition);
+  periodOptions.forEach(opt => {
+    opt.addEventListener('click', () => {
+      periodOptions.forEach(o => {
+        o.classList.remove('border-[#c8a675]', 'bg-[#2b323f]', 'text-white');
+        o.classList.add('border-slate-700', 'bg-[#181b22]', 'text-slate-400');
+        const textSpan = o.querySelector('span:first-child');
+        if (textSpan) textSpan.classList.remove('text-white');
+      });
+
+      opt.classList.add('border-[#c8a675]', 'bg-[#2b323f]', 'text-white');
+      opt.classList.remove('border-slate-700', 'bg-[#181b22]', 'text-slate-400');
+      const activeTextSpan = opt.querySelector('span:first-child');
+      if (activeTextSpan) activeTextSpan.classList.add('text-white');
+
+      selectedPeriod = parseInt(opt.getAttribute('data-period')) || 1;
+      calculateTuition();
+    });
+  });
+
   calculateTuition();
 
   // 5. FAQ Accordions
